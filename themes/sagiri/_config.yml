@@ -102,7 +102,7 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/foreverchenyl || <i class="fa fa-fw fa-github"></i>
+  GitHub: https://github.com/foreverchenyl || github
 #  Twitter: https://twitter.com/DIYgod || twitter
 #  QQ 群: /images/qq-g.jpg || qq || qq
 #  Telegram Channel: https://t.me/awesomeDIYgod || telegram
@@ -779,7 +779,7 @@ card:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  since: 2/9/2014 11:30:00
+  since: 7/2/2019 11:30:00
 
   # Icon between year and copyright info.
   icon: user
