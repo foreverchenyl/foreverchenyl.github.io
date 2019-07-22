@@ -40,7 +40,8 @@
     "jshint-stylish": "^2.1.0",
     "strip-loader": "0.1.2",
     "stylint": "^1.5.9",
-    "webpack": "3.8.1"
+    "webpack": "^3.8.1",
+    "webpack-cli": "^3.3.6"
   },
   "dependencies": {
     "balloon-css": "0.5.0",
@@ -51,7 +52,7 @@
     "headroom.js": "0.9.4",
     "jquery-pjax": "2.0.1",
     "lazyload": "2.0.0-beta.2",
-    "leancloud-storage": "3.3.1",
+    "leancloud-storage": "^3.14.1",
     "nprogress": "0.2.0",
     "social-share.js": "1.0.16",
     "typed.js": "2.0.6",

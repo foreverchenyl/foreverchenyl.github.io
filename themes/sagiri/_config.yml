@@ -102,11 +102,11 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/DIYgod || github
-  Twitter: https://twitter.com/DIYgod || twitter
-  QQ 群: /images/qq-g.jpg || qq || qq
-  Telegram Channel: https://t.me/awesomeDIYgod || telegram
-  更多: https://www.anotherhome.net/3163 || more
+  GitHub: https://github.com/foreverchenyl || <i class="fa fa-fw fa-github"></i>
+#  Twitter: https://twitter.com/DIYgod || twitter
+#  QQ 群: /images/qq-g.jpg || qq || qq
+#  Telegram Channel: https://t.me/awesomeDIYgod || telegram
+#  更多: https://www.anotherhome.net/3163 || more
 
 social_icons:
   enable: true
@@ -212,10 +212,10 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-reward_comment:
-wechatpay: /images/wechatpay.png
-alipay: /images/alipay.png
-bitcoin:
+#reward_comment:
+#wechatpay: /images/wechatpay.png
+#alipay: /images/alipay.png
+#bitcoin:
 
 # Declare license on posts
 post_copyright:
@@ -333,9 +333,9 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
-  shortname: diygod-me
-  count: false
+  enable: false
+  #shortname: diygod-me
+  #count: false
 
 # Hypercomments
 #hypercomments_id:
