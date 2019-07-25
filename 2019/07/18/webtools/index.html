@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next pisces" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.cat.net/css?family=Sigmar One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+
+
+  
+
+<link href="https://cdn.bootcss.com/social-share.js/1.0.9/css/share.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=0.0.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=0.0.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=0.0.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=0.0.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="tools,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="100+ 超全的web开发工具和资源 整合 WEB 开发包含的 JavaScript 库，前端框架，Web 应用框架，任务批处理工具 / 包管理器，编程语言 / 开发平台，数据库，icon 图标，本地开发环境搭建，协作工具，Web 开发社区，未能一一整合，欢迎评论提交哦。   英文原文： https://www.keycdn.com/blog/web-development-tools/ 转载出处">
+<meta name="keywords" content="tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web开发工具和资源">
+<meta property="og:url" content="http://foreverchenyl.github.io/2019/07/18/webtools/index.html">
+<meta property="og:site_name" content="Hi,YuLong">
+<meta property="og:description" content="100+ 超全的web开发工具和资源 整合 WEB 开发包含的 JavaScript 库，前端框架，Web 应用框架，任务批处理工具 / 包管理器，编程语言 / 开发平台，数据库，icon 图标，本地开发环境搭建，协作工具，Web 开发社区，未能一一整合，欢迎评论提交哦。   英文原文： https://www.keycdn.com/blog/web-development-tools/ 转载出处">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/66101050jw1f7axgo2hbtj20l808cjss.jpg">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/javascript-libraries.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/front-end-frameworks.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-application-frameworks.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/build-systems-task-runners.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/programming-languages.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/databases.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/css-preprocessors.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/text-editors-code-editors.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/markdown-editors.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/icons.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/git-clients.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/local-dev-environment.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/diff-checkers.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/code-sharing.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/dev-collaboration-tools.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/developers-inspiration.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/website-speed-test-tools.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-communities.webp">
+<meta property="og:image" content="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-newsletters.webp">
+<meta property="og:updated_time" content="2019-07-24T01:15:38.004Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web开发工具和资源">
+<meta name="twitter:description" content="100+ 超全的web开发工具和资源 整合 WEB 开发包含的 JavaScript 库，前端框架，Web 应用框架，任务批处理工具 / 包管理器，编程语言 / 开发平台，数据库，icon 图标，本地开发环境搭建，协作工具，Web 开发社区，未能一一整合，欢迎评论提交哦。   英文原文： https://www.keycdn.com/blog/web-development-tools/ 转载出处">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/66101050jw1f7axgo2hbtj20l808cjss.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '0.0.4',
+    sidebar: {"position":"right","display":"always","offset":52,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    since: '7/2/2019 11:30:00',
+    onlineAPI: '',
+    site: {
+      title: 'Hi,YuLong',
+      subtitle: '',
+      author: 'YuLong'
+    },
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    leancloud: {
+      enable: false,
+      appID: '',
+      appKey: ''
+    },
+    favicon: {
+      visibilitychange: true,
+      narmal: '/images/favicon.ico',
+      hidden: '/images/failure.ico',
+      show_text: '(/≧▽≦/)咦！又好了！',
+      hide_text: '(●—●)喔哟，崩溃啦！'
+    }
+  };
+</script>
+
+
+
+  
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="canonical" href="http://foreverchenyl.github.io/2019/07/18/webtools/">
+
+
+
+
+
+  <title>web开发工具和资源 | Hi,YuLong</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48084758-7', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+      <li class="menu-item search">
+          <form class="search-form">
+            <input name="keyword" type="text" class="search-input" placeholder="站内搜索">
+            <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+          </form>
+      </li>
+     <!-- <li class="menu-item online"><span id="online-count">?</span>人在线</li> -->
+    </ul>
+  
+
+  
+</nav>
+
+<div class="site-brand-wrapper" style="background-image: url(/images/header-sagiri.jpg)">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <div class="brand">
+        <span class="logo-line-before"><i></i></span>
+        <div class="site-title">
+          <div id="animate" class="animate">
+            <span>H</span><span>i</span><span>,</span><span>Y</span><span>u</span><span>L</span><span>o</span><span>n</span><span>g</span>
+          </div>
+          <div id="guide" class="guide">
+            <span>H</span><span>i</span><span>,</span><span>Y</span><span>u</span><span>L</span><span>o</span><span>n</span><span>g</span>
+          </div>
+        </div>
+        <span class="logo-line-after"><i></i></span>
+      </div>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+<div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-master-avatar" itemprop="image" src="/images/DIYgod.jpg" alt="YuLong">
+    <h2 class="site-master-description" itemprop="description">
+        
+    </h2>
+</div>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">07月</div>
+			<div class="post-day">18</div>
+	</div>
+  
+  <div class="post-badge">
+    
+      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/帮助文档/" itemprop="url" rel="index">
+          <span itemprop="name">帮助文档</span>
+        </a>
+      </span>
+    
+  </div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://foreverchenyl.github.io/2019/07/18/webtools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuLong">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/DIYgod.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hi,YuLong">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">web开发工具和资源</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T17:31:03+08:00">
+                2019-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">•</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/帮助文档/" itemprop="url" rel="index">
+                    <span itemprop="name">帮助文档</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="100-超全的web开发工具和资源"><a href="#100-超全的web开发工具和资源" class="headerlink" title="100+ 超全的web开发工具和资源"></a>100+ 超全的web开发工具和资源</h1><blockquote>
+<p>整合 WEB 开发包含的 JavaScript 库，前端框架，Web 应用框架，任务批处理工具 / 包管理器，编程语言 / 开发平台，数据库，icon 图标，本地开发环境搭建，协作工具，Web 开发社区，未能一一整合，欢迎评论提交哦。</p>
+</blockquote>
+<p><img src="http://ww4.sinaimg.cn/large/66101050jw1f7axgo2hbtj20l808cjss.jpg" alt></p>
+<p><strong>英文原文：</strong> <a href="https://www.keycdn.com/blog/web-development-tools/" target="_blank" rel="noopener">https://www.keycdn.com/blog/web-development-tools/</a></p>
+<p><strong>转载出处：</strong> <a href="https://xituqu.com/170.html" target="_blank" rel="noopener">https://xituqu.com/170.html</a></p>
+<p><strong>译者：</strong> 稀土区</p>
+<p>作为Web开发者，这是好的时代，也是坏的时代。Web开发技术也在不断变化。虽然很令人兴奋，但是这也意味着Web开发人员需要要积极主动的学习新技术和新的<a href="https://xituqu.com/tag/programing-language" target="_blank" rel="noopener">编程语言</a>，并愿意和渴望接受新的挑战，以适应变化。新的挑战可能会包括一些开发上的要求，如利用适应现有的<a href="https://xituqu.com/tag/framework" target="_blank" rel="noopener">框架</a>来满足业务需求。测试一个网站，能从中知道出了哪些技术上的问题，并且我们针对这些问题进行优化和消除。便于后端的开发进程加快和测试。所以我们列出了完整的<a href="https://xituqu.com/tag/web" target="_blank" rel="noopener">web</a>开发所需要的工具和资源，助力开发者提高开发效率！学不止步，让我们努力成为一个优秀的开发者！</p>
+<a id="more"></a>
+
+<h3 id="Web开发工具和资源整合"><a href="#Web开发工具和资源整合" class="headerlink" title="Web开发工具和资源整合"></a>Web开发工具和资源整合</h3><p>注：工具和资源排序不分先后。</p>
+<h3 id="JavaScript库"><a href="#JavaScript库" class="headerlink" title="JavaScript库"></a>JavaScript库</h3><p><a href="https://ww4.sinaimg.cn/large/72f96cbagw1f49ehwz03lj20k506e74o" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/javascript-libraries.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>我敢说JavaScript语言是目前web开发最流行的编程语言。JavaScript库又称JavaScript框架，封装了很多预定义的对象和使用函数。是网站更容易兼容各式各样的浏览器。那么您就可以使用以下JavaScript库来帮助你的开发更好进行。</p>
+<p><a href="http://jquery.com/" target="_blank" rel="noopener">jQuery</a>：快y速，小巧，功能丰富的<a href="https://xituqu.com/tag/javascript-library" target="_blank" rel="noopener">JavaScript库</a>。</p>
+<p><a href="http://backbonejs.org/" target="_blank" rel="noopener">BackBoneJS</a>：为复杂Javascript应用程序提供模型(models)、集合(collections)、视图(views)的结构。</p>
+<p><a href="http://d3js.org/" target="_blank" rel="noopener">D3.js</a>：<em>D3</em>是基于数据的文档操作javascript库,<em>D3</em>能够把数据和HTML、SVG、CSS结合起来,创造出可交互的数据图表。</p>
+<p><a href="https://facebook.github.io/react/" target="_blank" rel="noopener">React:</a>：Facebook的Javascript库为构建用户界面而开发。</p>
+<p><a href="http://jqueryui.com/" target="_blank" rel="noopener">jQ</a><a href="http://jqueryui.com/" target="_blank" rel="noopener">uery</a><a href="http://jqueryui.com/" target="_blank" rel="noopener"> UI</a>：<em>jQuery UI</em> 是以 jQuery 为基础的开源 JavaScript 网页用户界面代码库。包含底层用户交互、动画、特效和可更换主题的可视控件。</p>
+<p><a href="http://jquerymobile.com/" target="_blank" rel="noopener">jQuery Mobile</a>：基于HTML5用于创建移动 web 应用程序的框架。</p>
+<p><a href="http://underscorejs.org/" target="_blank" rel="noopener">Underscore.js</a>：JavaScript实用库,提供了类似Prototype.js的一些功能,但是没有继承任何JavaScript内置对象。</p>
+<p><a href="http://momentjs.com/" target="_blank" rel="noopener">Moment.js</a>：一个 JavaScript 日期处理类库，用于解析、检验、操作、以及显示日期。</p>
+<p><a href="https://lodash.com/" target="_blank" rel="noopener">Lodash</a>：一个 JavaScript 实用工具库,提供一致性,模块化,性能和配件等功能。</p>
+<h3 id="前端框架"><a href="#前端框架" class="headerlink" title="前端框架"></a><a href="https://xituqu.com/tag/front-end-framework" target="_blank" rel="noopener">前端框架</a></h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49eh9fjvhj20k506eaab" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/front-end-frameworks.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>通俗的前端由HTML，CSS，JavasScript等构成。当然为了适应Web开发日益增长的需求，应运而生许多独立的前端框架，例如Bootstrap。一个优秀的框架可以为前端开发人员在开发过程中增益，减小开发压力。</p>
+<p><a href="http://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>： <em>Bootstrap</em> 是基于 HTML、CSS、JAVASCRIPT 的,它简洁灵活,使得 Web 开发更加快捷。</p>
+<p><a href="http://foundation.zurb.com/" target="_blank" rel="noopener">Foundation</a>： 迄今为止最好的响应式前端框架，更快、更轻、更多功能、更灵活、更强大！</p>
+<p><a href="http://semantic-ui.com/" target="_blank" rel="noopener">Semantic UI</a>：<em>Semantic</em> <em>UI</em> 是一款语义化设计的前端开源框架,其功能强大,使用简单,为设计师和开发师提供可复用的完美设计方案。</p>
+<p><a href="http://getuikit.com/" target="_blank" rel="noopener">uikit</a>：<em>UIKit</em>使用的变量基于LESS,具有体积小、模块化、可轻松地自定义主题及响应式界面。</p>
+<h3 id="Web应用框架"><a href="#Web应用框架" class="headerlink" title="Web应用框架"></a><a href="https://xituqu.com/tag/web-framework" target="_blank" rel="noopener">Web应用框架</a></h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49ei86hctj20k506edg4" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-application-frameworks.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>Web应用框架作为一个软件框架，意在帮助和缓解开发者在进行Web应用的开发与维护时遇见的开发问题。例如：AngularJS，您可以在您的项目完全免费使用它，详细文档请您参见 <a href="https://angularcdn.com/" target="_blank" rel="noopener">angularcdn.com</a>.</p>
+<p><a href="http://rubyonrails.org/" target="_blank" rel="noopener">Ruby</a>：Ruby on Rails 是使用 Ruby 语言编写的网页程序开发框架，目的是为开发者提供常用组件，简化网页程序的开发。</p>
+<p><a href="http://facebook.github.io/react/" target="_blank" rel="noopener">React</a>：React 起源于 Facebook 的内部项目，React 的设计思想极其独特，属于革命性创新，性能出众，代码逻辑却非常简单。是现在非长热门的框架。</p>
+<p><a href="http://cn.vuejs.org/" target="_blank" rel="noopener">Vue</a>：Vue.js 是用于构建交互式的 Web  界面的库。它提供了 MVVM 数据绑定和一个可组合的组件系统，具有简单、灵活的 API。从技术上讲， Vue.js 集中在 MVVM 模式上的视图模型层，并通过双向数据绑定连接视图和模型。</p>
+<p><a href="https://angularjs.org/" target="_blank" rel="noopener">AngularJS</a>：AngularJS 通过新的属性和表达式扩展了 HTML，可以构建一个单一页面应用程序。AngularJS有着诸多特性，最为核心的是：MVVM、模块化、自动化双向数据绑定、语义化标签、依赖注入等等。</p>
+<p><a href="http://emberjs.com/" target="_blank" rel="noopener">Ember.js</a>：一个用于创建 web 应用的 JavaScript MVC 框架，采用基于字符串的Handlebars模板，支持双向绑定、观察者模式、计算属性（依赖其他属性动态变化）、自动更新模板、路由控制、状态机等。</p>
+<p><a href="http://expressjs.com/" target="_blank" rel="noopener">Express</a>：基于 Node.js 平台的 web 应用开发框架 基于Node.js 平台,快速、开放、极简的 web 开发框架。</p>
+<p><a href="https://www.meteor.com/" target="_blank" rel="noopener">Meteor</a>：Meteor 是一个构建在 Node.js 之上的平台，用来开发实时网页程序。Meteor 位于程序<a href="https://xituqu.com/tag/database" target="_blank" rel="noopener">数据库</a>和用户界面之间，保持二者之间的数据同步更新。</p>
+<p><a href="https://www.djangoproject.com/" target="_blank" rel="noopener">Django</a>：<em>Django</em>是一个开放源代码的Web应用框架,由Python写成。采用了MVC的软件设计模式,即模型M,视图V和控制器C。</p>
+<p><a href="https://www.microsoft.com/web/platform/framework.aspx" target="_blank" rel="noopener">ASP.net</a>：ASP.NET是免费，高兼容的WEB应用框架，能够提供标准化WEB应用构建时所需的解决方案。</p>
+<p><a href="https://laravel.com/" target="_blank" rel="noopener">Laravel</a>：一个免费，开源的PHP Web应用程序框架，可以基于MVC模式来创建Web应用程序。</p>
+<p><a href="http://framework.zend.com/" target="_blank" rel="noopener">Zend Framework 2</a>：一款的Web应用框架，基于PHP来创建Web应用和服务端应用。</p>
+<p><a href="https://phalconphp.com/en/" target="_blank" rel="noopener">Phalcon</a>：<em>Phalcon</em> 是开源、全功能栈、使用 C 扩展编写、针对高性能优化的 PHP 5 框架。</p>
+<p><a href="http://symfony.com/" target="_blank" rel="noopener">Symfony</a>：<em>Symfony</em>是一个基于MVC模式的面向对象的PHP5框架。<em>Symfony</em>允许在一个web应用中分离事务控制，服务逻辑和表示层。</p>
+<p><a href="http://cakephp.org/" target="_blank" rel="noopener">CakePHP</a>：<em>CakePHP</em>是一个运用了诸如ActiveRecord、Association Data Mapping、Front Controller和MVC等著名设计模式的快速开发框架。主要目标是提供一个可以让各种层次的PHP开发人员快速地开发出健壮的Web应用，而 又不失灵活性。</p>
+<p><a href="http://flask.pocoo.org/" target="_blank" rel="noopener">Flask</a>：<em>Flask</em>是一个使用 Python 编写的轻量级 Web 应用框架。其 WSGI 工具箱采用 Werkzeug ，模板引擎则使用 Jinja2</p>
+<p><a href="https://www.codeigniter.com/" target="_blank" rel="noopener">CodeIgniter</a>：CodeIgniter 是一个简单快速的PHP MVC框架。它为团队提供了足够的自由支持，允许开发人员更迅速地工作。</p>
+<h3 id="任务批处理工具-包管理器"><a href="#任务批处理工具-包管理器" class="headerlink" title="任务批处理工具/包管理器"></a><a href="https://xituqu.com/tag/task-runner" target="_blank" rel="noopener">任务批处理工具</a>/<a href="https://xituqu.com/tag/package-manager" target="_blank" rel="noopener">包管理器</a></h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49eifxrl5j20k506ejru" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/build-systems-task-runners.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>任务批量处理工具可将你的工作流程全自动化.例如你可以创建一个任务，使用JavaScript语言编写的工具来进行自动化的处理。 然后打包，这样会大大提高开发效率。 包管理器它能跟踪所有已安装的软件、自动化进行安装和删除应用程序、以及确保所有软件都保持更新以获得最新的增强功能和错误修复。</p>
+<p><a href="http://gruntjs.com/" target="_blank" rel="noopener">Grunt</a>：<em>Grunt</em>是基于Node.js的项目构建工具。它可以自动运行你所设定的任务。</p>
+<p><a href="http://gulpjs.com/" target="_blank" rel="noopener">Gulp</a>：<em>Gulp</em>.js 是基于 Node.js 构建的一个自动化构建工具,开发者可以使用它在项目开发过程中自动执行常见任务。</p>
+<p><a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>：NPM（node package manager），通常称为node包管理器。顾名思义，它的主要功能就是管理node包，包括：安装、卸载、更新、查看、搜索、发布等。</p>
+<p><a href="http://bower.io/" target="_blank" rel="noopener">Bower</a>：Bower是一个客户端技术的软件包管理器，它可用于搜索、安装和卸载如JavaScript、HTML、CSS之类的网络资源。</p>
+<h3 id="编程语言-开发平台"><a href="#编程语言-开发平台" class="headerlink" title="编程语言 / 开发平台"></a>编程语言 / 开发平台</h3><p><a href="https://ww2.sinaimg.cn/large/72f96cbagw1f49eimuqt3j20k506ewew" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/programming-languages.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>所有Web开发都需要编程语言的支持.<em>编程语言</em>（programming language），是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种计算机语言让程序员能够准确地定义计算机所需要使用的数据，并精确地定义在不同情况下所应当采取的行动。.当然进行Web开发不仅仅只有一门语言来进开发。</p>
+<p><a href="http://php.net/" target="_blank" rel="noopener">PHP</a>：PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）是一种通用开源脚本语言。语法吸收了C语言、Java和Perl的特点，利于学习，使用广泛，主要适用于Web开发领域</p>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">NodeJS</a>：<em>Node</em>.<em>js</em> 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。<em>Node</em>.<em>js</em> 使用了一个事件驱动、非阻塞式 I/O 的模型,使其轻量又高效。</p>
+<p><a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">Javascript</a>：JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言</p>
+<p><a href="https://www.w3.org/TR/html5/" target="_blank" rel="noopener">HTML5</a>：标记语言，是HTML和XHTML的最新版本。</p>
+<p><a href="https://www.python.org/" target="_blank" rel="noopener">Python</a>：Python是一种解释型、面向对象、动态数据类型的高级程序设计语言。</p>
+<p><a href="https://www.ruby-lang.org/en/" target="_blank" rel="noopener">Ruby</a>：<em>Ruby</em>，一种为简单快捷的面向对象编程（面向对象程序设计）而创的脚本语言</p>
+<p><a href="http://www.scala-lang.org/" target="_blank" rel="noopener">Scala</a>：<em>Scala</em>是一门多范式的编程语言，一种类似java的编程语言，设计初衷是实现可伸缩的语言、并集成面向对象编程和函数式编程的各种特性。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="_blank" rel="noopener">CSS3</a>：<em>CSS</em>即层叠<em>样式表</em>（Cascading StyleSheet）。 在网页制作时采用层叠<em>样式表</em>技术，可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制。CSS3是CSS的最新版本。</p>
+<p><a href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener">SQL</a>：结构化查询语言(Structured Query Language)简称<em>SQL，</em>是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统；同时也是数据库脚本文件的扩展名。</p>
+<p><a href="https://golang.org/" target="_blank" rel="noopener">Golang</a>：Go是Google开发的一种编译型，可平行化，并具有垃圾回收功能的编程语言。</p>
+<p><a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>：Rust是Mozilla开发的注重安全、性能和并发性的编程语言。</p>
+<p><a href="http://elixir-lang.org/" target="_blank" rel="noopener">Elixir</a>：Elixir 是一种函数式编程语言,建立在Erlang虚拟机之上。它是一种动态语言,灵活的语法与宏支持,利用Erlang的能力来构建并发、分布式、容错应用程序与热代码升级。</p>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49eiztykmj20k506eweu" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/databases.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p><em>数据库</em>（Database）是按照数据结构来组织、存储和管理数据的仓库。</p>
+<p><a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a>：MySQL是一种关联数据库管理系统，关联数据库将数据保存在不同的表中，而不是将所有数据放在一个大仓库内，这样就增加了速度并提高了灵活性。</p>
+<p><a href="https://mariadb.org/" target="_blank" rel="noopener">MariaDB</a>：<em>MariaDB</em>数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 <em>MariaDB</em>的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。</p>
+<p><a href="https://www.mongodb.org/" target="_blank" rel="noopener">MongoDB</a>：<em>MongoDB</em> 教程 <em>MongoDB</em> 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</p>
+<p><a href="http://redis.io/" target="_blank" rel="noopener">Redis</a>：<em>Redis</em>是一个开源的使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库，并提供多种语言的API。</p>
+<p><a href="http://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a>：ostgreSQL支持大部分 SQL标准并且提供了许多其他现代特性：复杂查询、外键、触发器、视图、事务完整性、MVCC。</p>
+<h3 id="CSS-预处理器"><a href="#CSS-预处理器" class="headerlink" title="CSS 预处理器"></a>CSS 预处理器</h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49ej7q1o7j20k506edga" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/css-preprocessors.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>CSS 预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为 CSS 增加了一些编程的特性，将 CSS 作为目标生成文件，然后开发者就只要使用这种语言进行编码工作。</p>
+<p>通俗的说，“CSS 预处理器用一种专门的编程语言，进行 Web 页面样式设计，然后再编译成正常的 CSS 文件，以供项目使用。CSS 预处理器为 CSS 增加一些编程的特性，无需考虑浏览器的兼容性问题”，例如你可以在 CSS 中使用变量、简单的逻辑程序、函数等等在编程语言中的一些基本特性，可以让你的 CSS 更加简洁、适应性更强、可读性更佳，更易于代码的维护等诸多好处。例如：Sass，Less，Stylus。</p>
+<p><a href="http://sass-lang.com/" target="_blank" rel="noopener">Sass</a>： Sass是一种CSS的开发工具，提供了许多便利的写法，大大节省了设计者的时间，使得CSS的开发，变得简单和可维护。</p>
+<p><a href="http://lesscss.org/" target="_blank" rel="noopener">Less</a>：<em>Lesscss</em>是一种动态样式语言,属于CSS预处理语言的一种,它使用类似CSS的语法,为CSS的赋予了动态语言的特性,如变量、继承、运算、函数等,更方便CSS的编写和维护。</p>
+<p><a href="http://stylus-lang.com/" target="_blank" rel="noopener">Stylus</a>：Stylus 是一个CSS的预处理框架，2010年产生，来自Node.js社区，主要用来给Node项目进行CSS预处理支持，所以Stylus 是一种新型语言，可以创建健壮的、动态的、富有表现力的CSS。</p>
+<p>如果你是刚刚开始使用CSS的预处理器，你可能要先使用第三方编译器进行开发，如下所示。</p>
+<h3 id="文本编辑器-代码编辑器"><a href="#文本编辑器-代码编辑器" class="headerlink" title="文本编辑器 / 代码编辑器"></a><a href="https://xituqu.com/tag/text-editor" target="_blank" rel="noopener">文本编辑器</a> / <a href="https://xituqu.com/tag/code-editor" target="_blank" rel="noopener">代码编辑器</a></h3><p><a href="https://ww2.sinaimg.cn/large/72f96cbagw1f49ejgpwtjj20k506eglx" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/text-editors-code-editors.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>无论你是做笔记，敲代码，或者Markdown文档编写，一个好的文本编辑器都是必须拥有的！</p>
+<p><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a>：<em>Atom</em> 更为先进的文本代码编辑器 - 由 Github 打造的下一代编程开发利器在代码编辑器、文本编辑器领域,有着不少的「神器」级的产品。</p>
+<p><a href="http://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text</a>：Sublime Text 是一个代码编辑器（Sublime Text 2和3是收费软件，但可以无限期试用），也是HTML和散文先进的文本编辑器。</p>
+<p><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Notepad++</a>：<em>Notepad++</em>是 Windows操作系统下的一套文本编辑器(软件版权许可证: GPL)，有完整的中文化接口及支持多国语言编写的功能。</p>
+<p><a href="https://www.visualstudio.com/products/code-vs" target="_blank" rel="noopener">Visual Studio Code </a>：微软推出，一个运行于 Mac OS X、Windows和 Linux 之上的，针对于编写现代 Web 和云应用的跨平台源代码编辑器。</p>
+<p><a href="https://macromates.com/" target="_blank" rel="noopener">TextMate</a>：TextMate是Mac下的著名的文本编辑器软件，与BBedit一起并称苹果机上的emacs和vim。</p>
+<p><a href="https://panic.com/coda/" target="_blank" rel="noopener">Coda 2</a>:  OS X下快速，简洁，功能强大的编辑器【需要付费】.</p>
+<p><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="noopener">WebStorm</a>：jetbrains公司旗下一款JavaScript 开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的JavaScript IDE”等。</p>
+<p><a href="http://www.vim.org/" target="_blank" rel="noopener">Vim</a>：Vim是一个类似于Vi的著名的功能强大、高度可定制的文本编辑器，在Vi的基础上改进和增加了很多特性。</p>
+<p><a href="http://brackets.io/" target="_blank" rel="noopener">Brackets</a>：Brackets 是一个免费、开源且跨平台的 HTML/CSS/JavaScript 前端 WEB 集成开发环境 (IDE工具)。</p>
+<p><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="noopener">Emacs</a>：著名的集成开发环境和文本编辑器。<em>Emacs</em>被公认为是最受专业程序员喜爱的代码编辑器之一。</p>
+<h3 id="Markdown-编辑器"><a href="#Markdown-编辑器" class="headerlink" title="Markdown 编辑器"></a><a href="https://xituqu.com/tag/markdown-editor" target="_blank" rel="noopener">Markdown 编辑器</a></h3><p><a href="https://ww4.sinaimg.cn/large/72f96cbagw1f49ejo6wj1j20k506edg1" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/markdown-editors.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p><em>Markdown</em> 是一种轻量级的「标记语言」,它的优点很多,目前也被越来越多的写作爱好者,撰稿者广泛使用。<em>Markdown</em> 十分轻量,学习成本也不高。</p>
+<p><a href="http://zh.mweb.im/" target="_blank" rel="noopener">MWeb</a>：专业的 Markdown 写作、记笔记、静态博客生成软件 【付费】</p>
+<p><a href="http://markeditor.com/app/markeditor" target="_blank" rel="noopener">Markeditor</a>：MarkEditor 是最新的一款 Markdown 编辑器，除了基本功能外，还包含了诸如表格编辑、图表、高亮、公式等等丰富的功能！【付费】</p>
+<p><a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>：一个开放源码免费使用的 MarkDown 编辑器, 基于 PageDown,使用了 Stack Overflow 和其他 Stack Exchange 网站的 MarkDown 库</p>
+<p><a href="http://dillinger.io/" target="_blank" rel="noopener">Dillinger</a>：Dillinger 是一款在线的 Markdown 编辑器,支持更换主题,字数统计,云服务保存,导出 HTML、PDF 等功能。</p>
+<p><a href="http://25.io/mou/" target="_blank" rel="noopener">Mou</a>: Mac OS X下的免费Markdown编辑器【作者貌似已经跑路了】</p>
+<p><a href="http://www.texts.io/" target="_blank" rel="noopener">Texts</a>：Windows和Mac OS X下纯文本编辑器。</p>
+<p>表示有些付费的Markdown编辑器宝宝买不起。</p>
+<h3 id="icon图标"><a href="#icon图标" class="headerlink" title="icon图标"></a><a href="https://xituqu.com/tag/icon" target="_blank" rel="noopener">icon图标</a></h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49ejvaf9zj20k506emxi" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/icons.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>几乎每一个Web开发者，尤其是前端开发人员都会需要icon图标来增色项目。</p>
+<p><a href="http://fontawesome.io/" target="_blank" rel="noopener">Font Awesome</a>：Font Awesome为您提供可缩放的矢量图标,您可以使用CSS所提供的所有特性对它们进行更改,包括:大小、颜色、阴影或者其它任何支持的效果。</p>
+<p><a href="http://iconmonstr.com/" target="_blank" rel="noopener">IconMonster</a>：免费，高质量, 庞大且资源不断增长的简洁的icon图标库。</p>
+<p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">IconFinder</a>：<em>Iconfinder</em>提供美丽的图标,服务数以百万计的设计师,开发商和其他有创意的专业人员。</p>
+<p><a href="http://fontello.com/" target="_blank" rel="noopener">Fontello</a>：一个目测有200+个图标（数量还在增加）的 Web-font 图标市场，对于广大设计师、前端开发者来说是很棒的资源。</p>
+<h3 id="Git-代理-服务"><a href="#Git-代理-服务" class="headerlink" title="Git 代理 / 服务"></a>Git 代理 / 服务</h3><p><a href="https://ww2.sinaimg.cn/large/72f96cbagw1f49ek4s93zj20k506eq3e" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/git-clients.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+<p><a href="https://www.sourcetreeapp.com/" target="_blank" rel="noopener">SourceTree</a>：SourceTree 是 Windows 和Mac OS X 下免费的 Git 和 Hg 客户端。支持创建、克隆、提交、push、pull 和合并等操作。</p>
+<p><a href="http://www.gitkraken.com/" target="_blank" rel="noopener">GitKraken</a> (Beta)：一款自由、直观、快捷、美观的跨平台Git客户端。</p>
+<p><a href="https://www.git-tower.com/" target="_blank" rel="noopener">Tower 2</a>：一款美丽，高效，强大的Git管理，让Git版本控制变得容易。</p>
+<p><a href="https://desktop.github.com/" target="_blank" rel="noopener">GitHub Client</a>：有助于无缝连接GitHub和GitHub的企业的项目。</p>
+<p><a href="https://gogs.io/" target="_blank" rel="noopener">Gogs</a>：Gogs (Go Git Service) 是一款极易搭建的自助 Git 服务。 开发目的 <em>Gogs</em> 的目标是打造一个最简单、最快速和最轻松的方式搭建自助 Git 服务。</p>
+<p><a href="https://about.gitlab.com/gitlab-com/" target="_blank" rel="noopener">GitLab</a>:  GitLab是利用 Ruby on Rails 一个开源的版本管理系统,实现一个自托管的Git项目仓库,可通过Web界面进行访问公开的或者私人项目。</p>
+<p><a href="http://ww1.sinaimg.cn/large/72f96cbajw1f4chvmh9hqj206t03ywei" target="_blank" rel="noopener">Coding</a>：Coding 的代码托管功能除了基本的 Git 仓库以外，还有保护分支，分屏对比， Code Review 等高级功能。并且整合了 Pages 服务，质量管理，演示平台等开发工具，提升研发效率。</p>
+<h3 id="本地开发环境搭建"><a href="#本地开发环境搭建" class="headerlink" title="本地开发环境搭建"></a><a href="https://xituqu.com/tag/local-development-environment" target="_blank" rel="noopener">本地开发环境搭建</a></h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49ekcv2vqj20k506emxn" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/local-dev-environment.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>根据您运行的是什么操作系统和计算机配置，有时候进行测试的时候就有可能需要搭建一个快速的本地开发环境。自己搭建很是蛮烦，不用担心，有很多将Apache，Nginx，MySQL和phpMyAdmin进行打包一体化的软件。这些软件很是方便我们来进行本地测试。</p>
+<p><a href="https://www.apachefriends.org/index.html" target="_blank" rel="noopener">XAMPP</a>：XAMPP（Apache+MySQL+PHP+PERL）是一个功能强大的建站集成软件包。</p>
+<p><a href="https://www.mamp.info/en/" target="_blank" rel="noopener">MAMP PRO</a>：<em>MAMP</em> <em>Pro</em> for mac是Mac OS平台搭建本地服务器环境的组合软件套装,包含 Macintosh、Apache、MySQL和PHP 四大开发环境。</p>
+<p><a href="http://www.wampserver.com/en/" target="_blank" rel="noopener">WampServer</a>：Wamp就是Windows Apache Mysql PHP集成安装环境，即在window下的apache、php和mysql的服务器软件。</p>
+<p><a href="https://www.vagrantup.com/" target="_blank" rel="noopener">Vagrant</a>：<em>Vagrant</em>是一个基于Ruby的工具，用于创建和部署虚拟化开发环境。它 使用Oracle的开源VirtualBox虚拟化系统，使用 Chef创建自动化虚拟环境。</p>
+<p><a href="https://laragon.org/" target="_blank" rel="noopener">Laragon</a>：Laragon工具就是Laravel的一键安装工具吧，还集成了一整套wamp工具，除去Laravel安装外，它也是一款不错的wamp工具，干净简单，便捷迅速。Diff Checkers<br><a href="https://www.getwnmp.org/" target="_blank" rel="noopener">Wnmp</a>：WNMP是Windows下便捷，安全的Nginx+MariaDB+PHP开发环境环境集成套件包。</p>
+<h3 id="文本对比检查"><a href="#文本对比检查" class="headerlink" title="文本对比检查"></a>文本对比检查</h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49ekq3tfpj20k506eaaa" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/diff-checkers.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。帮助我们更直观的看见文本之间的差异。</p>
+<p><a href="https://www.diffchecker.com/" target="_blank" rel="noopener">Diffchecker</a>：Diffchecker 是一款非常好用的在线文本对比工具,能够高亮显示有差异的行和字符。<em>Diffchecker</em> 提供了文件上传对比功能,还可以选择对比的存储时间。</p>
+<p><a href="http://www.scootersoftware.com/" target="_blank" rel="noopener">Beyond Compare</a>：Beyond Compare是一套由Scooter Software推出的软件，主要用途是对比两个文件夹或者文件，并将差异以颜色标示。</p>
+<p>当然有很多免费的文本编辑器，包括我们上面提到的也有插件和扩展，可以协助开发者方便的进行文件比较。</p>
+<h3 id="代码共享-代码测试"><a href="#代码共享-代码测试" class="headerlink" title="代码共享 / 代码测试"></a>代码共享 / 代码测试</h3><p><a href="https://ww2.sinaimg.cn/large/72f96cbagw1f49ekurukwj20k506eq3a" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/code-sharing.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>前端开发者在公司内或者团体间需要进行协作，共享代码，那么一下工具很值得开发者一试。</p>
+<p><a href="http://jsbin.com/" target="_blank" rel="noopener">JS Bin</a>：<em>JS</em> <em>Bin</em>能够让你编辑和测试JavaScript和HTML代码。你还可以将编辑后的代码保存到本地,或将URL地址发给其他人,让其协助调试代码。</p>
+<p><a href="https://jsfiddle.net/" target="_blank" rel="noopener">JSfiddle</a>：jsFiddle是一个在线的shell编辑器,通过流行的JS框架创建自定义的环境,以简化JS代码。可以用于测试示例代码。</p>
+<p><a href="https://codeshare.io/" target="_blank" rel="noopener">codeshare</a>：与其他开发者实时共享代码。</p>
+<p><a href="http://dabblet.com/" target="_blank" rel="noopener">Dabblet</a>：Dabblet是一个开源互动测试工具,用于测试CSS和HTML。<em>Dabblet</em>支持实时更新、匿名备份、嵌入网站、与他人共享或者存储到GitHub。</p>
+<h3 id="协作工具"><a href="#协作工具" class="headerlink" title="协作工具"></a><a href="https://xituqu.com/tag/collaboration-tools" target="_blank" rel="noopener">协作工具</a></h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49el0a4oxj20k506ejrq" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/dev-collaboration-tools.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a><br>每一个很棒的开发团队需要一种方式来保持联系，协作，来帮助提高生产力。</p>
+<p><a href="https://slack.com/" target="_blank" rel="noopener">Slack</a>：Slack 是聊天群组 + 大规模工具集成 + 文件整合 + 统一搜索。</p>
+<p><a href="https://trello.com/" target="_blank" rel="noopener">Trello</a>：Trello的目标是提供简洁清晰的团队协作工具。不过弥缝在这里将介绍如果将<em>Trello</em>用来建立自己的时间管理系统。</p>
+<p><a href="https://glip.com/" target="_blank" rel="noopener">Glip</a>：Glip:在线团队办公协作平台是一个类似于Slack网站的网络办公集合体,内置了邮箱、网盘、即时通讯应用、协作服务等,把所有和网络办公有关的服务和工具都整合在了一起。</p>
+<p><a href="https://asana.com/" target="_blank" rel="noopener">Asana</a>：Asana是一款团队任务管理软件 方便人们去制定和跟踪团队的项目任务的完成情况</p>
+<p><a href="https://www.atlassian.com/software/jira" target="_blank" rel="noopener">Jira</a>：JIRA是Atlassian公司出品的项目与事务跟踪工具，被广泛应用于缺陷跟踪、客户服务、需求收集、流程审批、任务跟踪、项目跟踪和敏捷管理等工作领域。</p>
+<h3 id="灵感创意"><a href="#灵感创意" class="headerlink" title="灵感创意"></a>灵感创意</h3><p><a href="https://ww3.sinaimg.cn/large/72f96cbagw1f49ela424oj20k506e74e" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/developers-inspiration.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>当我们进行开发时，偶尔迸发的灵感会使我们的项目或者产品增色不少。当然不仅仅依靠自我的灵感，我们也需要从别人的作品中得到灵感来保证我们的Web设计界面或者产品不落后这个时代。</p>
+<p><a href="http://codepen.io/" target="_blank" rel="noopener">CodePen</a>：全球web前端开发人员的圣地！可以展示个人的创意和建立一个测试实例来解决bug。 来寻找你的项目设计方式和灵感吧。</p>
+<p><a href="https://dribbble.com/" target="_blank" rel="noopener">Dribble</a>：Dribbble是一个面向创作家、艺术工作者、设计师等创意类作品的人群，提供作品在线服务，供网友在线查看已经完成的作品或者正在创作的作品的交流网站。</p>
+<h3 id="网站测速工具"><a href="#网站测速工具" class="headerlink" title="网站测速工具"></a><a href="https://xituqu.com/tag/web-test" target="_blank" rel="noopener">网站测速工具</a></h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49elhl774j20k506eglw" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/website-speed-test-tools.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a><br>网站的速度是用户体验关键因素。网站速度快与慢决定是否能更高的搜索引擎排名，更高的转换率，更低的跳出率，以及更好的整体用户体验和。值得高兴的是很多免费软件可以用于测试网站速度，帮助我们找出加载缓慢的问题，方便我们去解决。</p>
+<p><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener">Google PageSpeed Insights</a>：PageSpeed Insights是一款可以分析网页速度瓶颈,让网页设计人员开发出速度更快的网站的<em>谷歌</em>浏览器插件。</p>
+<p><a href="https://developers.google.com/web/tools/chrome-devtools/?hl=en" target="_blank" rel="noopener">Google Chrome DevTools</a>：Chrome DevTools 是公认的优秀的前端调试工具，功能强大，使用起来有一定的学习门槛。</p>
+<p><a href="http://www.webpagetest.org/" target="_blank" rel="noopener">WebPageTest</a>：<em>WebPagetest</em>是一款Web应用程序,它将一个URL以及一系列配置参数作为输入,并对那个URL运行性能测试。</p>
+<p><a href="http://tools.pingdom.com/fpt/" target="_blank" rel="noopener">Pingdom</a>：pingdom全面的网站监测服务网站,可测速和ping跟踪路由,可以免费监测1个站点,最短1分钟监测一次。</p>
+<p><a href="https://gtmetrix.com/" target="_blank" rel="noopener">GTmetrix</a>：主要优点在于提供了丰富的详细的测量结果，并建议如何来优化网页中每个元素的，最重要的是会根据网站的具体情况，直接告诉你导致网站加载速度变慢的根源在哪里</p>
+<h3 id="Web开发社区"><a href="#Web开发社区" class="headerlink" title="Web开发社区"></a><a href="https://xituqu.com/tag/web-community" target="_blank" rel="noopener">Web开发社区</a></h3><p><a href="https://ww2.sinaimg.cn/large/72f96cbagw1f49elwu9q7j20k506edg4" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-communities.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a></p>
+<p>当开发者在开发的过程中有遇到问题时，除了询问他人以外，还可以使用搜索引擎搜索。社区的重要性就显而易见了，大部分开发者会在开发社区分享他们经验，如何避过不必要踩的坑。</p>
+<p><strong>国内：</strong></p>
+<p><a href="http://chinagdg.org/" target="_blank" rel="noopener">谷歌开发者社区(GDG)</a>：开放 · 分享 · 创新</p>
+<p><a href="https://segmentfault.com/" target="_blank" rel="noopener">segmentfault</a>：是中国领先的<em>开发</em>者技术<em>社区</em>。 为编程爱好者提供一个纯粹、高质的技术交流的平台, 与<em>开发</em>者一起学习、交流与成长。【老实话我觉得这名字不好记】</p>
+<p><a href="http://www.fullstackspace.com/" target="_blank" rel="noopener">全栈社区</a>：中国最大的全栈<em>开发者社区</em>,致力于打造一个问题解答,技术文章分享,全栈人员创业的服务平台,让开发更容易,让创业更简单.</p>
+<p><strong>国外：</strong></p>
+<p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">Stack Overflow</a>：Stack Overflow是一个与程序相关的IT技术问答网站。用户可以在网站免费提交问题，浏览问题，索引相关内容，在创建主页的时候使用简单的HTML。</p>
+<p><a href="https://frontendfront.com/" target="_blank" rel="noopener">Front-end Front</a>：在Front-end Front，前端开发者可以提出问题，分享有趣的链接，并展示他们的项目作品。</p>
+<p><a href="https://hashnode.com/" target="_blank" rel="noopener">Hashnode</a>：Hashnode是开发者讨论技术问题，分享解决方案，与世界各地的开发者共享资源的聚集地。</p>
+<p><a href="https://refind.com/" target="_blank" rel="noopener">Refind</a>：有着开发者, 黑客, 设计师收集和分享最好的资源的社区。</p>
+<p><a href="https://plus.google.com/u/0/communities/114175980151299757659" target="_blank" rel="noopener">Google+ Web Developers Group</a>：Web 开发者,Web设计师和Web开发.</p>
+<p><a href="https://plus.google.com/communities/114947356043496560984" target="_blank" rel="noopener">Google+ Web Developers Group</a>：Java, PHP, Ruby, JavaScript and Python 资源。</p>
+<p><a href="https://www.facebook.com/groups/wpfrontenddevs/" target="_blank" rel="noopener">Facebook WordPress Front-end Developers Group</a>：WordPress 前端开发者的分享社区，可以提问题，分享开发者的项目作品，还有讨论WP未来发展趋势。</p>
+<p><a href="https://www.linkedin.com/groups/139851/profile" target="_blank" rel="noopener">LinkedIn Web Design and Development Professionals Group</a>：与专业网页设计师，网页开发者共享Web开发资源</p>
+<p><a href="https://www.linkedin.com/groups/2192521/profile" target="_blank" rel="noopener">LinkedIn Web Site Development Group</a>: 网站设计和开发。</p>
+<p><a href="https://www.linkedin.com/groups/2195403/profile" target="_blank" rel="noopener">LinkedIn PHP Developer Group</a>: PHP, Mysql, Drupal, Joomla, Zend, Cake, MVC.</p>
+<p><a href="https://www.linkedin.com/groups/3722491" target="_blank" rel="noopener">LinkedIn WordPress Developers Group</a>: WordPress 开发. 使用WP来创建CMS和CMF.</p>
+<p><a href="http://www.webdeveloper.com/forum/" target="_blank" rel="noopener">Webdeveloper.com</a>：帮助Web开发者和设计师学习使用HTML，java和javascript开发网站。</p>
+<p><a href="https://www.sitepoint.com/community/" target="_blank" rel="noopener">Sitepoint Forums</a>: Web开发者论坛。</p>
+<p><a href="https://www.reddit.com/r/perfmatters/" target="_blank" rel="noopener">/r/perfmatters</a>: 讨论关于 web 性能</p>
+<p><a href="https://www.reddit.com/r/webdev" target="_blank" rel="noopener">/r/webdev</a>: 关于Web开发和开发者的新闻</p>
+<h3 id="Web开发新闻聚合"><a href="#Web开发新闻聚合" class="headerlink" title="Web开发新闻聚合"></a><a href="https://xituqu.com/tag/web-news" target="_blank" rel="noopener">Web开发新闻聚合</a></h3><p><a href="https://ww1.sinaimg.cn/large/72f96cbagw1f49em7ogivj20k506e74n" target="_blank" rel="noopener"><img src="https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-newsletters.webp" alt="100+ 超全的web开发工具和资源-稀土区"></a>阅读开发和设计的技术干货，及时的知道技术圈内更新了什么，保持信息流新鲜，有助于我们更好的开发！</p>
+<p><strong>国内：</strong><br><a href="http://gold.xitu.io/#/" target="_blank" rel="noopener">掘金</a>：掘金是中国质量最高的技术分享社区，邀请稀土用户作为Co-Editor 来分享优质的技术干货，从前端到后端开发，从设计到产品，让每一个<em>掘金</em>用户都能挖掘到有价值的干货。</p>
+<p><a href="http://toutiao.io/" target="_blank" rel="noopener">开发者头条</a>：一个以程序员为中心，基于学习和分享的开发者社区。你可以阅读头条新闻、分享技术文章、发布开源项目，订阅技术极客们创建的学习主题和关注编程牛人。</p>
+<p><a href="http://www.tuicool.com/" target="_blank" rel="noopener">推酷</a>：以技术为驱动，以聚合挖掘为核心，打造个性推荐和订阅，给你一站式的阅读。 更汇聚优质公开课和线下活动，让信息知识获取更便捷。</p>
+<p><strong>国外：</strong><br><a href="https://wdrl.info/" target="_blank" rel="noopener">wdrl.info</a>：精心挑选的Web开发相关资源，每星期进行整合报道。</p>
+<p><a href="http://webopsweekly.com/" target="_blank" rel="noopener">webopsweekly.com</a>： 每周进行报道关于网络运营，应用部署，网站性能和工具分享类的文章。</p>
+<p><a href="http://webtoolsweekly.com/" target="_blank" rel="noopener">web tools weekly</a>：专注于前端开发和网页设计工具分享。每一个问题都有一个简短的提示或教程，另外每周都会分享的各种应用程序、脚本、插件和其他有用的资源。</p>
+<p><a href="https://freshbrewed.co/" target="_blank" rel="noopener">freshbrewed.co</a>：每周为前端开发者和设计师提供开发和设计类的阅读摘要。</p>
+<p><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">smashingmagazine.com</a>： Smashing Magazine是一款专门为个人前端开发者和设计师提供的在线报纸，每周二都会定时的更新有用的资源。</p>
+<p><a href="http://frontenddevweekly.com/" target="_blank" rel="noopener">front-end dev weekly</a>: 每周为前端开发者提供新闻, 包含工具资源，还有灵感。</p>
+<p><a href="http://fridayfrontend.com/" target="_blank" rel="noopener">friday front-end</a>：邮件订阅，每日为前端开发者发关于开发资源的邮件。</p>
+<p><a href="https://umaar.com/dev-tips/" target="_blank" rel="noopener">dev tips</a>: 收集开发者的问题和建议, 用gif呈现，会每周发邮件通知。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div class="post-share">分享到：</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tools/" rel="tag"># tools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/18/EF/" rel="next" title="FE-learning">
+                <i class="fa fa-chevron-left"></i> FE-learning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/23/interview/" rel="prev" title="Interview">
+                Interview <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/card.jpg" alt="YuLong">
+            
+              <p class="site-author-name" itemprop="name"><span style="opacity:.2;">Codeing </span>YuLong</p>
+              <p class="site-description motion-element" itemprop="description">Keep up with me!</p>
+          </div>
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/foreverchenyl" target="_blank" title="GitHub" data-balloon="GitHub" data-balloon-pos="up">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+            
+
+          </nav>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.png" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#100-超全的web开发工具和资源"><span class="nav-number">1.</span> <span class="nav-text">100+ 超全的web开发工具和资源</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web开发工具和资源整合"><span class="nav-number">1.0.1.</span> <span class="nav-text">Web开发工具和资源整合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript库"><span class="nav-number">1.0.2.</span> <span class="nav-text">JavaScript库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端框架"><span class="nav-number">1.0.3.</span> <span class="nav-text">前端框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web应用框架"><span class="nav-number">1.0.4.</span> <span class="nav-text">Web应用框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#任务批处理工具-包管理器"><span class="nav-number">1.0.5.</span> <span class="nav-text">任务批处理工具/包管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编程语言-开发平台"><span class="nav-number">1.0.6.</span> <span class="nav-text">编程语言 / 开发平台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库"><span class="nav-number">1.0.7.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-预处理器"><span class="nav-number">1.0.8.</span> <span class="nav-text">CSS 预处理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本编辑器-代码编辑器"><span class="nav-number">1.0.9.</span> <span class="nav-text">文本编辑器 / 代码编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown-编辑器"><span class="nav-number">1.0.10.</span> <span class="nav-text">Markdown 编辑器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icon图标"><span class="nav-number">1.0.11.</span> <span class="nav-text">icon图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-代理-服务"><span class="nav-number">1.0.12.</span> <span class="nav-text">Git 代理 / 服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地开发环境搭建"><span class="nav-number">1.0.13.</span> <span class="nav-text">本地开发环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本对比检查"><span class="nav-number">1.0.14.</span> <span class="nav-text">文本对比检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码共享-代码测试"><span class="nav-number">1.0.15.</span> <span class="nav-text">代码共享 / 代码测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协作工具"><span class="nav-number">1.0.16.</span> <span class="nav-text">协作工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#灵感创意"><span class="nav-number">1.0.17.</span> <span class="nav-text">灵感创意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网站测速工具"><span class="nav-number">1.0.18.</span> <span class="nav-text">网站测速工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web开发社区"><span class="nav-number">1.0.19.</span> <span class="nav-text">Web开发社区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web开发新闻聚合"><span class="nav-number">1.0.20.</span> <span class="nav-text">Web开发新闻聚合</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-image"></div>
+      <div class="footer-inner">
+        <p>博客已萌萌哒运行<span id="since"></span><span class="my-face">(●'◡'●)ﾉ♥</span></p>
+<p>前端萌新，哈哈哈 ~</p>
+
+<p>© <span itemprop="copyrightYear">2019</span> Hi,YuLong.
+    由 <a href="https://hexo.io/" target="_blank" class="external" rel="nofollow">Hexo</a> 强力驱动.
+    Theme By <a href="https://github.com/DIYgod/hexo-theme-sagiri" target="_blank" class="external" rel="nofollow">Sagiri</a> v0.0.4.
+    <a href="/sitemap.xml" target="_blank">站点地图</a>.
+    xxxx.
+</p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">YuLong</span>. </p>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    <canvas id="evanyou"></canvas>
+
+    
+
+  </div>
+
+  <script type="text/javascript" src="/js/sagiri.min.js?v=0.0.4"></script>
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
