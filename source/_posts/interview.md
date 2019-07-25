@@ -7,11 +7,17 @@ tags:
 - tools
 ---
 
-前端面试题目做个汇总~~~~
+部分前端技术做个汇总~~~~
 
 <!-- more-->
 
-# JavaScript基础
+# 一、JavaScript基础
+
+一个完整的JavaScript 实现应该由下列三
+个不同的部分组成（见图1-1）。
+q 核心（ECMAScript）
+q 文档对象模型（DOM）
+q 浏览器对象模型（BOM）
 
 ## 1、声明提前类问题
 
@@ -311,7 +317,111 @@ let cloneResult = JSON.parse(JSON.stringify(targetObj))
 
 此前转载了一篇文章，对JavaScript运算精度丢失的原因及解决方案都有比较详细的说明： [blog.csdn.net/qq_35271556…](https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80137474)
 
-# 浏览器相关
+## 12、defer 和async
+
+无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照<script>元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个<script>元素包含的代码解析完成后，第二个<script>包含的代码才会被解析，然后才是第三个、第四个……
+
+按照传统的做法，所有<script>元素都应该放在页面的<head>元素中, 这种做法的目的就是把所有外部文件（包括CSS 文件和JavaScript 文件）的引用都放在相同的地方。可是，在文档的<head>元素中包含所有JavaScript 文件，意味着必须等到全部JavaScript 代码都被下载、解析和执行完成以后，才能开始呈现页面的内容（浏览器在遇到<body>标签时才开始呈现内容）。对于那些需要很多JavaScript 代码的页面来说，这无疑会导致浏览器在呈现页面时出现明显的延迟，而延迟期间的浏览器窗口中将是一片空白。为了避免这个问题，现代Web 应用程序一般都把全部JavaScript 引用放在<body>元素中页面内容的后面.
+
+defer 属性只适用于外部脚本文件。这一点在HTML5 中已经明确规定，因此支持HTML5 的实现会忽略给嵌入脚本设置的defer 属性。同样与defer 类似，async 只适用于外部脚本文件，并告诉浏览器立即下载文件。但与defer不同的是，标记为async 的脚本并不保证按照指定它们的先后顺序执行。
+异步脚本一定会在页面的load 事件前执行，但可能会在DOMContentLoaded 事件触发之前或之后执行。
+
+## 13、垃圾收集方式
+
+JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）
+
+## 14、JS函数类型
+
+JS中函数有两种类型，具名函数（命名函数）和匿名函数。
+创建方式有：1. 声明函数  2.创建匿名函数表达式  3.创建具名函数表达式  4.Function构造函数  5.自执行函数  6.其他创建函数的方法
+
+
+
+# 二、ECMAScript
+
+ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number
+和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。ECMAScript
+不支持任何创建自定义类型的机制，而所有值最终都将是上述6 种数据类型之一。
+
+即便未初始化的变量会自动被赋予undefined 值，但显式地初始化变量依然是
+明智的选择。如果能够做到这一点，那么当typeof 操作符返回"undefined"值时，
+我们就知道被检测的变量还没有被声明，而不是尚未初始化。
+
+undefined 值是派生自null 值的，因此ECMA-262 规定对它们的相等性测试要返回true：
+alert(null == undefined); //true
+
+var n=null; typeof(n) ->object
+typeof检测正则表达式时，Safari 5以及之前版本和Chrome 7及之前版本中这个操作符返回"function", 在IE和Firefox中返回"Object"
+
+在局部作用域中定义的变量可以在局部环境中与全局变量互换使用
+内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。
+var color = "blue";
+function changeColor(){
+var anotherColor = "red";
+function swapColors(){
+var tempColor = anotherColor;
+anotherColor = color;
+color = tempColor;
+// 这里可以访问color、anotherColor 和tempColor
+}
+// 这里可以访问color 和anotherColor，但不能访问tempColor
+swapColors();
+}
+// 这里只能访问color
+changeColor();
+
+JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）
+
+数组中已经存在两个可以直接用来重排序的方法：reverse()和sort()。在默认情况下，sort()方法按升序排列数组项
+
+ECMAScript 5 还新增了两个归并数组的方法：reduce()和reduceRight()。这两个方法都会迭代数组的所有项，然后构建一个最终返回的值。其中，reduce()方法从数组的第一项开始，逐个遍历到最后。而reduceRight()则从数组的最后一项开始，向前遍历到第一项。
+
+var stringValue = "hello world";
+alert(stringValue.slice(3)); //"lo world"
+alert(stringValue.substring(3)); //"lo world"
+alert(stringValue.substr(3)); //"lo world"
+alert(stringValue.slice(3, 7)); //"lo w"
+alert(stringValue.substring(3,7)); //"lo w"
+alert(stringValue.substr(3, 7)); //"lo worl"
+
+indexOf()  lastIndexOf()
+ECMAScript 5 为所有字符串定义了trim()方法。这个方法会创建一个字符串的副本，删除前置及
+后缀的所有空格，然后返回结果
+
+sayHi(); //错误：函数还不存在 
+var sayHi = function(){   //这种情况下创建的函数叫做匿名函数
+alert("Hi!");
+};
+
+arguments.callee 是一个指向正在执行的函数的指针。
+
+function factorial(num){
+if (num <= 1){
+return 1;
+} else {
+return num * factorial(num-1);
+}
+}
+
+function factorial(num){   // 在严格模式下，不能通过脚本访问arguments.callee，访问这个属性会导致错误。
+if (num <= 1){
+return 1;
+} else {
+return num * arguments.callee(num-1);
+}
+}
+
+var factorial = (function f(num){  //这种方式在严格模式和非严格模式下都行得通。
+if (num <= 1){
+return 1;
+} else {
+return num * f(num-1);
+}
+});
+
+
+
+# 三、浏览器相关
 
 ## 1、浏览器从加载到渲染的过程
 
@@ -372,9 +482,78 @@ let cloneResult = JSON.parse(JSON.stringify(targetObj))
 
 2. 图标使用 IconFont 替换
 
-   
 
-# Vue
+
+
+# 四、AngularJs
+
+## 1、factory、service 和 provider
+
+- **factory**
+
+把 service 的方法和数据放在一个对象里，并返回这个对象
+
+```
+app.factory('FooService', function(){
+    return {
+        target: 'factory',
+        sayHello: function(){
+            return 'hello ' + this.target;
+        }
+    }
+});
+```
+
+- **service**
+
+通过构造函数方式创建 service，返回一个实例化对象
+
+```
+app.service('FooService', function(){
+    var self = this;
+    this.target = 'service';
+    this.sayHello = function(){
+        return 'hello ' + self.target;
+    }
+});
+```
+
+- **provider**
+
+创建一个可通过 config 配置的 service，$get 中返回的，就是用 factory 创建 service 的内容
+
+```
+app.provider('FooService', function(){
+    this.configData = 'init data';
+    this.setConfigData = function(data){
+        if(data){
+            this.configData = data;
+        }
+    }
+    this.$get = function(){
+        var self = this;
+        return {
+            target: 'provider',
+            sayHello: function(){
+                return self.configData + ' hello ' + this.target;
+            }
+        }
+    }
+});
+
+// 此处注入的是 FooService 的 provider
+app.config(function(FooServiceProvider){
+    FooServiceProvider.setConfigData('config data');
+});
+```
+
+从底层实现上来看，service 调用了 factory，返回其实例；factory 调用了 provider，返回其 `$get` 中定义的内容。factory 和 service 功能类似，只不过 factory 是普通 function，可以返回任何东西（return 的都可以被访问）；service 是构造器，可以不返回（绑定到 this 的都可以被访问）；provider 是加强版 factory，返回一个可配置的 factory。
+
+详见 [AngularJS 之 Factory vs Service vs Provider](http://www.oschina.net/translate/angularjs-factory-vs-service-vs-provider)
+
+
+
+# 五、Vue
 
 ## 1、组件间通信方式
 
@@ -526,7 +705,7 @@ v-html、v-show、v-if、v-for等等
 
 
 
-# CSS
+# 五、CSS
 
 ## 1、CSS引入方式
 
