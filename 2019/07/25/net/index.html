@@ -102,7 +102,7 @@
 
 
 
-  <meta name="keywords" content="C#,.Net,">
+  <meta name="keywords" content=".Net,">
 
 
 
@@ -114,14 +114,14 @@
 
 
 <meta name="description" content="C#       .NET">
-<meta name="keywords" content="C#,.Net">
+<meta name="keywords" content=".Net">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#, .NET">
 <meta property="og:url" content="http://foreverchenyl.github.io/2019/07/25/net/index.html">
 <meta property="og:site_name" content="Hi,YuLong">
 <meta property="og:description" content="C#       .NET">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T09:04:12.322Z">
+<meta property="og:updated_time" content="2019-07-26T06:42:55.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#, .NET">
 <meta name="twitter:description" content="C#       .NET">
@@ -355,8 +355,8 @@
   <div class="post-badge">
     
       <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/NET/" itemprop="url" rel="index">
-          <span itemprop="name">.NET</span>
+        <a href="/categories/后端技术/" itemprop="url" rel="index">
+          <span itemprop="name">后端技术</span>
         </a>
       </span>
     
@@ -416,8 +416,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NET/" itemprop="url" rel="index">
-                    <span itemprop="name">.NET</span>
+                  <a href="/categories/后端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">后端技术</span>
                   </a>
                 </span>
 
@@ -460,7 +460,14 @@
 <p>protected : 保护成员，该类内部和从该类派生的类中可以访问。 </p>
 <p>public : 公共成员，完全公开，没有访问限制。  </p>
 <p>internal: 在同一命名空间内可以访问。</p>
-<h3 id="2、C-中的委托"><a href="#2、C-中的委托" class="headerlink" title="2、C#中的委托"></a>2、C#中的委托</h3><p>委托是将一种方法作为参数代入到另一种方法。</p>
+<h3 id="2、ASP-NET-页面之间传递值的几种方式。"><a href="#2、ASP-NET-页面之间传递值的几种方式。" class="headerlink" title="2、ASP.NET 页面之间传递值的几种方式。"></a>2、ASP.NET 页面之间传递值的几种方式。</h3><ul>
+<li><p>使用QueryString, 如…?id=1; response. Redirect()…</p>
+</li>
+<li><p>使用Session变量</p>
+</li>
+<li><p>使用Server.Transfer</p>
+</li>
+</ul>
 <h3 id="3、实现多态的过程中-overload-重载-与override-重写的区别"><a href="#3、实现多态的过程中-overload-重载-与override-重写的区别" class="headerlink" title="3、实现多态的过程中 overload 重载 与override 重写的区别"></a>3、实现多态的过程中 overload 重载 与override 重写的区别</h3><p>override 重写与 overload 重载的区别：</p>
 <p>重载是方法的名称相同。不同的参数类型，不同的参数个数，不同的参数顺序，进行多次重载以适应不同的需要。</p>
 <p>Override 是进行基类中函数的重写，实现多态。</p>
@@ -484,7 +491,9 @@
 <h3 id="6、装箱和拆箱"><a href="#6、装箱和拆箱" class="headerlink" title="6、装箱和拆箱"></a>6、装箱和拆箱</h3><p>装箱是将值类型转换为引用类型 ；拆箱是将引用类型转换为值类型<br>利用装箱和拆箱功能，可通过允许值类型的任何值与Object 类型的值相互转换，将值类型与引用类型链接起来<br>例如：<br>int val = 100;<br>object obj = val;<br>Console.WriteLine (“对象的值 = {0}”, obj);<br>这是一个装箱的过程，是将值类型转换为引用类型的过程 </p>
 <p>int val = 100;<br>object obj = val;<br>int num = (int) obj;<br>Console.WriteLine (“num: {0}”, num);<br>这是一个拆箱的过程，是将值类型转换为引用类型，再由引用类型转换为值类型的过程   </p>
 <ul>
-<li>值类型只会在栈中分配。引用类型分配内存与托管堆。</li>
+<li><p>值类型只会在栈中分配。引用类型分配内存与托管堆。</p>
+<p><a href="https://blog.csdn.net/qiaoquan3/article/details/51439726" target="_blank" rel="noopener">详细</a></p>
+</li>
 </ul>
 <h3 id="7、String"><a href="#7、String" class="headerlink" title="7、String"></a>7、String</h3><ul>
 <li>string str = null 是不给他分配内存空间,而string str = “” 给它分配<br>长度为空字符串的内存空间。</li>
@@ -590,6 +599,7 @@
 </blockquote>
 <blockquote>
 </blockquote>
+<h3 id="9、C-中的委托"><a href="#9、C-中的委托" class="headerlink" title="9、C#中的委托"></a>9、C#中的委托</h3><p>委托可以把一个方法作为参数代入另一个方法。 委托可以理解为指向一个函数的引用。<br>是，是一种特殊的委托。</p>
 
       
     </div>
@@ -611,8 +621,6 @@
       
         <div class="post-tags">
           
-            <a href="/tags/C/" rel="tag"># C#</a>
-          
             <a href="/tags/Net/" rel="tag"># .Net</a>
           
         </div>
@@ -626,8 +634,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/23/interview/" rel="next" title="Interview">
-                <i class="fa fa-chevron-left"></i> Interview
+              <a href="/2019/07/23/interview/" rel="next" title="前端部分知识">
+                <i class="fa fa-chevron-left"></i> 前端部分知识
               </a>
             
           </div>
@@ -757,7 +765,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -768,7 +776,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -804,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、private、-protected、-public、internal-修饰符的访问权限"><span class="nav-number">1.</span> <span class="nav-text">1、private、 protected、 public、internal 修饰符的访问权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、C-中的委托"><span class="nav-number">2.</span> <span class="nav-text">2、C#中的委托</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、实现多态的过程中-overload-重载-与override-重写的区别"><span class="nav-number">3.</span> <span class="nav-text">3、实现多态的过程中 overload 重载 与override 重写的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、编程实现一个冒泡排序算法"><span class="nav-number">4.</span> <span class="nav-text">4、编程实现一个冒泡排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、递归算法实现"><span class="nav-number">5.</span> <span class="nav-text">5、递归算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、装箱和拆箱"><span class="nav-number">6.</span> <span class="nav-text">6、装箱和拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、String"><span class="nav-number">7.</span> <span class="nav-text">7、String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、WebService与WCF"><span class="nav-number">8.</span> <span class="nav-text">8、WebService与WCF</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、private、-protected、-public、internal-修饰符的访问权限"><span class="nav-number">1.</span> <span class="nav-text">1、private、 protected、 public、internal 修饰符的访问权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、ASP-NET-页面之间传递值的几种方式。"><span class="nav-number">2.</span> <span class="nav-text">2、ASP.NET 页面之间传递值的几种方式。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、实现多态的过程中-overload-重载-与override-重写的区别"><span class="nav-number">3.</span> <span class="nav-text">3、实现多态的过程中 overload 重载 与override 重写的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、编程实现一个冒泡排序算法"><span class="nav-number">4.</span> <span class="nav-text">4、编程实现一个冒泡排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、递归算法实现"><span class="nav-number">5.</span> <span class="nav-text">5、递归算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、装箱和拆箱"><span class="nav-number">6.</span> <span class="nav-text">6、装箱和拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、String"><span class="nav-number">7.</span> <span class="nav-text">7、String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、WebService与WCF"><span class="nav-number">8.</span> <span class="nav-text">8、WebService与WCF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、C-中的委托"><span class="nav-number">9.</span> <span class="nav-text">9、C#中的委托</span></a></li></ol></div>
             
 
           </div>
