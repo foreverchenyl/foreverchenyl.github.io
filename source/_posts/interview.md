@@ -1,10 +1,10 @@
 ---
-title: Interview
+title: 前端部分知识
 date: 2019-07-23 16:29:00
 categories:
-- 帮助文档
+- 前端
 tags:
-- tools
+- Web
 ---
 
 部分前端技术做个汇总~~~~
@@ -481,6 +481,18 @@ return num * f(num-1);
 1. 减少 DOM 操作
 
 2. 图标使用 IconFont 替换
+
+
+
+## 4、跨域
+
+- 同源策略
+
+同源策略是浏览器有一个很重要的概念。所谓同源是指，域名，协议，端口相同。不同源的客户端脚本(javascript、ActionScript)在没明确授权的情况下，不能读写对方的资源。简单的来说，浏览器允许包含在页面A的脚本访问第二个页面B的数据资源，这一切是建立在A和B页面是同源的基础上。
+
+- 跨域的几种方式
+
+jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特性，是一种新协议）跨域、设置代理服务器（由服务器替我们向不同源的服务器请求数据）、CORS（跨源资源共享，cross origin resource sharing）、iframe跨域、postMessage(包含iframe的页面向iframe传递消息)
 
 
 

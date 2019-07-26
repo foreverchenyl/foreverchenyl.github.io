@@ -8,7 +8,7 @@ tags:
 
 ---
 
-# 100+ 超全的web开发工具和资源
+# web开发工具和资源
 
 > 整合 WEB 开发包含的 JavaScript 库，前端框架，Web 应用框架，任务批处理工具 / 包管理器，编程语言 / 开发平台，数据库，icon 图标，本地开发环境搭建，协作工具，Web 开发社区，未能一一整合，欢迎评论提交哦。
 
@@ -26,10 +26,8 @@ tags:
 
 ### Web开发工具和资源整合
 
-注：工具和资源排序不分先后。
-
 ### JavaScript库
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/javascript-libraries.webp)](https://ww4.sinaimg.cn/large/72f96cbagw1f49ehwz03lj20k506e74o)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/javascript-libraries.webp)](https://ww4.sinaimg.cn/large/72f96cbagw1f49ehwz03lj20k506e74o)
 
 我敢说JavaScript语言是目前web开发最流行的编程语言。JavaScript库又称JavaScript框架，封装了很多预定义的对象和使用函数。是网站更容易兼容各式各样的浏览器。那么您就可以使用以下JavaScript库来帮助你的开发更好进行。
 
@@ -52,7 +50,7 @@ tags:
 [Lodash](https://lodash.com/)：一个 JavaScript 实用工具库,提供一致性,模块化,性能和配件等功能。
 
 ### [前端框架](https://xituqu.com/tag/front-end-framework)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/front-end-frameworks.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eh9fjvhj20k506eaab)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/front-end-frameworks.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eh9fjvhj20k506eaab)
 
 通俗的前端由HTML，CSS，JavasScript等构成。当然为了适应Web开发日益增长的需求，应运而生许多独立的前端框架，例如Bootstrap。一个优秀的框架可以为前端开发人员在开发过程中增益，减小开发压力。
 
@@ -65,7 +63,7 @@ tags:
 [uikit](http://getuikit.com/)：*UIKit*使用的变量基于LESS,具有体积小、模块化、可轻松地自定义主题及响应式界面。
 
 ### [Web应用框架](https://xituqu.com/tag/web-framework)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-application-frameworks.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ei86hctj20k506edg4)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-application-frameworks.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ei86hctj20k506edg4)
 
 Web应用框架作为一个软件框架，意在帮助和缓解开发者在进行Web应用的开发与维护时遇见的开发问题。例如：AngularJS，您可以在您的项目完全免费使用它，详细文档请您参见 [angularcdn.com](https://angularcdn.com/).
 
@@ -102,7 +100,7 @@ Web应用框架作为一个软件框架，意在帮助和缓解开发者在进�
 [CodeIgniter](https://www.codeigniter.com/)：CodeIgniter 是一个简单快速的PHP MVC框架。它为团队提供了足够的自由支持，允许开发人员更迅速地工作。
 
 ### [任务批处理工具](https://xituqu.com/tag/task-runner)/[包管理器](https://xituqu.com/tag/package-manager)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/build-systems-task-runners.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eifxrl5j20k506ejru)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/build-systems-task-runners.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eifxrl5j20k506ejru)
 
 任务批量处理工具可将你的工作流程全自动化.例如你可以创建一个任务，使用JavaScript语言编写的工具来进行自动化的处理。 然后打包，这样会大大提高开发效率。 包管理器它能跟踪所有已安装的软件、自动化进行安装和删除应用程序、以及确保所有软件都保持更新以获得最新的增强功能和错误修复。
 
@@ -115,7 +113,7 @@ Web应用框架作为一个软件框架，意在帮助和缓解开发者在进�
 [Bower](http://bower.io/)：Bower是一个客户端技术的软件包管理器，它可用于搜索、安装和卸载如JavaScript、HTML、CSS之类的网络资源。
 
 ### 编程语言 / 开发平台
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/programming-languages.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49eimuqt3j20k506ewew)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/programming-languages.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49eimuqt3j20k506ewew)
 
 所有Web开发都需要编程语言的支持.*编程语言*（programming language），是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种计算机语言让程序员能够准确地定义计算机所需要使用的数据，并精确地定义在不同情况下所应当采取的行动。.当然进行Web开发不仅仅只有一门语言来进开发。
 
@@ -144,7 +142,7 @@ Web应用框架作为一个软件框架，意在帮助和缓解开发者在进�
 [Elixir](http://elixir-lang.org/)：Elixir 是一种函数式编程语言,建立在Erlang虚拟机之上。它是一种动态语言,灵活的语法与宏支持,利用Erlang的能力来构建并发、分布式、容错应用程序与热代码升级。
 
 ### 数据库
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/databases.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eiztykmj20k506eweu)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/databases.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49eiztykmj20k506eweu)
 
 *数据库*（Database）是按照数据结构来组织、存储和管理数据的仓库。
 
@@ -159,7 +157,7 @@ Web应用框架作为一个软件框架，意在帮助和缓解开发者在进�
 [PostgreSQL](http://www.postgresql.org/)：ostgreSQL支持大部分 SQL标准并且提供了许多其他现代特性：复杂查询、外键、触发器、视图、事务完整性、MVCC。
 
 ### CSS 预处理器
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/css-preprocessors.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ej7q1o7j20k506edga)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/css-preprocessors.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ej7q1o7j20k506edga)
 
 CSS 预处理器定义了一种新的语言，其基本思想是，用一种专门的编程语言，为 CSS 增加了一些编程的特性，将 CSS 作为目标生成文件，然后开发者就只要使用这种语言进行编码工作。
 
@@ -174,7 +172,7 @@ CSS 预处理器定义了一种新的语言，其基本思想是，用一种专�
 如果你是刚刚开始使用CSS的预处理器，你可能要先使用第三方编译器进行开发，如下所示。
 
 ### [文本编辑器](https://xituqu.com/tag/text-editor) / [代码编辑器](https://xituqu.com/tag/code-editor)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/text-editors-code-editors.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ejgpwtjj20k506eglx)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/text-editors-code-editors.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ejgpwtjj20k506eglx)
 
 无论你是做笔记，敲代码，或者Markdown文档编写，一个好的文本编辑器都是必须拥有的！
 
@@ -199,7 +197,7 @@ CSS 预处理器定义了一种新的语言，其基本思想是，用一种专�
 [Emacs](https://www.gnu.org/software/emacs/)：著名的集成开发环境和文本编辑器。*Emacs*被公认为是最受专业程序员喜爱的代码编辑器之一。
 
 ### [Markdown 编辑器](https://xituqu.com/tag/markdown-editor)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/markdown-editors.webp)](https://ww4.sinaimg.cn/large/72f96cbagw1f49ejo6wj1j20k506edg1)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/markdown-editors.webp)](https://ww4.sinaimg.cn/large/72f96cbagw1f49ejo6wj1j20k506edg1)
 
 *Markdown* 是一种轻量级的「标记语言」,它的优点很多,目前也被越来越多的写作爱好者,撰稿者广泛使用。*Markdown* 十分轻量,学习成本也不高。
 
@@ -218,7 +216,7 @@ CSS 预处理器定义了一种新的语言，其基本思想是，用一种专�
 表示有些付费的Markdown编辑器宝宝买不起。
 
 ### [icon图标](https://xituqu.com/tag/icon)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/icons.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ejvaf9zj20k506emxi)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/icons.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ejvaf9zj20k506emxi)
 
 几乎每一个Web开发者，尤其是前端开发人员都会需要icon图标来增色项目。
 
@@ -231,7 +229,7 @@ CSS 预处理器定义了一种新的语言，其基本思想是，用一种专�
 [Fontello](http://fontello.com/)：一个目测有200+个图标（数量还在增加）的 Web-font 图标市场，对于广大设计师、前端开发者来说是很棒的资源。
 
 ### Git 代理 / 服务
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/git-clients.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ek4s93zj20k506eq3e)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/git-clients.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ek4s93zj20k506eq3e)
 
 Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
 
@@ -250,7 +248,7 @@ Git是一款免费、开源的分布式版本控制系统，用于敏捷高效�
 [Coding](http://ww1.sinaimg.cn/large/72f96cbajw1f4chvmh9hqj206t03ywei)：Coding 的代码托管功能除了基本的 Git 仓库以外，还有保护分支，分屏对比， Code Review 等高级功能。并且整合了 Pages 服务，质量管理，演示平台等开发工具，提升研发效率。
 
 ### [本地开发环境搭建](https://xituqu.com/tag/local-development-environment)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/local-dev-environment.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49ekcv2vqj20k506emxn)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/local-dev-environment.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49ekcv2vqj20k506emxn)
 
 根据您运行的是什么操作系统和计算机配置，有时候进行测试的时候就有可能需要搭建一个快速的本地开发环境。自己搭建很是蛮烦，不用担心，有很多将Apache，Nginx，MySQL和phpMyAdmin进行打包一体化的软件。这些软件很是方便我们来进行本地测试。
 
@@ -266,7 +264,7 @@ Git是一款免费、开源的分布式版本控制系统，用于敏捷高效�
 [Wnmp](https://www.getwnmp.org/)：WNMP是Windows下便捷，安全的Nginx+MariaDB+PHP开发环境环境集成套件包。
 
 ### 文本对比检查
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/diff-checkers.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ekq3tfpj20k506eaaa)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/diff-checkers.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ekq3tfpj20k506eaaa)
 
 Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。帮助我们更直观的看见文本之间的差异。
 
@@ -277,7 +275,7 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 当然有很多免费的文本编辑器，包括我们上面提到的也有插件和扩展，可以协助开发者方便的进行文件比较。
 
 ### 代码共享 / 代码测试
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/code-sharing.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ekurukwj20k506eq3a)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/code-sharing.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49ekurukwj20k506eq3a)
 
 前端开发者在公司内或者团体间需要进行协作，共享代码，那么一下工具很值得开发者一试。
 
@@ -290,7 +288,7 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 [Dabblet](http://dabblet.com/)：Dabblet是一个开源互动测试工具,用于测试CSS和HTML。*Dabblet*支持实时更新、匿名备份、嵌入网站、与他人共享或者存储到GitHub。
 
 ### [协作工具](https://xituqu.com/tag/collaboration-tools)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/dev-collaboration-tools.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49el0a4oxj20k506ejrq)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/dev-collaboration-tools.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49el0a4oxj20k506ejrq)
 每一个很棒的开发团队需要一种方式来保持联系，协作，来帮助提高生产力。
 
 [Slack](https://slack.com/)：Slack 是聊天群组 + 大规模工具集成 + 文件整合 + 统一搜索。
@@ -304,7 +302,7 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 [Jira](https://www.atlassian.com/software/jira)：JIRA是Atlassian公司出品的项目与事务跟踪工具，被广泛应用于缺陷跟踪、客户服务、需求收集、流程审批、任务跟踪、项目跟踪和敏捷管理等工作领域。
 
 ### 灵感创意
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/developers-inspiration.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ela424oj20k506e74e)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/developers-inspiration.webp)](https://ww3.sinaimg.cn/large/72f96cbagw1f49ela424oj20k506e74e)
 
 当我们进行开发时，偶尔迸发的灵感会使我们的项目或者产品增色不少。当然不仅仅依靠自我的灵感，我们也需要从别人的作品中得到灵感来保证我们的Web设计界面或者产品不落后这个时代。
 
@@ -313,7 +311,7 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 [Dribble](https://dribbble.com/)：Dribbble是一个面向创作家、艺术工作者、设计师等创意类作品的人群，提供作品在线服务，供网友在线查看已经完成的作品或者正在创作的作品的交流网站。
 
 ### [网站测速工具](https://xituqu.com/tag/web-test)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/website-speed-test-tools.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49elhl774j20k506eglw)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/website-speed-test-tools.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49elhl774j20k506eglw)
 网站的速度是用户体验关键因素。网站速度快与慢决定是否能更高的搜索引擎排名，更高的转换率，更低的跳出率，以及更好的整体用户体验和。值得高兴的是很多免费软件可以用于测试网站速度，帮助我们找出加载缓慢的问题，方便我们去解决。
 
 [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)：PageSpeed Insights是一款可以分析网页速度瓶颈,让网页设计人员开发出速度更快的网站的*谷歌*浏览器插件。
@@ -327,12 +325,12 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 [GTmetrix](https://gtmetrix.com/)：主要优点在于提供了丰富的详细的测量结果，并建议如何来优化网页中每个元素的，最重要的是会根据网站的具体情况，直接告诉你导致网站加载速度变慢的根源在哪里
 
 ### [Web开发社区](https://xituqu.com/tag/web-community)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-communities.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49elwu9q7j20k506edg4)
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-communities.webp)](https://ww2.sinaimg.cn/large/72f96cbagw1f49elwu9q7j20k506edg4)
 
 当开发者在开发的过程中有遇到问题时，除了询问他人以外，还可以使用搜索引擎搜索。社区的重要性就显而易见了，大部分开发者会在开发社区分享他们经验，如何避过不必要踩的坑。
 
 **国内：**
- 
+
 [谷歌开发者社区(GDG)](http://chinagdg.org/)：开放 · 分享 · 创新
 
 [segmentfault](https://segmentfault.com/)：是中国领先的*开发*者技术*社区*。 为编程爱好者提供一个纯粹、高质的技术交流的平台, 与*开发*者一起学习、交流与成长。【老实话我觉得这名字不好记】
@@ -372,7 +370,7 @@ Diff checkers 可以帮助您比较文件之间的差异，然后合并更改。
 [/r/webdev](https://www.reddit.com/r/webdev): 关于Web开发和开发者的新闻
 
 ### [Web开发新闻聚合](https://xituqu.com/tag/web-news)
-[![100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-newsletters.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49em7ogivj20k506e74n)阅读开发和设计的技术干货，及时的知道技术圈内更新了什么，保持信息流新鲜，有助于我们更好的开发！
+[100+ 超全的web开发工具和资源-稀土区](https://blog.keycdn.com/blog/wp-content/uploads/2016/02/web-development-newsletters.webp)](https://ww1.sinaimg.cn/large/72f96cbagw1f49em7ogivj20k506e74n)阅读开发和设计的技术干货，及时的知道技术圈内更新了什么，保持信息流新鲜，有助于我们更好的开发！
 
 **国内：**
 [掘金](http://gold.xitu.io/#/)：掘金是中国质量最高的技术分享社区，邀请稀土用户作为Co-Editor 来分享优质的技术干货，从前端到后端开发，从设计到产品，让每一个*掘金*用户都能挖掘到有价值的干货。

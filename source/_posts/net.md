@@ -2,9 +2,8 @@
 title: C#, .NET
 date: 2019-07-25 16:59:03
 categories:
-- .NET
+- 后端技术
 tags:
-- C#
 - .Net
 ---
 
@@ -24,11 +23,15 @@ internal: 在同一命名空间内可以访问。
 
 
 
-### 2、C#中的委托
+### 2、ASP.NET 页面之间传递值的几种方式。
 
-委托是将一种方法作为参数代入到另一种方法。
+- 使用QueryString, 如…?id=1; response. Redirect()…
 
+- 使用Session变量
 
+- 使用Server.Transfer
+
+  
 
 ### 3、实现多态的过程中 overload 重载 与override 重写的区别
 
@@ -146,6 +149,8 @@ Console.WriteLine ("num: {0}", num);
 
 - 值类型只会在栈中分配。引用类型分配内存与托管堆。
 
+  [详细](https://blog.csdn.net/qiaoquan3/article/details/51439726)
+  
   
 
 ### 7、String
@@ -275,3 +280,10 @@ Console.WriteLine ("num: {0}", num);
 > ```
 >
 >  
+
+
+
+### 9、C#中的委托
+
+委托可以把一个方法作为参数代入另一个方法。 委托可以理解为指向一个函数的引用。
+是，是一种特殊的委托。
