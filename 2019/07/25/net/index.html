@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="C#       .NET">
+<meta name="description" content="C#       .NET汇总~">
 <meta name="keywords" content=".Net">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C#, .NET">
+<meta property="og:title" content="C#, .NET笔记">
 <meta property="og:url" content="http://foreverchenyl.github.io/2019/07/25/net/index.html">
 <meta property="og:site_name" content="Hi,YuLong">
-<meta property="og:description" content="C#       .NET">
+<meta property="og:description" content="C#       .NET汇总~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-26T06:42:55.545Z">
+<meta property="og:updated_time" content="2019-07-30T09:05:22.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C#, .NET">
-<meta name="twitter:description" content="C#       .NET">
+<meta name="twitter:title" content="C#, .NET笔记">
+<meta name="twitter:description" content="C#       .NET汇总~">
 
 
 
@@ -185,7 +185,7 @@
 
 
 
-  <title>C#, .NET | Hi,YuLong</title>
+  <title>C#, .NET笔记 | Hi,YuLong</title>
   
 
 
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C#, .NET</h1>
+          <h1 class="post-title" itemprop="name headline">C#, .NET笔记</h1>
         
 
         <div class="post-meta">
@@ -453,7 +453,7 @@
       
 
       
-        <p>C#       .NET</p>
+        <p>C#       .NET汇总<del>~</del></p>
 <a id="more"></a>
 
 <h3 id="1、private、-protected、-public、internal-修饰符的访问权限"><a href="#1、private、-protected、-public、internal-修饰符的访问权限" class="headerlink" title="1、private、 protected、 public、internal 修饰符的访问权限"></a>1、private、 protected、 public、internal 修饰符的访问权限</h3><p>private : 私有成员, 在类的内部才可以访问(只能从其声明上下文中进行访问)。  </p>
@@ -600,6 +600,45 @@
 <blockquote>
 </blockquote>
 <h3 id="9、C-中的委托"><a href="#9、C-中的委托" class="headerlink" title="9、C#中的委托"></a>9、C#中的委托</h3><p>委托可以把一个方法作为参数代入另一个方法。 委托可以理解为指向一个函数的引用。<br>是，是一种特殊的委托。</p>
+<h3 id="10、反序列化的使用"><a href="#10、反序列化的使用" class="headerlink" title="10、反序列化的使用"></a>10、反序列化的使用</h3><p>如果XML是由类型序列化得到那的，那么反序列化的调用代码是很简单的，<br>反之，如果要面对一个没有类型的XML，就需要我们先设计一个（或者一些）类型出来，<br>这是一个逆向推导的过程，请参考以下步骤：</p>
+<ol>
+<li>首先要分析整个XML结构，定义与之匹配的类型</li>
+<li>如果XML结构有嵌套层次，则需要定义多个类型与之匹配</li>
+<li>定义具体类型（一个层级下的XML结构）时，请参考以下表格。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>XML形式</th>
+<th align="right">处理方法</th>
+<th>补充说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>XmlElement</td>
+<td align="right">定义一个属性</td>
+<td>属性名与节点名字匹配</td>
+</tr>
+<tr>
+<td>XmlAttribute</td>
+<td align="right">[XmlAttribute] 加到属性上</td>
+<td></td>
+</tr>
+<tr>
+<td>InnerText</td>
+<td align="right">[XmlText] 加到属性上</td>
+<td>一个类型只能使用一次</td>
+</tr>
+<tr>
+<td>节点重命名</td>
+<td align="right">根节点：[XmlType(“testClass”)] 元素节点：[XmlElement(“name”)] 属性节点：[XmlAttribute(“id”)] 列表子元素节点：[XmlArrayItem(“Detail”)] 列表元素自身：[XmlArray(“Items”)]</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>默认情况下，类型的所有公开的数据成员（属性，字段）在序列化时都会被输出， 如果希望排除某些成员，可以用<strong>[XmlIgnore]</strong>来指出</li>
+</ul>
+<p><a href="https://www.cnblogs.com/fish-li/archive/2013/05/05/3061816.html" target="_blank" rel="noopener">More</a></p>
 
       
     </div>
@@ -634,8 +673,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/23/interview/" rel="next" title="前端部分知识">
-                <i class="fa fa-chevron-left"></i> 前端部分知识
+              <a href="/2019/07/23/web/" rel="next" title="Web前端">
+                <i class="fa fa-chevron-left"></i> Web前端
               </a>
             
           </div>
@@ -643,6 +682,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/30/vue/" rel="prev" title="vue笔记">
+                vue笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -765,7 +808,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -812,7 +855,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、private、-protected、-public、internal-修饰符的访问权限"><span class="nav-number">1.</span> <span class="nav-text">1、private、 protected、 public、internal 修饰符的访问权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、ASP-NET-页面之间传递值的几种方式。"><span class="nav-number">2.</span> <span class="nav-text">2、ASP.NET 页面之间传递值的几种方式。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、实现多态的过程中-overload-重载-与override-重写的区别"><span class="nav-number">3.</span> <span class="nav-text">3、实现多态的过程中 overload 重载 与override 重写的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、编程实现一个冒泡排序算法"><span class="nav-number">4.</span> <span class="nav-text">4、编程实现一个冒泡排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、递归算法实现"><span class="nav-number">5.</span> <span class="nav-text">5、递归算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、装箱和拆箱"><span class="nav-number">6.</span> <span class="nav-text">6、装箱和拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、String"><span class="nav-number">7.</span> <span class="nav-text">7、String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、WebService与WCF"><span class="nav-number">8.</span> <span class="nav-text">8、WebService与WCF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、C-中的委托"><span class="nav-number">9.</span> <span class="nav-text">9、C#中的委托</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、private、-protected、-public、internal-修饰符的访问权限"><span class="nav-number">1.</span> <span class="nav-text">1、private、 protected、 public、internal 修饰符的访问权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、ASP-NET-页面之间传递值的几种方式。"><span class="nav-number">2.</span> <span class="nav-text">2、ASP.NET 页面之间传递值的几种方式。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、实现多态的过程中-overload-重载-与override-重写的区别"><span class="nav-number">3.</span> <span class="nav-text">3、实现多态的过程中 overload 重载 与override 重写的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、编程实现一个冒泡排序算法"><span class="nav-number">4.</span> <span class="nav-text">4、编程实现一个冒泡排序算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、递归算法实现"><span class="nav-number">5.</span> <span class="nav-text">5、递归算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、装箱和拆箱"><span class="nav-number">6.</span> <span class="nav-text">6、装箱和拆箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、String"><span class="nav-number">7.</span> <span class="nav-text">7、String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、WebService与WCF"><span class="nav-number">8.</span> <span class="nav-text">8、WebService与WCF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、C-中的委托"><span class="nav-number">9.</span> <span class="nav-text">9、C#中的委托</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、反序列化的使用"><span class="nav-number">10.</span> <span class="nav-text">10、反序列化的使用</span></a></li></ol></div>
             
 
           </div>
