@@ -1,5 +1,5 @@
 ---
-title: 前端部分知识
+title: Web前端
 date: 2019-07-23 16:29:00
 categories:
 - 前端
@@ -339,6 +339,40 @@ JS中函数有两种类型，具名函数（命名函数）和匿名函数。
 
 # 二、ECMAScript
 
+## 1、let 和 const 命令
+
+ES6 新增了`let`命令，用来声明变量。它的用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效。
+
+- 不存在变量提升
+- 暂时性死区
+- 不允许重复声明
+
+```javascript
+// 报错
+function func() {
+  let a = 10;
+  var a = 1;
+}
+
+// 报错
+function func() {
+  let a = 10;
+  let a = 1;
+}
+```
+
+- `let`实际上为 JavaScript 新增了块级作用域。
+
+[LearnMore](http://es6.ruanyifeng.com/#docs/let)
+
+
+
+## 2、声明变量方法
+
+ES5 只有两种声明变量的方法：`var`命令和`function`命令。ES6 除了添加`let`和`const`命令，后面章节还会提到，另外两种声明变量的方法：`import`命令和`class`命令。所以，ES6 一共有 6 种声明变量的方法。
+
+
+
 ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number
 和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。ECMAScript
 不支持任何创建自定义类型的机制，而所有值最终都将是上述6 种数据类型之一。
@@ -454,7 +488,20 @@ return num * f(num-1);
 
 参考文章：[segmentfault.com/a/119000001…](https://link.juejin.im?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011212929)
 
-## 3、性能优化
+
+
+## 3、输入 URL 到展现涉及的缓存环节
+
+- 地址栏缓存
+- 检查HSTS预加载列表
+- DNS缓存
+- ARP（地址解析协议）缓存
+
+参考文章：[More](https://toutiao.io/posts/9tv7pf)
+
+
+
+## 4、性能优化
 
 参考文章：[blog.csdn.net/na_sama/art…](https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fna_sama%2Farticle%2Fdetails%2F51291798)
 
@@ -484,7 +531,7 @@ return num * f(num-1);
 
 
 
-## 4、跨域
+## 5、跨域
 
 - 同源策略
 
@@ -562,158 +609,6 @@ app.config(function(FooServiceProvider){
 从底层实现上来看，service 调用了 factory，返回其实例；factory 调用了 provider，返回其 `$get` 中定义的内容。factory 和 service 功能类似，只不过 factory 是普通 function，可以返回任何东西（return 的都可以被访问）；service 是构造器，可以不返回（绑定到 this 的都可以被访问）；provider 是加强版 factory，返回一个可配置的 factory。
 
 详见 [AngularJS 之 Factory vs Service vs Provider](http://www.oschina.net/translate/angularjs-factory-vs-service-vs-provider)
-
-
-
-# 五、Vue
-
-## 1、组件间通信方式
-
-Vue的官方文档对组件间的通信方式做了详细的说明：[cn.vuejs.org](https://link.juejin.im?target=https%3A%2F%2Fcn.vuejs.org)
-
-### 父组件向子组件传输
-
-- 最常用的方式是在子组件标签上传入数据，在子组件内部用`props`接收：
-
-```
-// 父组件
-<template>
-  <children name="boy"></children>
-</template>
-<script>
-// 子组件：children
-export default {
-  props: {
-    name: String
-  }
-}
-</script>
-复制代码
-```
-
-- 还可以在子组件中用 `this.$parent` 访问父组件的实例，不过官方文档有这样一段文字，很好的说明了 `$parent` 的意义：节制地使用 `$parent` 和 `$children` —— 它们的主要目的是作为访问组件的应急方法。更推荐用 `props` 和 `events` 实现父子组件通信。
-
-### 子组件向父组件传输
-
-- 一般在子组件中使用 `this.$emit('eventName', 'data')`，然后在父组件中的子组件标签上监听 `eventName` 事件，并在参数中获取传过来的值。
-
-```
-// 子组件
-export default {
-  mounted () {
-    this.$emit('mounted', 'Children is mounted.')
-  }
-}
-复制代码
-<template>
-  <children @mounted="mountedHandle"></children>
-</template>
-<script>
-// 父组件
-export default {
-  methods: {
-    mountedHandle (data) {
-      console.log(data) // Children is mounted.
-    }
-  }
-}
-</script>
-复制代码
-```
-
-- 与 `$parent` 一样，在父组件中可以通过访问 `this.$children` 来访问组件的所有子组件实例。
-
-### 非父子组件之间的数据传递
-
-- 对于非父子组件间，且具有复杂组件层级关系的情况，可以通过 `Vuex` 进行组件间数据传递： [vuex.vuejs.org/zh/](https://link.juejin.im?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2F)
-- 在 `Vue 1.0` 中常用的 `event bus` 方式进行的全局数据传递，在 `Vue 2.0` 中已经被移除，官方文档中有说明：`$dispatch` 和 `$broadcast` 已经被弃用。请使用更多简明清晰的组件间通信和更好的状态管理方案，如：`Vuex`。
-
-## 2、双向绑定原理
-
-[blog.seosiwei.com/detail/35](https://link.juejin.im?target=https%3A%2F%2Fblog.seosiwei.com%2Fdetail%2F35) [blog.seosiwei.com/detail/36](https://link.juejin.im?target=https%3A%2F%2Fblog.seosiwei.com%2Fdetail%2F36) [blog.seosiwei.com/detail/37](https://link.juejin.im?target=https%3A%2F%2Fblog.seosiwei.com%2Fdetail%2F37)
-
-- 在组件内部实现一个双向数据绑定
-
-假设有一个输入框组件，用户输入时，同步父组件页面中的数据
-具体思路：父组件通过 props 传值给子组件，子组件通过 $emit 来通知父组件修改相应的props值，具体实现如下：
-
-```
-import Vue from 'vue'
-
-const component = {
-  props: ['value'],
-  template: `
-    <div>
-      <input type="text" @input="handleInput" :value="value">
-    </div>
-  `,
-  data () {
-    return {
-    }
-  },
-  methods: {
-    handleInput (e) {
-      this.$emit('input', e.target.value)
-    }
-  }
-}
-
-new Vue({
-  components: {
-    CompOne: component
-  },
-  el: '#root',
-  template: `
-    <div>
-      <comp-one :value1="value" @input="value = arguments[0]"></comp-one>
-    </div>
-  `,
-  data () {
-    return {
-      value: '123'
-    }
-  }
-})
-```
-
-我们在父组件中做了两件事，一是给子组件传入props，二是监听input事件并同步自己的value属性。那么这两步操作能否再精简一下呢？答案是可以的，你只需要修改父组件：
-
-```
-template: `
-    <div>
-      <!--<comp-one :value1="value" @input="value = arguments[0]"></comp-one>-->
-      <comp-one v-model="value"></comp-one>
-    </div>
-  `
-```
-
-v-model 实际上会帮我们完成上面的两步操作。
-
-## 3、路由导航钩子
-
-[router.vuejs.org/zh-cn/advan…](https://link.juejin.im?target=https%3A%2F%2Frouter.vuejs.org%2Fzh-cn%2Fadvanced%2Fnavigation-guards.html)
-
-## 4、对MVVM开发模式的理解
-
-MVVM分为Model、View、ViewModel三者。
-**Model** 代表数据模型，数据和业务逻辑都在Model层中定义；
-**View** 代表UI视图，负责数据的展示；
-**ViewModel** 负责监听 **Model** 中数据的改变并且控制视图的更新，处理用户交互操作；
-**Model** 和 **View** 并无直接关联，而是通过 **ViewModel** 来进行联系的，**Model** 和 **ViewModel** 之间有着双向数据绑定的联系。因此当 **Model** 中的数据改变时会触发 **View** 层的刷新，**View** 中由于用户交互操作而改变的数据也会在 **Model** 中同步。
-这种模式实现了 **Model** 和 **View** 的数据自动同步，因此开发者只需要专注对数据的维护操作即可，而不需要自己操作 **dom**。
-
-- Vue指令
-
-v-html、v-show、v-if、v-for等等
-
-* v-if 和 v-show 的区别: 
-
-```v-show 仅仅控制元素的显示方式，将 display 属性在 block 和 none 来回切换；而v-if会控制这个 DOM 节点的存在与否。当我们需要经常切换某个元素的显示/隐藏时，使用v-show会更加节省性能上的开销；当只需要一次显示或隐藏时，使用v-if更加合理。```
-
-## 5、Vue的响应式原理
-
-当一个Vue实例创建时，vue会遍历data选项的属性，用 **Object.defineProperty** 将它们转为 getter/setter并且在内部追踪相关依赖，在属性被访问和修改时通知变化。
-每个组件实例都有相应的 watcher 程序实例，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知 watcher 重新计算，从而致使它关联的组件得以更新。
 
 
 
