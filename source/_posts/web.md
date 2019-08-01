@@ -669,3 +669,78 @@ Id选择器
 <link href='common.css' rel='stylesheet'/>
 
 那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式来加载 css ，而不是使用 @import 方式。
+
+
+
+## 7、CSS布局
+
+```
+margin: 10px 20px 10px 20px;
+```
+
+这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：**上右下左**。
+
+- 样式覆盖
+  - id > class
+  - class类的声明部分中的 class 声明的顺序是重要的，第二个声明将始终优先于第一个声明。
+  - !important > 内联样式 >  id > class > 标签
+
+- position：static，relatice，absolute，fixed，sticky
+
+  relative定位原点是自己，absolute定位原点是离自己最近的父元素
+
+
+
+## 8、CSS3中新添加的样式
+
+阴影，rgba，圆角
+
+- border-radius：允许向元素添加圆角
+
+- box-shadow：阴影
+
+- 设置多层阴影：box-shadow:10px 10px 5px 5px gray,15px 15px 5px 5px blue,20px 20px 5px 5px gray;/* 多层阴影*/
+
+- border-image属性用于设置图片边框
+
+  
+
+# 六、HTML
+
+## 1、HTML5新特性、移除元素
+
+新特性：
+
+画布canvas
+
+用于媒介播放的video和audio
+
+新的语义化标签：article，header，nav，section，footer
+
+新的本地存储：localstorage，sessionstorage
+
+新的表单控件：date，time，calendar，url
+
+新的技术：websocket，web worker，geoloacation
+
+移除得元素：
+
+可以用css代替的元素，font，fontbase，center，s，tt，u
+
+
+
+## 2、 HTML5 存储类型以及区别
+
+cookies，localstorage，sessionstorage
+cookies的存储容量比较小而且数量有限制，一般为4K左右，localstorage的可以高达5M以上
+cookies在设置的时间之前有效，localstorage本地永久存储，sessionstorage在当前窗口有效
+cookies每次http请求都会被携带，会造成带宽浪费，localstorage和sessionstorage是保存在本地
+
+
+
+## 3、document load 和document ready 的区别
+
+1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数
+问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响
+2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行
+在原生的jS中不包括ready()这个方法，只有load方法就是onload事件

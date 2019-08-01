@@ -1,11 +1,13 @@
 ---
-title: vue笔记
+title: vue学习笔记
 date: 2019-07-30 16:29:00
 categories:
 - 前端
 tags:
 - vue
 ---
+
+Start Vue
 
 vue.js汇总~~~~
 
