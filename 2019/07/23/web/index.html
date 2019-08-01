@@ -121,7 +121,7 @@
 <meta property="og:site_name" content="Hi,YuLong">
 <meta property="og:description" content="部分前端技术做个汇总~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-30T09:06:05.061Z">
+<meta property="og:updated_time" content="2019-07-31T09:20:07.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web前端">
 <meta name="twitter:description" content="部分前端技术做个汇总~">
@@ -725,6 +725,43 @@
 <link href="common.css" rel="stylesheet">
 
 <p>那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式来加载 css ，而不是使用 @import 方式。</p>
+<h2 id="7、CSS布局"><a href="#7、CSS布局" class="headerlink" title="7、CSS布局"></a>7、CSS布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10px 20px 10px 20px;</span><br></pre></td></tr></table></figure>
+
+<p>这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：<strong>上右下左</strong>。</p>
+<ul>
+<li><p>样式覆盖</p>
+<ul>
+<li>id > class</li>
+<li>class类的声明部分中的 class 声明的顺序是重要的，第二个声明将始终优先于第一个声明。</li>
+<li>!important > 内联样式 >  id > class > 标签</li>
+</ul>
+</li>
+<li><p>position：static，relatice，absolute，fixed，sticky</p>
+<p>relative定位原点是自己，absolute定位原点是离自己最近的父元素</p>
+</li>
+</ul>
+<h2 id="8、CSS3中新添加的样式"><a href="#8、CSS3中新添加的样式" class="headerlink" title="8、CSS3中新添加的样式"></a>8、CSS3中新添加的样式</h2><p>阴影，rgba，圆角</p>
+<ul>
+<li><p>border-radius：允许向元素添加圆角</p>
+</li>
+<li><p>box-shadow：阴影</p>
+</li>
+<li><p>设置多层阴影：box-shadow:10px 10px 5px 5px gray,15px 15px 5px 5px blue,20px 20px 5px 5px gray;/* 多层阴影*/</p>
+</li>
+<li><p>border-image属性用于设置图片边框</p>
+</li>
+</ul>
+<h1 id="六、HTML"><a href="#六、HTML" class="headerlink" title="六、HTML"></a>六、HTML</h1><h2 id="1、HTML5新特性、移除元素"><a href="#1、HTML5新特性、移除元素" class="headerlink" title="1、HTML5新特性、移除元素"></a>1、HTML5新特性、移除元素</h2><p>新特性：</p>
+<p>画布canvas</p>
+<p>用于媒介播放的video和audio</p>
+<p>新的语义化标签：article，header，nav，section，footer</p>
+<p>新的本地存储：localstorage，sessionstorage</p>
+<p>新的表单控件：date，time，calendar，url</p>
+<p>新的技术：websocket，web worker，geoloacation</p>
+<p>移除得元素：</p>
+<p>可以用css代替的元素，font，fontbase，center，s，tt，u</p>
+<h2 id="2、-HTML5-存储类型以及区别"><a href="#2、-HTML5-存储类型以及区别" class="headerlink" title="2、 HTML5 存储类型以及区别"></a>2、 HTML5 存储类型以及区别</h2><p>cookies，localstorage，sessionstorage<br>cookies的存储容量比较小而且数量有限制，一般为4K左右，localstorage的可以高达5M以上<br>cookies在设置的时间之前有效，localstorage本地永久存储，sessionstorage在当前窗口有效<br>cookies每次http请求都会被携带，会造成带宽浪费，localstorage和sessionstorage是保存在本地</p>
+<h2 id="3、document-load-和document-ready-的区别"><a href="#3、document-load-和document-ready-的区别" class="headerlink" title="3、document load 和document ready 的区别"></a>3、document load 和document ready 的区别</h2><p>1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数<br>问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响<br>2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行<br>在原生的jS中不包括ready()这个方法，只有load方法就是onload事件</p>
 
       
     </div>
@@ -941,7 +978,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、JavaScript基础"><span class="nav-number">1.</span> <span class="nav-text">一、JavaScript基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、声明提前类问题"><span class="nav-number">1.1.</span> <span class="nav-text">1、声明提前类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、浏览器存储"><span class="nav-number">1.2.</span> <span class="nav-text">2、浏览器存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage，sessionStorage和cookie的区别"><span class="nav-number">1.2.1.</span> <span class="nav-text">localStorage，sessionStorage和cookie的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、跨域"><span class="nav-number">1.3.</span> <span class="nav-text">3、跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Promise的使用及原理"><span class="nav-number">1.4.</span> <span class="nav-text">4、Promise的使用及原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、JavaScript事件循环机制"><span class="nav-number">1.5.</span> <span class="nav-text">5、JavaScript事件循环机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、ES6作用域及let和var的区别"><span class="nav-number">1.6.</span> <span class="nav-text">6、ES6作用域及let和var的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、闭包"><span class="nav-number">1.7.</span> <span class="nav-text">7、闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、原型及原型链"><span class="nav-number">1.8.</span> <span class="nav-text">8、原型及原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、浏览器的回流与重绘-Reflow-amp-Repaint"><span class="nav-number">1.9.</span> <span class="nav-text">9、浏览器的回流与重绘 (Reflow &amp; Repaint)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方案："><span class="nav-number">1.9.1.</span> <span class="nav-text">优化方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS"><span class="nav-number">1.9.1.1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.9.1.2.</span> <span class="nav-text">JavaScript</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、JS对象的深复制"><span class="nav-number">1.10.</span> <span class="nav-text">10、JS对象的深复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、JS运算精度丢失"><span class="nav-number">1.11.</span> <span class="nav-text">11、JS运算精度丢失</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、defer-和async"><span class="nav-number">1.12.</span> <span class="nav-text">12、defer 和async</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、JavaScript基础"><span class="nav-number">1.</span> <span class="nav-text">一、JavaScript基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、声明提前类问题"><span class="nav-number">1.1.</span> <span class="nav-text">1、声明提前类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、浏览器存储"><span class="nav-number">1.2.</span> <span class="nav-text">2、浏览器存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage，sessionStorage和cookie的区别"><span class="nav-number">1.2.1.</span> <span class="nav-text">localStorage，sessionStorage和cookie的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、跨域"><span class="nav-number">1.3.</span> <span class="nav-text">3、跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Promise的使用及原理"><span class="nav-number">1.4.</span> <span class="nav-text">4、Promise的使用及原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、JavaScript事件循环机制"><span class="nav-number">1.5.</span> <span class="nav-text">5、JavaScript事件循环机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、ES6作用域及let和var的区别"><span class="nav-number">1.6.</span> <span class="nav-text">6、ES6作用域及let和var的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、闭包"><span class="nav-number">1.7.</span> <span class="nav-text">7、闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、原型及原型链"><span class="nav-number">1.8.</span> <span class="nav-text">8、原型及原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、浏览器的回流与重绘-Reflow-amp-Repaint"><span class="nav-number">1.9.</span> <span class="nav-text">9、浏览器的回流与重绘 (Reflow &amp; Repaint)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方案："><span class="nav-number">1.9.1.</span> <span class="nav-text">优化方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS"><span class="nav-number">1.9.1.1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.9.1.2.</span> <span class="nav-text">JavaScript</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、JS对象的深复制"><span class="nav-number">1.10.</span> <span class="nav-text">10、JS对象的深复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、JS运算精度丢失"><span class="nav-number">1.11.</span> <span class="nav-text">11、JS运算精度丢失</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、defer-和async"><span class="nav-number">1.12.</span> <span class="nav-text">12、defer 和async</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、CSS布局"><span class="nav-number">1.13.</span> <span class="nav-text">7、CSS布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、CSS3中新添加的样式"><span class="nav-number">1.14.</span> <span class="nav-text">8、CSS3中新添加的样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、HTML"><span class="nav-number">2.</span> <span class="nav-text">六、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、HTML5新特性、移除元素"><span class="nav-number">2.1.</span> <span class="nav-text">1、HTML5新特性、移除元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-HTML5-存储类型以及区别"><span class="nav-number">2.2.</span> <span class="nav-text">2、 HTML5 存储类型以及区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、document-load-和document-ready-的区别"><span class="nav-number">2.3.</span> <span class="nav-text">3、document load 和document ready 的区别</span></a></li></ol></li></ol></div>
             
 
           </div>
