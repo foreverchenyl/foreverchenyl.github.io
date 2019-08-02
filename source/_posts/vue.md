@@ -300,3 +300,114 @@ computed 是计算属性，依赖其他属性计算值，并且 computed 的值�
 watch 监听到值的变化就会执行回调，在回调中可以进行一些逻辑操作。
 
 所以一般来说需要依赖别的属性来动态获得值的时候可以使用 computed，对于监听到值的变化需要做一些复杂业务逻辑的情况可以使用 watch。
+
+
+
+## 10、vuex
+
+Vuex 是一个专为 Vue.js 应用程序开发的**状态管理模式**。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+
+每一个 Vuex 应用的核心就是 store（仓库）。“store”基本上就是一个容器，它包含着你的应用中大部分的**状态 (state)**。
+
+![vuex](https://vuex.vuejs.org/vuex.png)
+
+Vuex 通过 `store` 选项，提供了一种机制将状态从根组件“注入”到每一个子组件中（需调用 `Vue.use(Vuex)`）：
+
+```js
+const app = new Vue({
+  el: '#app',
+  // 把 store 对象提供给 “store” 选项，这可以把 store 的实例注入所有的子组件
+  store,
+  components: { Counter },
+  template: `
+    <div class="app">
+      <counter></counter>
+    </div>
+  `
+})
+```
+
+通过在根实例中注册 `store` 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 `this.$store` 访问到。让我们更新下 `Counter` 的实现：
+
+```js
+const Counter = {
+  template: `<div>{{ count }}</div>`,
+  computed: {
+    count () {
+      return this.$store.state.count
+    }
+  }
+}
+```
+
+
+
+1、vuex的属性？
+
+答：有五种，分别是 State、 Getter、Mutation 、Action、 Module
+
+
+
+1.1、state
+
+​        state为单一状态树，在state中需要定义我们所需要管理的数组、对象、字符串等等，只有在这里定义了，在vue.js的组件中才能获取你定义的这个对象的状态。
+
+- mapState
+
+- State特性
+
+Vuex就是一个仓库，仓库里面放了很多对象。其中state就是数据源存放地，对应于与一般Vue对象里面的data。
+state里面存放的数据是响应式的，Vue组件从store中读取数据，若是store中的数据发生改变，依赖这个数据的组件也会发生更新。
+它通过mapState把全局的 state 和 getters 映射到当前组件的 computed 计算属性中。
+
+
+
+1.2、getter
+
+​        getter有点类似vue.js的计算属性，当我们需要从store的state中派生出一些状态，那么我们就需要使用getter，getter会接收state作为第一个参数，而且getter的返回值会根据它的依赖被缓存起来，只有getter中的依赖值（state中的某个需要派生状态的值）发生改变的时候才会被重新计算。
+
+虽然在组件内也可以做计算属性，但是getters 可以在多组件之间复用
+
+- 也可以通过让 getter 返回一个函数，来实现给 getter 传参。在你对 store 里的数组进行查询时非常有用。
+
+  ```js
+  getters: {
+    // ...
+    getTodoById: (state) => (id) => {
+      return state.todos.find(todo => todo.id === id)
+    }
+  }
+  ```
+
+- mapGetters
+
+
+
+1.3、mutation
+
+​        更改store中state状态的唯一方法就是提交mutation，就很类似事件。每个mutation都有一个字符串类型的事件类型和一个回调函数，我们需要改变state的值就要在回调函数中改变。我们要执行这个回调函数，那么我们需要执行一个相应的调用方法：store.commit。
+
+更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。
+
+mutation 都是同步事务。
+
+[mutation](https://vuex.vuejs.org/zh/guide/mutations.html)
+
+
+
+1.4、action
+
+​        action可以提交mutation，在action中可以执行store.commit，而且action中可以有任何的异步操作。在页面中如果我们要嗲用这个action，则需要执行store.dispatch
+
+Action 类似于 mutation，不同在于：
+
+- Action 提交的是 mutation，而不是直接变更状态。
+- Action 可以包含任意异步操作。
+
+调用异步 API 和分发多重 mutation
+
+
+
+1.5、module
+
+​        module其实只是解决了当state中很复杂臃肿的时候，module可以将store分割成模块，每个模块中拥有自己的state、mutation、action和getter。
