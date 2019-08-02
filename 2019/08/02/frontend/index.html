@@ -117,14 +117,16 @@
 <meta name="keywords" content="Web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web前端">
-<meta property="og:url" content="http://foreverchenyl.github.io/2019/07/23/web/index.html">
+<meta property="og:url" content="http://foreverchenyl.github.io/2019/08/02/frontend/index.html">
 <meta property="og:site_name" content="Hi,YuLong">
 <meta property="og:description" content="部分前端技术做个汇总~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-31T09:20:07.131Z">
+<meta property="og:image" content="https://jian2333.github.io/images/pj-1.jpg">
+<meta property="og:updated_time" content="2019-08-02T03:33:07.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web前端">
 <meta name="twitter:description" content="部分前端技术做个汇总~">
+<meta name="twitter:image" content="https://jian2333.github.io/images/pj-1.jpg">
 
 
 
@@ -179,7 +181,7 @@
 
 
 
-  <link rel="canonical" href="http://foreverchenyl.github.io/2019/07/23/web/">
+  <link rel="canonical" href="http://foreverchenyl.github.io/2019/08/02/frontend/">
 
 
 
@@ -348,8 +350,8 @@
   
   
   <div class="post-date">
-			<div class="post-month">07月</div>
-			<div class="post-day">23</div>
+			<div class="post-month">08月</div>
+			<div class="post-day">02</div>
 	</div>
   
   <div class="post-badge">
@@ -364,7 +366,7 @@
   
 
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverchenyl.github.io/2019/07/23/web/">
+    <link itemprop="mainEntityOfPage" href="http://foreverchenyl.github.io/2019/08/02/frontend/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YuLong">
@@ -393,8 +395,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-23T16:29:00+08:00">
-                2019-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-02T11:29:00+08:00">
+                2019-08-02
               </time>
             
 
@@ -456,8 +458,8 @@
         <p>部分前端技术做个汇总<del>~</del></p>
 <a id="more"></a>
 
-<h1 id="一、JavaScript基础"><a href="#一、JavaScript基础" class="headerlink" title="一、JavaScript基础"></a>一、JavaScript基础</h1><p>一个完整的JavaScript 实现应该由下列三<br>个不同的部分组成（见图1-1）。<br>q 核心（ECMAScript）<br>q 文档对象模型（DOM）<br>q 浏览器对象模型（BOM）</p>
-<h2 id="1、声明提前类问题"><a href="#1、声明提前类问题" class="headerlink" title="1、声明提前类问题"></a>1、声明提前类问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Foo() &#123;</span><br><span class="line">    getName = function () &#123; alert (1); &#125;;</span><br><span class="line">    return this;</span><br><span class="line">&#125;</span><br><span class="line">Foo.getName = function () &#123; alert (2);&#125;;</span><br><span class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</span><br><span class="line">var getName = function () &#123; alert (4);&#125;;</span><br><span class="line">function getName() &#123; alert (5);&#125;</span><br><span class="line"></span><br><span class="line">// 请写出以下输出结果：</span><br><span class="line">Foo.getName();</span><br><span class="line">getName(); // 声明提前</span><br><span class="line">Foo().getName();</span><br><span class="line">getName();</span><br><span class="line">new Foo.getName();</span><br><span class="line">new Foo().getName();</span><br><span class="line">new new Foo().getName();</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+<h2 id="一、JavaScript基础"><a href="#一、JavaScript基础" class="headerlink" title="一、JavaScript基础"></a>一、JavaScript基础</h2><p>一个完整的JavaScript 实现应该由下列三<br>个不同的部分组成（见图1-1）。<br>q 核心（ECMAScript）<br>q 文档对象模型（DOM）<br>q 浏览器对象模型（BOM）</p>
+<h3 id="1、声明提前类问题"><a href="#1、声明提前类问题" class="headerlink" title="1、声明提前类问题"></a>1、声明提前类问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function Foo() &#123;</span><br><span class="line">    getName = function () &#123; alert (1); &#125;;</span><br><span class="line">    return this;</span><br><span class="line">&#125;</span><br><span class="line">Foo.getName = function () &#123; alert (2);&#125;;</span><br><span class="line">Foo.prototype.getName = function () &#123; alert (3);&#125;;</span><br><span class="line">var getName = function () &#123; alert (4);&#125;;</span><br><span class="line">function getName() &#123; alert (5);&#125;</span><br><span class="line"></span><br><span class="line">// 请写出以下输出结果：</span><br><span class="line">Foo.getName();</span><br><span class="line">getName(); // 声明提前</span><br><span class="line">Foo().getName();</span><br><span class="line">getName();</span><br><span class="line">new Foo.getName();</span><br><span class="line">new Foo().getName();</span><br><span class="line">new new Foo().getName();</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 
 <p>答案是：2、4、1、1、2、3、3。</p>
 <p>这里考察声明提前的题目在代码中已经标出，这里声明getName方法的两个语句：</p>
@@ -472,7 +474,10 @@
 <p>在第一次getName时，function的声明和var的声明都被提前到了第一次getName的前面，而getName的赋值操作并不会提前，单纯使用var的声明也不会覆盖function所定义的变量，因此第一次getName输出的是function声明的5； 而第二次getName则是发生在赋值语句的后面，因此输出的结果是4，所以实际代码的执行顺序是这样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getName() &#123; alert (5) &#125;</span><br><span class="line">var getName;</span><br><span class="line">getName(); // 5</span><br><span class="line">getName = function () &#123; alert (4) &#125;;</span><br><span class="line">getName(); // 4</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
 
-<h2 id="2、浏览器存储"><a href="#2、浏览器存储" class="headerlink" title="2、浏览器存储"></a>2、浏览器存储</h2><h3 id="localStorage，sessionStorage和cookie的区别"><a href="#localStorage，sessionStorage和cookie的区别" class="headerlink" title="localStorage，sessionStorage和cookie的区别"></a>localStorage，sessionStorage和cookie的区别</h3><p>共同点：都是保存在浏览器端、仅同源可用的存储方式</p>
+<h3 id="2、浏览器存储"><a href="#2、浏览器存储" class="headerlink" title="2、浏览器存储"></a>2、浏览器存储</h3><ul>
+<li><strong>localStorage，sessionStorage和cookie的区别</strong></li>
+</ul>
+<p>共同点：都是保存在浏览器端、仅同源可用的存储方式</p>
 <ol>
 <li>数据存储方面</li>
 </ol>
@@ -503,8 +508,8 @@
 <li>localstorage在所有同源窗口中都是共享的；也就是说只要浏览器不关闭，数据仍然存在</li>
 <li>cookie: 也是在所有同源窗口中都是共享的.也就是说只要浏览器不关闭，数据仍然存在</li>
 </ul>
-<h2 id="3、跨域"><a href="#3、跨域" class="headerlink" title="3、跨域"></a>3、跨域</h2><p>对同源策略及各种跨域的方式进行了总结：<a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80340102" target="_blank" rel="noopener">什么是跨域，为什么浏览器会禁止跨域，及其引起的发散性学习</a></p>
-<h2 id="4、Promise的使用及原理"><a href="#4、Promise的使用及原理" class="headerlink" title="4、Promise的使用及原理"></a>4、Promise的使用及原理</h2><p>Promise是ES6加入的新特性，用于更合理的解决异步编程问题，关于用法阮一峰老师在<a href="https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Fpromise" target="_blank" rel="noopener">ECMAScript 6 入门</a>中作出了详细的说明。</p>
+<h3 id="3、跨域"><a href="#3、跨域" class="headerlink" title="3、跨域"></a>3、跨域</h3><p>对同源策略及各种跨域的方式进行了总结：<a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80340102" target="_blank" rel="noopener">什么是跨域，为什么浏览器会禁止跨域，及其引起的发散性学习</a></p>
+<h3 id="4、Promise的使用及原理"><a href="#4、Promise的使用及原理" class="headerlink" title="4、Promise的使用及原理"></a>4、Promise的使用及原理</h3><p>Promise是ES6加入的新特性，用于更合理的解决异步编程问题，关于用法阮一峰老师在<a href="https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Fpromise" target="_blank" rel="noopener">ECMAScript 6 入门</a>中作出了详细的说明。</p>
 <p><a href="https://link.juejin.im?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000009478377" target="_blank" rel="noopener">让你彻底明白Promise原理</a></p>
 <p>这篇文章对Promise的原理进行的详细的说明，提取最简单的Promise实现方式来对Promise的原理进行说明：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function Promise(fn) &#123;</span><br><span class="line">    var value = null,</span><br><span class="line">        callbacks = [];  // callbacks为数组，因为可能同时有很多个回调</span><br><span class="line"></span><br><span class="line">    this.then = function (onFulfilled) &#123;</span><br><span class="line">        callbacks.push(onFulfilled);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    function resolve(value) &#123;</span><br><span class="line">        callbacks.forEach(function (callback) &#123;</span><br><span class="line">            callback(value);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    fn(resolve);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -515,7 +520,7 @@
 
 <p><code>func</code>函数的定义是返回了一个Promise实例，声明实例时传入的回调函数加入了一个<code>resolve</code>参数（这个<code>resolve</code>参数在Promise中的<code>fn(resolve)</code>定义中获取<code>resolve</code>的函数实体），回调中执行了一个异步操作，在异步操作完成的回调中执行了<code>resolve</code>函数。</p>
 <p>再看执行步骤，<code>func</code>函数返回了一个Promise实例，实例则可以执行Promise构造函数中定义的<code>then</code>方法，<code>then</code>方法中传入的回调则会在<code>resolve</code>（即异步操作完成后）执行，由此实现了通过<code>then</code>方法执行异步操作完成后回调的功能。</p>
-<h2 id="5、JavaScript事件循环机制"><a href="#5、JavaScript事件循环机制" class="headerlink" title="5、JavaScript事件循环机制"></a>5、JavaScript事件循环机制</h2><p>原文中贴出的文章具有很大参考价值，链接：<a href="https://link.juejin.im?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F33058983" target="_blank" rel="noopener">详解JavaScript中的Event Loop（事件循环）机制</a>。</p>
+<h3 id="5、JavaScript事件循环机制"><a href="#5、JavaScript事件循环机制" class="headerlink" title="5、JavaScript事件循环机制"></a>5、JavaScript事件循环机制</h3><p>原文中贴出的文章具有很大参考价值，链接：<a href="https://link.juejin.im?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F33058983" target="_blank" rel="noopener">详解JavaScript中的Event Loop（事件循环）机制</a>。</p>
 <p>JavaScript是一种单线程、非阻塞的语言，这是由于它当初的设计就是用于和浏览器交互的：</p>
 <ul>
 <li>单线程：<code>JavaScript</code>设计为单线程的原因是，最开始它最大的作用就是和<code>DOM</code>进行交互，试想一下，如果<code>JavaScript</code>是多线程的，那么当两个线程同时对<code>DOM</code>进行一项操作，例如一个向其添加事件，而另一个删除了这个<code>DOM</code>，此时该如何处理呢？因此，为了保证不会 发生类似于这个例子中的情景，<code>JavaScript</code>选择只用一个主线程来执行代码，这样就保证了程序执行的一致性。</li>
@@ -524,7 +529,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function () &#123;</span><br><span class="line">    console.log(1);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">new Promise(function(resolve,reject)&#123;</span><br><span class="line">    console.log(2)</span><br><span class="line">    resolve(3)</span><br><span class="line">&#125;).then(function(val)&#123;</span><br><span class="line">    console.log(val);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>下面通过一段代码来分析这个问题，首先<code>setTimeout</code>和<code>Promise</code>中的<code>then</code>回调都是异步方法，而<code>new Promise</code>则是一个同步操作，所以这段代码应该首先会立即输出<code>2</code>；<code>JavaScript</code>将异步方法分为了<code>marco task</code>（宏任务：包括<code>setTimeout</code>和<code>setInterval</code>等）和<code>micro task</code>（微任务：包括<code>new Promise</code>等），在<code>JavaScript</code>的执行栈中，如果同时存在到期的宏任务和微任务，则会将微任务先全部执行，再执行第一个宏任务，因此，两个异步操作中<code>then</code>的回调会率先执行，然后才执行<code>setTimeout</code>的回调，因此会依次输出3、1，所以最终输出的结果就是2、3、1。</p>
-<h2 id="6、ES6作用域及let和var的区别"><a href="#6、ES6作用域及let和var的区别" class="headerlink" title="6、ES6作用域及let和var的区别"></a>6、ES6作用域及let和var的区别</h2><p>阮一峰老师在<a href="https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Flet" target="_blank" rel="noopener">ECMAScript 6 入门</a>中的<code>let 和 const 命令</code>章节对这个问题作出了详细的说明，下面提取一些我认为关键的点进行讲解。</p>
+<h3 id="6、ES6作用域及let和var的区别"><a href="#6、ES6作用域及let和var的区别" class="headerlink" title="6、ES6作用域及let和var的区别"></a>6、ES6作用域及let和var的区别</h3><p><a href="https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Flet" target="_blank" rel="noopener">ECMAScript 6 入门</a>中的<code>let 和 const 命令</code>章节对这个问题作出了详细的说明。</p>
 <p>ES6引入了使用<code>{}</code>包裹的代码区域作为块级作用域的声明方式，其效果与ES5中<code>function</code>声明的函数所生成的函数作用域具有相同的效果，作用域外部不能访问作用域内部声明的函数或变量，这样的声明在ES6中对于包括<code>for () {}</code>、<code>if () {}</code>等大括号包裹的代码块中都会生效，生成一个单独的作用域。</p>
 <p>ES6新增的<code>let</code>声明变量的方式相比<code>var</code>具有以下几个重要特点：</p>
 <ul>
@@ -547,51 +552,83 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var tmp = 123;</span><br><span class="line">if (true) &#123;</span><br><span class="line">  tmp = &apos;abc&apos;; // ReferenceError</span><br><span class="line">  let tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="7、闭包"><a href="#7、闭包" class="headerlink" title="7、闭包"></a>7、闭包</h2><p>待补充</p>
-<h2 id="8、原型及原型链"><a href="#8、原型及原型链" class="headerlink" title="8、原型及原型链"></a>8、原型及原型链</h2><p>待补充</p>
-<h2 id="9、浏览器的回流与重绘-Reflow-amp-Repaint"><a href="#9、浏览器的回流与重绘-Reflow-amp-Repaint" class="headerlink" title="9、浏览器的回流与重绘 (Reflow &amp; Repaint)"></a>9、浏览器的回流与重绘 (Reflow &amp; Repaint)</h2><p>参考：<a href="https://juejin.im/post/5a9923e9518825558251c96a" target="_blank" rel="noopener">juejin.im/post/5a9923…</a></p>
+<h3 id="7、闭包"><a href="#7、闭包" class="headerlink" title="7、闭包"></a>7、闭包</h3><p>待补充</p>
+<h3 id="8、原型及原型链"><a href="#8、原型及原型链" class="headerlink" title="8、原型及原型链"></a>8、原型及原型链</h3><p>待补充</p>
+<h3 id="9、浏览器的回流与重绘"><a href="#9、浏览器的回流与重绘" class="headerlink" title="9、浏览器的回流与重绘"></a>9、浏览器的回流与重绘</h3><p>参考：<a href="https://juejin.im/post/5a9923e9518825558251c96a" target="_blank" rel="noopener">juejin.im/post/5a9923…</a></p>
 <p>浏览器在接收到 <code>html</code> 与 <code>css</code> 后，渲染的步骤是：<code>html</code> 经过渲染生成 <code>DOM</code> 树， <code>css</code> 经过渲染生成 <code>css</code> 渲染树，两者再经过结合，生成 <code>render tree</code>，浏览器就可以根据 <code>render tree</code> 进行画面绘制。</p>
 <p>如果浏览器从服务器接收到了新的 <code>css</code> ，需要更新页面时，需要经过什么操作呢？这就是回流 <code>reflow</code> 与重绘 <code>repaint</code>。由于浏览器在重新渲染页面时会先进行 <code>reflow</code> 再进行 <code>repaint</code>，因此，回流必将引起重绘，而重绘不一定会引起回流。</p>
 <p>重绘：当前元素的样式(背景颜色、字体颜色等)发生改变的时候，我们只需要把改变的元素重新的渲染一下即可，重绘对浏览器的性能影响较小。发生重绘的情形：改变容器的外观风格等，比如 <code>background：black</code> 等。改变外观，不改变布局，不影响其他的 <code>DOM</code>。    回流：是指浏览器为了重新渲染部分或者全部的文档而重新计算文档中元素的位置和几何构造的过程。</p>
 <p>因为回流可能导致整个 <code>DOM</code> 树的重新构造，所以是性能的一大杀手，一个元素的回流导致了其所有子元素以及 <code>DOM</code> 中紧随其后的祖先元素的随后的回流。下面贴出会触发浏览器 <code>reflow</code> 的变化：</p>
 <ul>
-<li>页面首次渲染</li>
-<li>浏览器窗口大小发生改变</li>
-<li>元素尺寸或位置发生改变</li>
-<li>元素内容变化（文字数量或图片大小等等）</li>
-<li>元素字体大小变化</li>
-<li>添加或者删除可见的DOM元素</li>
-<li>激活CSS伪类（例如：:hover）</li>
-<li>查询某些属性或调用某些方法</li>
+<li><p>页面首次渲染</p>
+</li>
+<li><p>浏览器窗口大小发生改变</p>
+</li>
+<li><p>元素尺寸或位置发生改变</p>
+</li>
+<li><p>元素内容变化（文字数量或图片大小等等）</p>
+</li>
+<li><p>元素字体大小变化</p>
+</li>
+<li><p>添加或者删除可见的DOM元素</p>
+</li>
+<li><p>激活CSS伪类（例如：:hover）</p>
+</li>
+<li><p>查询某些属性或调用某些方法</p>
+</li>
+<li><p>优化方案：</p>
+</li>
+<li><p>CSS</p>
+</li>
+<li><p>避免使用<code>table</code>布局。</p>
+</li>
+<li><p>尽可能在<code>DOM</code>树的最末端改变<code>class</code>。</p>
+</li>
+<li><p>避免设置多层内联样式。</p>
+</li>
+<li><p>将动画效果应用到<code>position</code>属性为<code>absolute</code>或<code>fixed</code>的元素上。</p>
+</li>
+<li><p>避免使用<code>CSS</code>表达式（例如：<code>calc()</code>）。</p>
+</li>
+<li><p>JavaScript</p>
+</li>
+<li><p>避免频繁操作样式，最好一次性重写<code>style</code>属性，或者将样式列表定义为<code>class</code>并一次性更改<code>class</code>属性。</p>
+</li>
+<li><p>避免频繁操作<code>DOM</code>，创建一个<code>documentFragment</code>，在它上面应用所有<code>DOM</code>操作，最后再把它添加到文档中。</p>
+</li>
+<li><p>也可以先为元素设置<code>display: none</code>，操作结束后再把它显示出来。因为在<code>display</code>属性为<code>none</code>的元素上进行的<code>DOM</code>操作不会引发回流和重绘。</p>
+</li>
+<li><p>避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。</p>
+</li>
+<li><p>对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</p>
+</li>
 </ul>
-<h3 id="优化方案："><a href="#优化方案：" class="headerlink" title="优化方案："></a>优化方案：</h3><h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ul>
-<li>避免使用<code>table</code>布局。</li>
-<li>尽可能在<code>DOM</code>树的最末端改变<code>class</code>。</li>
-<li>避免设置多层内联样式。</li>
-<li>将动画效果应用到<code>position</code>属性为<code>absolute</code>或<code>fixed</code>的元素上。</li>
-<li>避免使用<code>CSS</code>表达式（例如：<code>calc()</code>）。</li>
-</ul>
-<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><ul>
-<li>避免频繁操作样式，最好一次性重写<code>style</code>属性，或者将样式列表定义为<code>class</code>并一次性更改<code>class</code>属性。</li>
-<li>避免频繁操作<code>DOM</code>，创建一个<code>documentFragment</code>，在它上面应用所有<code>DOM</code>操作，最后再把它添加到文档中。</li>
-<li>也可以先为元素设置<code>display: none</code>，操作结束后再把它显示出来。因为在<code>display</code>属性为<code>none</code>的元素上进行的<code>DOM</code>操作不会引发回流和重绘。</li>
-<li>避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。</li>
-<li>对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</li>
-</ul>
-<h2 id="10、JS对象的深复制"><a href="#10、JS对象的深复制" class="headerlink" title="10、JS对象的深复制"></a>10、JS对象的深复制</h2><p>一般的思路就是递归解决，对不同的数据类型做不同的处理：</p>
+<h3 id="10、JS对象的深复制"><a href="#10、JS对象的深复制" class="headerlink" title="10、JS对象的深复制"></a>10、JS对象的深复制</h3><p>一般的思路就是递归解决，对不同的数据类型做不同的处理：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function deepCopy (obj) &#123;</span><br><span class="line">  let result = &#123;&#125;</span><br><span class="line">  for (let key in obj) &#123;</span><br><span class="line">    if (obj[key] instanceof Object || obj[key] instanceof Array) &#123;</span><br><span class="line">      result[key] = deepCopy(obj[key])</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      result[key] = obj[key]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这个只能复制内部有数组、对象或其他基础数据类型的对象，假如有一些像<code>RegExp</code>、<code>Date</code>这样的复杂对象复制的结果就是一个<code>{}</code>，无法正确进行复制，因为没有对这些特殊对象进行单独的处理。若要参考对复杂对象进行复制，可以参考<code>lodash</code>中数组深复制方法<code>_.cloneDeep()</code>的实现方案，下面这篇文章对数组深复制的方法进行了详细的解析，有一定参考价值： <a href="https://link.juejin.im?target=http%3A%2F%2Fjerryzou.com%2Fposts%2Fdive-into-deep-clone-in-javascript%2F" target="_blank" rel="noopener">jerryzou.com/posts/dive-…</a></p>
 <p>另外如果要复制的对象数据结构较为简单，没有复杂对象的数据，那么可以用最简便的方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let cloneResult = JSON.parse(JSON.stringify(targetObj))</span><br></pre></td></tr></table></figure>
 
-<h2 id="11、JS运算精度丢失"><a href="#11、JS运算精度丢失" class="headerlink" title="11、JS运算精度丢失"></a>11、JS运算精度丢失</h2><p>此前转载了一篇文章，对JavaScript运算精度丢失的原因及解决方案都有比较详细的说明： <a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80137474" target="_blank" rel="noopener">blog.csdn.net/qq_35271556…</a></p>
-<h2 id="12、defer-和async"><a href="#12、defer-和async" class="headerlink" title="12、defer 和async"></a>12、defer 和async</h2><p>无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照<script>元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个<script>元素包含的代码解析完成后，第二个<script>包含的代码才会被解析，然后才是第三个、第四个……</p>
-<p>按照传统的做法，所有<script>元素都应该放在页面的<head>元素中, 这种做法的目的就是把所有外部文件（包括CSS 文件和JavaScript 文件）的引用都放在相同的地方。可是，在文档的<head>元素中包含所有JavaScript 文件，意味着必须等到全部JavaScript 代码都被下载、解析和执行完成以后，才能开始呈现页面的内容（浏览器在遇到<body>标签时才开始呈现内容）。对于那些需要很多JavaScript 代码的页面来说，这无疑会导致浏览器在呈现页面时出现明显的延迟，而延迟期间的浏览器窗口中将是一片空白。为了避免这个问题，现代Web 应用程序一般都把全部JavaScript 引用放在<body>元素中页面内容的后面.</p>
-<p>defer 属性只适用于外部脚本文件。这一点在HTML5 中已经明确规定，因此支持HTML5 的实现会忽略给嵌入脚本设置的defer 属性。同样与defer 类似，async 只适用于外部脚本文件，并告诉浏览器立即下载文件。但与defer不同的是，标记为async 的脚本并不保证按照指定它们的先后顺序执行。<br>异步脚本一定会在页面的load 事件前执行，但可能会在DOMContentLoaded 事件触发之前或之后执行。</p>
-<h2 id="13、垃圾收集方式"><a href="#13、垃圾收集方式" class="headerlink" title="13、垃圾收集方式"></a>13、垃圾收集方式</h2><p>JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）</p>
-<h2 id="14、JS函数类型"><a href="#14、JS函数类型" class="headerlink" title="14、JS函数类型"></a>14、JS函数类型</h2><p>JS中函数有两种类型，具名函数（命名函数）和匿名函数。<br>创建方式有：1. 声明函数  2.创建匿名函数表达式  3.创建具名函数表达式  4.Function构造函数  5.自执行函数  6.其他创建函数的方法</p>
-<h1 id="二、ECMAScript"><a href="#二、ECMAScript" class="headerlink" title="二、ECMAScript"></a>二、ECMAScript</h1><h2 id="1、let-和-const-命令"><a href="#1、let-和-const-命令" class="headerlink" title="1、let 和 const 命令"></a>1、let 和 const 命令</h2><p>ES6 新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>，但是所声明的变量，只在<code>let</code>命令所在的代码块内有效。</p>
+<h3 id="11、JS运算精度丢失"><a href="#11、JS运算精度丢失" class="headerlink" title="11、JS运算精度丢失"></a>11、JS运算精度丢失</h3><p>此前转载了一篇文章，对JavaScript运算精度丢失的原因及解决方案都有比较详细的说明： <a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80137474" target="_blank" rel="noopener">blog.csdn.net/qq_35271556…</a></p>
+<h3 id="12、defer-和async"><a href="#12、defer-和async" class="headerlink" title="12、defer 和async"></a>12、defer 和async</h3><p>JS会阻塞 DOM 的加载和渲染。</p>
+<p><code>defer</code> ：</p>
+<ul>
+<li>立即加载JS，但不执行，待DOM渲染完成后再执行JS。</li>
+<li>多个 <code>defer</code> 按顺序执行，但实际上不一定，所以建议只有1个JS使用 <code>defer</code> 参数。</li>
+<li><code>XHTML</code> 下需写成 <code>defer=&quot;defer&quot;</code> 。</li>
+</ul>
+<p><code>async</code> ：</p>
+<ul>
+<li>异步加载JS (不阻塞DOM)，加载完后执行JS(此时会阻塞DOM)，执行完后继续加载/渲染DOM。</li>
+<li>不按顺序执行。</li>
+<li><code>XHTML</code> 下需写成 <code>async=&quot;async&quot;</code> 。</li>
+</ul>
+<p><img src="https://jian2333.github.io/images/pj-1.jpg" alt="img"></p>
+<p><a href="https://juejin.im/entry/5a7ad55ef265da4e81238da9" target="_blank" rel="noopener">浅谈script标签的defer和async</a></p>
+<h3 id="13、垃圾收集方式"><a href="#13、垃圾收集方式" class="headerlink" title="13、垃圾收集方式"></a>13、垃圾收集方式</h3><p>JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）</p>
+<h3 id="14、JS函数类型"><a href="#14、JS函数类型" class="headerlink" title="14、JS函数类型"></a>14、JS函数类型</h3><p>JS中函数有两种类型，具名函数（命名函数）和匿名函数。<br>创建方式有：1. 声明函数  2.创建匿名函数表达式  3.创建具名函数表达式  4.Function构造函数  5.自执行函数  6.其他创建函数的方法</p>
+<h2 id="二、ECMAScript"><a href="#二、ECMAScript" class="headerlink" title="二、ECMAScript"></a>二、ECMAScript</h2><h3 id="1、let-和-const-命令"><a href="#1、let-和-const-命令" class="headerlink" title="1、let 和 const 命令"></a>1、let 和 const 命令</h3><p>ES6 新增了<code>let</code>命令，用来声明变量。它的用法类似于<code>var</code>，但是所声明的变量，只在<code>let</code>命令所在的代码块内有效。</p>
 <ul>
 <li>不存在变量提升</li>
 <li>暂时性死区</li>
@@ -602,24 +639,24 @@
 <ul>
 <li><code>let</code>实际上为 JavaScript 新增了块级作用域。</li>
 </ul>
-<p><a href="http://es6.ruanyifeng.com/#docs/let">LearnMore</a></p>
-<h2 id="2、声明变量方法"><a href="#2、声明变量方法" class="headerlink" title="2、声明变量方法"></a>2、声明变量方法</h2><p>ES5 只有两种声明变量的方法：<code>var</code>命令和<code>function</code>命令。ES6 除了添加<code>let</code>和<code>const</code>命令，后面章节还会提到，另外两种声明变量的方法：<code>import</code>命令和<code>class</code>命令。所以，ES6 一共有 6 种声明变量的方法。</p>
+<p><a href="http://es6.ruanyifeng.com/#docs/let" target="_blank" rel="noopener">LearnMore</a></p>
+<h3 id="2、声明变量方法"><a href="#2、声明变量方法" class="headerlink" title="2、声明变量方法"></a>2、声明变量方法</h3><p>ES5 只有两种声明变量的方法：<code>var</code>命令和<code>function</code>命令。ES6 除了添加<code>let</code>和<code>const</code>命令，后面章节还会提到，另外两种声明变量的方法：<code>import</code>命令和<code>class</code>命令。所以，ES6 一共有 6 种声明变量的方法。</p>
 <p>ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number<br>和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。ECMAScript<br>不支持任何创建自定义类型的机制，而所有值最终都将是上述6 种数据类型之一。</p>
-<p>即便未初始化的变量会自动被赋予undefined 值，但显式地初始化变量依然是<br>明智的选择。如果能够做到这一点，那么当typeof 操作符返回"undefined"值时，<br>我们就知道被检测的变量还没有被声明，而不是尚未初始化。</p>
+<p>即便未初始化的变量会自动被赋予undefined 值，但显式地初始化变量依然是<br>明智的选择。如果能够做到这一点，那么当typeof 操作符返回”undefined”值时，<br>我们就知道被检测的变量还没有被声明，而不是尚未初始化。</p>
 <p>undefined 值是派生自null 值的，因此ECMA-262 规定对它们的相等性测试要返回true：<br>alert(null == undefined); //true</p>
-<p>var n=null; typeof(n) ->object<br>typeof检测正则表达式时，Safari 5以及之前版本和Chrome 7及之前版本中这个操作符返回"function", 在IE和Firefox中返回"Object"</p>
-<p>在局部作用域中定义的变量可以在局部环境中与全局变量互换使用<br>内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。<br>var color = "blue";<br>function changeColor(){<br>var anotherColor = "red";<br>function swapColors(){<br>var tempColor = anotherColor;<br>anotherColor = color;<br>color = tempColor;<br>// 这里可以访问color、anotherColor 和tempColor<br>}<br>// 这里可以访问color 和anotherColor，但不能访问tempColor<br>swapColors();<br>}<br>// 这里只能访问color<br>changeColor();</p>
+<p>var n=null; typeof(n) -&gt;object<br>typeof检测正则表达式时，Safari 5以及之前版本和Chrome 7及之前版本中这个操作符返回”function”, 在IE和Firefox中返回”Object”</p>
+<p>在局部作用域中定义的变量可以在局部环境中与全局变量互换使用<br>内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。<br>var color = “blue”;<br>function changeColor(){<br>var anotherColor = “red”;<br>function swapColors(){<br>var tempColor = anotherColor;<br>anotherColor = color;<br>color = tempColor;<br>// 这里可以访问color、anotherColor 和tempColor<br>}<br>// 这里可以访问color 和anotherColor，但不能访问tempColor<br>swapColors();<br>}<br>// 这里只能访问color<br>changeColor();</p>
 <p>JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）</p>
 <p>数组中已经存在两个可以直接用来重排序的方法：reverse()和sort()。在默认情况下，sort()方法按升序排列数组项</p>
 <p>ECMAScript 5 还新增了两个归并数组的方法：reduce()和reduceRight()。这两个方法都会迭代数组的所有项，然后构建一个最终返回的值。其中，reduce()方法从数组的第一项开始，逐个遍历到最后。而reduceRight()则从数组的最后一项开始，向前遍历到第一项。</p>
-<p>var stringValue = "hello world";<br>alert(stringValue.slice(3)); //"lo world"<br>alert(stringValue.substring(3)); //"lo world"<br>alert(stringValue.substr(3)); //"lo world"<br>alert(stringValue.slice(3, 7)); //"lo w"<br>alert(stringValue.substring(3,7)); //"lo w"<br>alert(stringValue.substr(3, 7)); //"lo worl"</p>
+<p>var stringValue = “hello world”;<br>alert(stringValue.slice(3)); //“lo world”<br>alert(stringValue.substring(3)); //“lo world”<br>alert(stringValue.substr(3)); //“lo world”<br>alert(stringValue.slice(3, 7)); //“lo w”<br>alert(stringValue.substring(3,7)); //“lo w”<br>alert(stringValue.substr(3, 7)); //“lo worl”</p>
 <p>indexOf()  lastIndexOf()<br>ECMAScript 5 为所有字符串定义了trim()方法。这个方法会创建一个字符串的副本，删除前置及<br>后缀的所有空格，然后返回结果</p>
-<p>sayHi(); //错误：函数还不存在<br>var sayHi = function(){   //这种情况下创建的函数叫做匿名函数<br>alert("Hi!");<br>};</p>
+<p>sayHi(); //错误：函数还不存在<br>var sayHi = function(){   //这种情况下创建的函数叫做匿名函数<br>alert(“Hi!”);<br>};</p>
 <p>arguments.callee 是一个指向正在执行的函数的指针。</p>
-<p>function factorial(num){<br>if (num <= 1){<br>return 1;<br>} else {<br>return num * factorial(num-1);<br>}<br>}</p>
-<p>function factorial(num){   // 在严格模式下，不能通过脚本访问arguments.callee，访问这个属性会导致错误。<br>if (num <= 1){<br>return 1;<br>} else {<br>return num * arguments.callee(num-1);<br>}<br>}</p>
-<p>var factorial = (function f(num){  //这种方式在严格模式和非严格模式下都行得通。<br>if (num <= 1){<br>return 1;<br>} else {<br>return num * f(num-1);<br>}<br>});</p>
-<h1 id="三、浏览器相关"><a href="#三、浏览器相关" class="headerlink" title="三、浏览器相关"></a>三、浏览器相关</h1><h2 id="1、浏览器从加载到渲染的过程"><a href="#1、浏览器从加载到渲染的过程" class="headerlink" title="1、浏览器从加载到渲染的过程"></a>1、浏览器从加载到渲染的过程</h2><p>大致可以分为如下7步：</p>
+<p>function factorial(num){<br>if (num &lt;= 1){<br>return 1;<br>} else {<br>return num * factorial(num-1);<br>}<br>}</p>
+<p>function factorial(num){   // 在严格模式下，不能通过脚本访问arguments.callee，访问这个属性会导致错误。<br>if (num &lt;= 1){<br>return 1;<br>} else {<br>return num * arguments.callee(num-1);<br>}<br>}</p>
+<p>var factorial = (function f(num){  //这种方式在严格模式和非严格模式下都行得通。<br>if (num &lt;= 1){<br>return 1;<br>} else {<br>return num * f(num-1);<br>}<br>});</p>
+<h2 id="三、浏览器相关"><a href="#三、浏览器相关" class="headerlink" title="三、浏览器相关"></a>三、浏览器相关</h2><h3 id="1、浏览器从加载到渲染的过程"><a href="#1、浏览器从加载到渲染的过程" class="headerlink" title="1、浏览器从加载到渲染的过程"></a>1、浏览器从加载到渲染的过程</h3><p>大致可以分为如下7步：</p>
 <ol>
 <li>输入网址；</li>
 <li>发送到DNS服务器，并获取域名对应的web服务器对应的ip地址；</li>
@@ -629,32 +666,34 @@
 <li>浏览器下载web服务器返回的数据及解析html源文件；</li>
 <li>生成DOM树，解析css和js，渲染页面，直至显示完成；</li>
 </ol>
-<h3 id="加载过程："><a href="#加载过程：" class="headerlink" title="加载过程："></a>加载过程：</h3><ul>
+<p><strong>加载过程：</strong></p>
+<ul>
 <li>浏览器根据 DNS 服务器解析得到域名的 IP 地址</li>
 <li>向这个 IP 的机器发送 HTTP 请求</li>
 <li>服务器收到、处理并返回 HTTP 请求</li>
 <li>浏览器得到返回内容</li>
 </ul>
-<h3 id="渲染过程："><a href="#渲染过程：" class="headerlink" title="渲染过程："></a>渲染过程：</h3><ul>
+<p><strong>渲染过程：</strong></p>
+<ul>
 <li>根据 HTML 结构生成 DOM 树</li>
 <li>根据 CSS 生成 CSSOM</li>
 <li>将 DOM 和 CSSOM 整合形成 RenderTree</li>
 <li>根据 RenderTree 开始渲染和展示</li>
 <li>遇到<code>&lt;script&gt;</code>时，会执行并阻塞渲染</li>
 </ul>
-<h2 id="2、浏览器缓存机制"><a href="#2、浏览器缓存机制" class="headerlink" title="2、浏览器缓存机制"></a>2、浏览器缓存机制</h2><p>参考文章：<a href="https://link.juejin.im?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011212929">segmentfault.com/a/119000001…</a></p>
-<h2 id="3、输入-URL-到展现涉及的缓存环节"><a href="#3、输入-URL-到展现涉及的缓存环节" class="headerlink" title="3、输入 URL 到展现涉及的缓存环节"></a>3、输入 URL 到展现涉及的缓存环节</h2><ul>
+<h3 id="2、浏览器缓存机制"><a href="#2、浏览器缓存机制" class="headerlink" title="2、浏览器缓存机制"></a>2、浏览器缓存机制</h3><p>参考文章：<a href="https://link.juejin.im?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011212929" target="_blank" rel="noopener">segmentfault.com/a/119000001…</a></p>
+<h3 id="3、输入-URL-到展现涉及的缓存环节"><a href="#3、输入-URL-到展现涉及的缓存环节" class="headerlink" title="3、输入 URL 到展现涉及的缓存环节"></a>3、输入 URL 到展现涉及的缓存环节</h3><ul>
 <li>地址栏缓存</li>
 <li>检查HSTS预加载列表</li>
 <li>DNS缓存</li>
 <li>ARP（地址解析协议）缓存</li>
 </ul>
-<p>参考文章：<a href="https://toutiao.io/posts/9tv7pf">More</a></p>
-<h2 id="4、性能优化"><a href="#4、性能优化" class="headerlink" title="4、性能优化"></a>4、性能优化</h2><p>参考文章：<a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fna_sama%2Farticle%2Fdetails%2F51291798">blog.csdn.net/na_sama/art…</a></p>
+<p>参考文章：<a href="https://toutiao.io/posts/9tv7pf" target="_blank" rel="noopener">More</a></p>
+<h3 id="4、性能优化"><a href="#4、性能优化" class="headerlink" title="4、性能优化"></a>4、性能优化</h3><p>参考文章：<a href="https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fna_sama%2Farticle%2Fdetails%2F51291798" target="_blank" rel="noopener">blog.csdn.net/na_sama/art…</a></p>
 <ol>
 <li>减少 HTTP 请求数量</li>
 </ol>
-<p>在浏览器与服务器进行通信时，主要是通过 HTTP 进行通信。浏览器与服务器需要经过三次握手，每次握手需要花费大量时间。而且不同浏览器对资源文件并发请求数量有限（<a href="http://www.stevesouders.com/blog/2008/03/20/roundup-on-parallel-connections/">不同浏览器允许并发数</a>），一旦 HTTP 请求数量达到一定数量，资源请求就存在等待状态，这是很致命的，因此减少 HTTP 的请求数量可以很大程度上对网站性能进行优化。</p>
+<p>在浏览器与服务器进行通信时，主要是通过 HTTP 进行通信。浏览器与服务器需要经过三次握手，每次握手需要花费大量时间。而且不同浏览器对资源文件并发请求数量有限（<a href="http://www.stevesouders.com/blog/2008/03/20/roundup-on-parallel-connections/" target="_blank" rel="noopener">不同浏览器允许并发数</a>），一旦 HTTP 请求数量达到一定数量，资源请求就存在等待状态，这是很致命的，因此减少 HTTP 的请求数量可以很大程度上对网站性能进行优化。</p>
 <ul>
 <li>CSS Sprites：国内俗称 CSS 精灵，这是将多张图片合并成一张图片达到减少 HTTP 请求的一种解决方案，可以通过 CSS background 属性来访问图片内容。这种方案同时还可以减少图片总字节数。</li>
 <li>合并 CSS 和 JS 文件：现在前端有很多工程化打包工具，如：grunt、gulp、webpack等。为了减少 HTTP 请求数量，可以通过这些工具再发布前将多个 CSS 或者 多个 JS 合并成一个文件。</li>
@@ -675,7 +714,7 @@
 <li><p>图标使用 IconFont 替换</p>
 </li>
 </ol>
-<h2 id="5、跨域"><a href="#5、跨域" class="headerlink" title="5、跨域"></a>5、跨域</h2><ul>
+<h3 id="5、跨域"><a href="#5、跨域" class="headerlink" title="5、跨域"></a>5、跨域</h3><ul>
 <li>同源策略</li>
 </ul>
 <p>同源策略是浏览器有一个很重要的概念。所谓同源是指，域名，协议，端口相同。不同源的客户端脚本(javascript、ActionScript)在没明确授权的情况下，不能读写对方的资源。简单的来说，浏览器允许包含在页面A的脚本访问第二个页面B的数据资源，这一切是建立在A和B页面是同源的基础上。</p>
@@ -683,7 +722,7 @@
 <li>跨域的几种方式</li>
 </ul>
 <p>jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特性，是一种新协议）跨域、设置代理服务器（由服务器替我们向不同源的服务器请求数据）、CORS（跨源资源共享，cross origin resource sharing）、iframe跨域、postMessage(包含iframe的页面向iframe传递消息)</p>
-<h1 id="四、AngularJs"><a href="#四、AngularJs" class="headerlink" title="四、AngularJs"></a>四、AngularJs</h1><h2 id="1、factory、service-和-provider"><a href="#1、factory、service-和-provider" class="headerlink" title="1、factory、service 和 provider"></a>1、factory、service 和 provider</h2><ul>
+<h2 id="四、AngularJs"><a href="#四、AngularJs" class="headerlink" title="四、AngularJs"></a>四、AngularJs</h2><h3 id="1、factory、service-和-provider"><a href="#1、factory、service-和-provider" class="headerlink" title="1、factory、service 和 provider"></a>1、factory、service 和 provider</h3><ul>
 <li><strong>factory</strong></li>
 </ul>
 <p>把 service 的方法和数据放在一个对象里，并返回这个对象</p>
@@ -702,45 +741,46 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">app.provider(&apos;FooService&apos;, function()&#123;</span><br><span class="line">    this.configData = &apos;init data&apos;;</span><br><span class="line">    this.setConfigData = function(data)&#123;</span><br><span class="line">        if(data)&#123;</span><br><span class="line">            this.configData = data;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    this.$get = function()&#123;</span><br><span class="line">        var self = this;</span><br><span class="line">        return &#123;</span><br><span class="line">            target: &apos;provider&apos;,</span><br><span class="line">            sayHello: function()&#123;</span><br><span class="line">                return self.configData + &apos; hello &apos; + this.target;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 此处注入的是 FooService 的 provider</span><br><span class="line">app.config(function(FooServiceProvider)&#123;</span><br><span class="line">    FooServiceProvider.setConfigData(&apos;config data&apos;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>从底层实现上来看，service 调用了 factory，返回其实例；factory 调用了 provider，返回其 <code>$get</code> 中定义的内容。factory 和 service 功能类似，只不过 factory 是普通 function，可以返回任何东西（return 的都可以被访问）；service 是构造器，可以不返回（绑定到 this 的都可以被访问）；provider 是加强版 factory，返回一个可配置的 factory。</p>
-<p>详见 <a href="http://www.oschina.net/translate/angularjs-factory-vs-service-vs-provider">AngularJS 之 Factory vs Service vs Provider</a></p>
-<h1 id="五、CSS"><a href="#五、CSS" class="headerlink" title="五、CSS"></a>五、CSS</h1><h2 id="1、CSS引入方式"><a href="#1、CSS引入方式" class="headerlink" title="1、CSS引入方式"></a>1、CSS引入方式</h2><p>​    内联: 这种是在标签内直接写的，style="   "</p>
+<p>详见 <a href="http://www.oschina.net/translate/angularjs-factory-vs-service-vs-provider" target="_blank" rel="noopener">AngularJS 之 Factory vs Service vs Provider</a></p>
+<h2 id="五、CSS"><a href="#五、CSS" class="headerlink" title="五、CSS"></a>五、CSS</h2><h3 id="1、CSS引入方式"><a href="#1、CSS引入方式" class="headerlink" title="1、CSS引入方式"></a>1、CSS引入方式</h3><p>​    内联: 这种是在标签内直接写的，style=”   “</p>
 <p>​    内嵌: 这种是在head标签里，加一个style标签，在style里添加样式</p>
 <p>​    外联: 这种是新建一个.css文件，通过link来引入样式</p>
 <p>​    导入: 这种是在head标签里，加一个style标签，再写@import  url（），跟用link的方式差不多</p>
 <p>​    跟link实现的效果一样，不同是link是页面加载的时候同时加载引入的样式，而@import是页面加载完成后，再    加载引入的样式；并且link是xhtml中的标签，所以兼容所有浏览器，但@import是在CSS2.1提出的，所以低版    本的浏览器会不兼容；link是可以通过js来改变样式的，@import就是不可以的；还有就是link可以引入除了css    以为的其他文件，但@import只能引入css文件。</p>
-<h2 id="2、-charset作用"><a href="#2、-charset作用" class="headerlink" title="2、@charset作用"></a>2、@charset作用</h2><p>在外部样式表文件中使用，告诉浏览器用什么编码方式解码该样式文件</p>
-<h2 id="3、-import-作用"><a href="#3、-import-作用" class="headerlink" title="3、@import 作用"></a>3、@import 作用</h2><p>@import用来引入外部样式</p>
+<h3 id="2、-charset作用"><a href="#2、-charset作用" class="headerlink" title="2、@charset作用"></a>2、@charset作用</h3><p>在外部样式表文件中使用，告诉浏览器用什么编码方式解码该样式文件</p>
+<h3 id="3、-import-作用"><a href="#3、-import-作用" class="headerlink" title="3、@import 作用"></a>3、@import 作用</h3><p>@import用来引入外部样式</p>
 <style> @import url('base.css') body{ margin:0; } </style>
-<h2 id="4、id选择器和class选择器的使用场景"><a href="#4、id选择器和class选择器的使用场景" class="headerlink" title="4、id选择器和class选择器的使用场景"></a>4、id选择器和class选择器的使用场景</h2><p>id选择器使用前确定此元素权限较高且在文档里具有唯一性才可用<br>class选择器是使用的最广最多的选择器，可以给任何元素添加class属性</p>
-<h2 id="5、CSS中常见的选择器"><a href="#5、CSS中常见的选择器" class="headerlink" title="5、CSS中常见的选择器"></a>5、CSS中常见的选择器</h2><p>通配符选择器<br>*{ margin:0; }<br>元素选择器<br>Id选择器<br>类（class）选择器<br>属性选择器<br>后代选择器<br>父子选择器<br>群组选择器<br>伪类选择器<br>伪元素选择器</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity">选择器的优先级是如何计算</a></p>
-<h2 id="6、src-和-href-的区别"><a href="#6、src-和-href-的区别" class="headerlink" title="6、src 和 href 的区别"></a>6、src 和 href 的区别</h2><ul>
+
+<h3 id="4、id选择器和class选择器的使用场景"><a href="#4、id选择器和class选择器的使用场景" class="headerlink" title="4、id选择器和class选择器的使用场景"></a>4、id选择器和class选择器的使用场景</h3><p>id选择器使用前确定此元素权限较高且在文档里具有唯一性才可用<br>class选择器是使用的最广最多的选择器，可以给任何元素添加class属性</p>
+<h3 id="5、CSS中常见的选择器"><a href="#5、CSS中常见的选择器" class="headerlink" title="5、CSS中常见的选择器"></a>5、CSS中常见的选择器</h3><p>通配符选择器<br>*{ margin:0; }<br>元素选择器<br>Id选择器<br>类（class）选择器<br>属性选择器<br>后代选择器<br>父子选择器<br>群组选择器<br>伪类选择器<br>伪元素选择器</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity" target="_blank" rel="noopener">选择器的优先级是如何计算</a></p>
+<h3 id="6、src-和-href-的区别"><a href="#6、src-和-href-的区别" class="headerlink" title="6、src 和 href 的区别"></a>6、src 和 href 的区别</h3><ul>
 <li>src用于替换当前元素， href 用于在当前文档和引用资源之间确立联系。<br>src是 source 的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求 src 资源时会将其指向的资源下载并应用到文档内，例如 js 脚本， img 图片和 frame 等元素。</li>
 </ul>
-<script src ='js.js'></script>
-</p><p>当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。</p>
+<script src="js.js"></script>
+<p>当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。</p>
 <ul>
 <li>href是 Hypertext Reference 的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加</li>
 </ul>
 <link href="common.css" rel="stylesheet">
 
 <p>那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式来加载 css ，而不是使用 @import 方式。</p>
-<h2 id="7、CSS布局"><a href="#7、CSS布局" class="headerlink" title="7、CSS布局"></a>7、CSS布局</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10px 20px 10px 20px;</span><br></pre></td></tr></table></figure>
+<h3 id="7、CSS布局"><a href="#7、CSS布局" class="headerlink" title="7、CSS布局"></a>7、CSS布局</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">margin: 10px 20px 10px 20px;</span><br></pre></td></tr></table></figure>
 
 <p>这四个值以顺时针方式排列：顶部、右侧、底部、左侧，简称：<strong>上右下左</strong>。</p>
 <ul>
 <li><p>样式覆盖</p>
 <ul>
-<li>id > class</li>
+<li>id &gt; class</li>
 <li>class类的声明部分中的 class 声明的顺序是重要的，第二个声明将始终优先于第一个声明。</li>
-<li>!important > 内联样式 >  id > class > 标签</li>
+<li>!important &gt; 内联样式 &gt;  id &gt; class &gt; 标签</li>
 </ul>
 </li>
 <li><p>position：static，relatice，absolute，fixed，sticky</p>
 <p>relative定位原点是自己，absolute定位原点是离自己最近的父元素</p>
 </li>
 </ul>
-<h2 id="8、CSS3中新添加的样式"><a href="#8、CSS3中新添加的样式" class="headerlink" title="8、CSS3中新添加的样式"></a>8、CSS3中新添加的样式</h2><p>阴影，rgba，圆角</p>
+<h3 id="8、CSS3中新添加的样式"><a href="#8、CSS3中新添加的样式" class="headerlink" title="8、CSS3中新添加的样式"></a>8、CSS3中新添加的样式</h3><p>阴影，rgba，圆角</p>
 <ul>
 <li><p>border-radius：允许向元素添加圆角</p>
 </li>
@@ -751,7 +791,7 @@
 <li><p>border-image属性用于设置图片边框</p>
 </li>
 </ul>
-<h1 id="六、HTML"><a href="#六、HTML" class="headerlink" title="六、HTML"></a>六、HTML</h1><h2 id="1、HTML5新特性、移除元素"><a href="#1、HTML5新特性、移除元素" class="headerlink" title="1、HTML5新特性、移除元素"></a>1、HTML5新特性、移除元素</h2><p>新特性：</p>
+<h2 id="六、HTML"><a href="#六、HTML" class="headerlink" title="六、HTML"></a>六、HTML</h2><h3 id="1、HTML5新特性、移除元素"><a href="#1、HTML5新特性、移除元素" class="headerlink" title="1、HTML5新特性、移除元素"></a>1、HTML5新特性、移除元素</h3><p>新特性：</p>
 <p>画布canvas</p>
 <p>用于媒介播放的video和audio</p>
 <p>新的语义化标签：article，header，nav，section，footer</p>
@@ -760,8 +800,8 @@
 <p>新的技术：websocket，web worker，geoloacation</p>
 <p>移除得元素：</p>
 <p>可以用css代替的元素，font，fontbase，center，s，tt，u</p>
-<h2 id="2、-HTML5-存储类型以及区别"><a href="#2、-HTML5-存储类型以及区别" class="headerlink" title="2、 HTML5 存储类型以及区别"></a>2、 HTML5 存储类型以及区别</h2><p>cookies，localstorage，sessionstorage<br>cookies的存储容量比较小而且数量有限制，一般为4K左右，localstorage的可以高达5M以上<br>cookies在设置的时间之前有效，localstorage本地永久存储，sessionstorage在当前窗口有效<br>cookies每次http请求都会被携带，会造成带宽浪费，localstorage和sessionstorage是保存在本地</p>
-<h2 id="3、document-load-和document-ready-的区别"><a href="#3、document-load-和document-ready-的区别" class="headerlink" title="3、document load 和document ready 的区别"></a>3、document load 和document ready 的区别</h2><p>1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数<br>问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响<br>2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行<br>在原生的jS中不包括ready()这个方法，只有load方法就是onload事件</p>
+<h3 id="2、-HTML5-存储类型以及区别"><a href="#2、-HTML5-存储类型以及区别" class="headerlink" title="2、 HTML5 存储类型以及区别"></a>2、 HTML5 存储类型以及区别</h3><p>cookies，localstorage，sessionstorage<br>cookies的存储容量比较小而且数量有限制，一般为4K左右，localstorage的可以高达5M以上<br>cookies在设置的时间之前有效，localstorage本地永久存储，sessionstorage在当前窗口有效<br>cookies每次http请求都会被携带，会造成带宽浪费，localstorage和sessionstorage是保存在本地</p>
+<h3 id="3、document-load-和document-ready-的区别"><a href="#3、document-load-和document-ready-的区别" class="headerlink" title="3、document load 和document ready 的区别"></a>3、document load 和document ready 的区别</h3><p>1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数<br>问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响<br>2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行<br>在原生的jS中不包括ready()这个方法，只有load方法就是onload事件</p>
 
       
     </div>
@@ -796,8 +836,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/19/urlcollect/" rel="next" title="好文收藏">
-                <i class="fa fa-chevron-left"></i> 好文收藏
+              <a href="/2019/07/30/vue/" rel="next" title="vue学习笔记">
+                <i class="fa fa-chevron-left"></i> vue学习笔记
               </a>
             
           </div>
@@ -805,10 +845,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/25/net/" rel="prev" title="C#, .NET笔记">
-                C#, .NET笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -978,7 +1014,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、JavaScript基础"><span class="nav-number">1.</span> <span class="nav-text">一、JavaScript基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、声明提前类问题"><span class="nav-number">1.1.</span> <span class="nav-text">1、声明提前类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、浏览器存储"><span class="nav-number">1.2.</span> <span class="nav-text">2、浏览器存储</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#localStorage，sessionStorage和cookie的区别"><span class="nav-number">1.2.1.</span> <span class="nav-text">localStorage，sessionStorage和cookie的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、跨域"><span class="nav-number">1.3.</span> <span class="nav-text">3、跨域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Promise的使用及原理"><span class="nav-number">1.4.</span> <span class="nav-text">4、Promise的使用及原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、JavaScript事件循环机制"><span class="nav-number">1.5.</span> <span class="nav-text">5、JavaScript事件循环机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、ES6作用域及let和var的区别"><span class="nav-number">1.6.</span> <span class="nav-text">6、ES6作用域及let和var的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、闭包"><span class="nav-number">1.7.</span> <span class="nav-text">7、闭包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、原型及原型链"><span class="nav-number">1.8.</span> <span class="nav-text">8、原型及原型链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、浏览器的回流与重绘-Reflow-amp-Repaint"><span class="nav-number">1.9.</span> <span class="nav-text">9、浏览器的回流与重绘 (Reflow &amp; Repaint)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化方案："><span class="nav-number">1.9.1.</span> <span class="nav-text">优化方案：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CSS"><span class="nav-number">1.9.1.1.</span> <span class="nav-text">CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.9.1.2.</span> <span class="nav-text">JavaScript</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、JS对象的深复制"><span class="nav-number">1.10.</span> <span class="nav-text">10、JS对象的深复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11、JS运算精度丢失"><span class="nav-number">1.11.</span> <span class="nav-text">11、JS运算精度丢失</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12、defer-和async"><span class="nav-number">1.12.</span> <span class="nav-text">12、defer 和async</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、CSS布局"><span class="nav-number">1.13.</span> <span class="nav-text">7、CSS布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、CSS3中新添加的样式"><span class="nav-number">1.14.</span> <span class="nav-text">8、CSS3中新添加的样式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、HTML"><span class="nav-number">2.</span> <span class="nav-text">六、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、HTML5新特性、移除元素"><span class="nav-number">2.1.</span> <span class="nav-text">1、HTML5新特性、移除元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、-HTML5-存储类型以及区别"><span class="nav-number">2.2.</span> <span class="nav-text">2、 HTML5 存储类型以及区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、document-load-和document-ready-的区别"><span class="nav-number">2.3.</span> <span class="nav-text">3、document load 和document ready 的区别</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、JavaScript基础"><span class="nav-number">1.</span> <span class="nav-text">一、JavaScript基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、声明提前类问题"><span class="nav-number">1.1.</span> <span class="nav-text">1、声明提前类问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、浏览器存储"><span class="nav-number">1.2.</span> <span class="nav-text">2、浏览器存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、跨域"><span class="nav-number">1.3.</span> <span class="nav-text">3、跨域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Promise的使用及原理"><span class="nav-number">1.4.</span> <span class="nav-text">4、Promise的使用及原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、JavaScript事件循环机制"><span class="nav-number">1.5.</span> <span class="nav-text">5、JavaScript事件循环机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、ES6作用域及let和var的区别"><span class="nav-number">1.6.</span> <span class="nav-text">6、ES6作用域及let和var的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、闭包"><span class="nav-number">1.7.</span> <span class="nav-text">7、闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、原型及原型链"><span class="nav-number">1.8.</span> <span class="nav-text">8、原型及原型链</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9、浏览器的回流与重绘"><span class="nav-number">1.9.</span> <span class="nav-text">9、浏览器的回流与重绘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10、JS对象的深复制"><span class="nav-number">1.10.</span> <span class="nav-text">10、JS对象的深复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11、JS运算精度丢失"><span class="nav-number">1.11.</span> <span class="nav-text">11、JS运算精度丢失</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12、defer-和async"><span class="nav-number">1.12.</span> <span class="nav-text">12、defer 和async</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13、垃圾收集方式"><span class="nav-number">1.13.</span> <span class="nav-text">13、垃圾收集方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14、JS函数类型"><span class="nav-number">1.14.</span> <span class="nav-text">14、JS函数类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、ECMAScript"><span class="nav-number">2.</span> <span class="nav-text">二、ECMAScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、let-和-const-命令"><span class="nav-number">2.1.</span> <span class="nav-text">1、let 和 const 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、声明变量方法"><span class="nav-number">2.2.</span> <span class="nav-text">2、声明变量方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、浏览器相关"><span class="nav-number">3.</span> <span class="nav-text">三、浏览器相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、浏览器从加载到渲染的过程"><span class="nav-number">3.1.</span> <span class="nav-text">1、浏览器从加载到渲染的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、浏览器缓存机制"><span class="nav-number">3.2.</span> <span class="nav-text">2、浏览器缓存机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、输入-URL-到展现涉及的缓存环节"><span class="nav-number">3.3.</span> <span class="nav-text">3、输入 URL 到展现涉及的缓存环节</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、性能优化"><span class="nav-number">3.4.</span> <span class="nav-text">4、性能优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、跨域"><span class="nav-number">3.5.</span> <span class="nav-text">5、跨域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、AngularJs"><span class="nav-number">4.</span> <span class="nav-text">四、AngularJs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、factory、service-和-provider"><span class="nav-number">4.1.</span> <span class="nav-text">1、factory、service 和 provider</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、CSS"><span class="nav-number">5.</span> <span class="nav-text">五、CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、CSS引入方式"><span class="nav-number">5.1.</span> <span class="nav-text">1、CSS引入方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、-charset作用"><span class="nav-number">5.2.</span> <span class="nav-text">2、@charset作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、-import-作用"><span class="nav-number">5.3.</span> <span class="nav-text">3、@import 作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、id选择器和class选择器的使用场景"><span class="nav-number">5.4.</span> <span class="nav-text">4、id选择器和class选择器的使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、CSS中常见的选择器"><span class="nav-number">5.5.</span> <span class="nav-text">5、CSS中常见的选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、src-和-href-的区别"><span class="nav-number">5.6.</span> <span class="nav-text">6、src 和 href 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、CSS布局"><span class="nav-number">5.7.</span> <span class="nav-text">7、CSS布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8、CSS3中新添加的样式"><span class="nav-number">5.8.</span> <span class="nav-text">8、CSS3中新添加的样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、HTML"><span class="nav-number">6.</span> <span class="nav-text">六、HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、HTML5新特性、移除元素"><span class="nav-number">6.1.</span> <span class="nav-text">1、HTML5新特性、移除元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、-HTML5-存储类型以及区别"><span class="nav-number">6.2.</span> <span class="nav-text">2、 HTML5 存储类型以及区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、document-load-和document-ready-的区别"><span class="nav-number">6.3.</span> <span class="nav-text">3、document load 和document ready 的区别</span></a></li></ol></li></ol></div>
             
 
           </div>
