@@ -1,5 +1,5 @@
 ---
-title: Web前端
+title: Web Front End
 date: 2019-08-02 11:29:00
 categories:
 - 前端
@@ -8,6 +8,20 @@ tags:
 ---
 
 部分前端技术做个汇总~~~~
+
+一、JavaScript基础
+
+二、ECMAScript
+
+三、浏览器相关
+
+四、AngularJs
+
+五、CSS
+
+六、HTML
+
+...
 
 <!-- more-->
 
@@ -681,7 +695,6 @@ app.config(function(FooServiceProvider){
 @import用来引入外部样式
 
 <style> @import url('base.css') body{ margin:0; } </style>
-
 ### 4、id选择器和class选择器的使用场景
 
 id选择器使用前确定此元素权限较高且在文档里具有唯一性才可用

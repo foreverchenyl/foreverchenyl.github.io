@@ -1,13 +1,13 @@
 ---
-title: C#, .NET笔记
+title: C#, .NET
 date: 2019-07-25 16:59:03
 categories:
-- 后端技术
+- 后端
 tags:
 - .Net
 ---
 
-C#       .NET汇总~~~~
+C#       .NET汇总 ~~~~
 
 <!-- More -->
 
