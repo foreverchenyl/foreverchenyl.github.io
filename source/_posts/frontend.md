@@ -1,6 +1,6 @@
 ---
 title: Web前端
-date: 2019-07-23 16:29:00
+date: 2019-08-02 11:29:00
 categories:
 - 前端
 tags:
@@ -11,7 +11,7 @@ tags:
 
 <!-- more-->
 
-# 一、JavaScript基础
+## 一、JavaScript基础
 
 一个完整的JavaScript 实现应该由下列三
 个不同的部分组成（见图1-1）。
@@ -19,7 +19,9 @@ q 核心（ECMAScript）
 q 文档对象模型（DOM）
 q 浏览器对象模型（BOM）
 
-## 1、声明提前类问题
+
+
+### 1、声明提前类问题
 
 ```
 function Foo() {
@@ -82,9 +84,11 @@ getName(); // 4
 复制代码
 ```
 
-## 2、浏览器存储
 
-### localStorage，sessionStorage和cookie的区别
+
+### 2、浏览器存储
+
+- **localStorage，sessionStorage和cookie的区别**
 
 共同点：都是保存在浏览器端、仅同源可用的存储方式
 
@@ -110,11 +114,15 @@ getName(); // 4
 - localstorage在所有同源窗口中都是共享的；也就是说只要浏览器不关闭，数据仍然存在
 - cookie: 也是在所有同源窗口中都是共享的.也就是说只要浏览器不关闭，数据仍然存在
 
-## 3、跨域
+
+
+### 3、跨域
 
 对同源策略及各种跨域的方式进行了总结：[什么是跨域，为什么浏览器会禁止跨域，及其引起的发散性学习](https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80340102)
 
-## 4、Promise的使用及原理
+
+
+### 4、Promise的使用及原理
 
 Promise是ES6加入的新特性，用于更合理的解决异步编程问题，关于用法阮一峰老师在[ECMAScript 6 入门](https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Fpromise)中作出了详细的说明。
 
@@ -163,7 +171,9 @@ func().then(function (res) {
 
 再看执行步骤，`func`函数返回了一个Promise实例，实例则可以执行Promise构造函数中定义的`then`方法，`then`方法中传入的回调则会在`resolve`（即异步操作完成后）执行，由此实现了通过`then`方法执行异步操作完成后回调的功能。
 
-## 5、JavaScript事件循环机制
+
+
+### 5、JavaScript事件循环机制
 
 原文中贴出的文章具有很大参考价值，链接：[详解JavaScript中的Event Loop（事件循环）机制](https://link.juejin.im?target=https%3A%2F%2Fzhuanlan.zhihu.com%2Fp%2F33058983)。
 
@@ -187,9 +197,11 @@ new Promise(function(resolve,reject){
 
 下面通过一段代码来分析这个问题，首先`setTimeout`和`Promise`中的`then`回调都是异步方法，而`new Promise`则是一个同步操作，所以这段代码应该首先会立即输出`2`；`JavaScript`将异步方法分为了`marco task`（宏任务：包括`setTimeout`和`setInterval`等）和`micro task`（微任务：包括`new Promise`等），在`JavaScript`的执行栈中，如果同时存在到期的宏任务和微任务，则会将微任务先全部执行，再执行第一个宏任务，因此，两个异步操作中`then`的回调会率先执行，然后才执行`setTimeout`的回调，因此会依次输出3、1，所以最终输出的结果就是2、3、1。
 
-## 6、ES6作用域及let和var的区别
 
-阮一峰老师在[ECMAScript 6 入门](https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Flet)中的`let 和 const 命令`章节对这个问题作出了详细的说明，下面提取一些我认为关键的点进行讲解。
+
+### 6、ES6作用域及let和var的区别
+
+[ECMAScript 6 入门](https://link.juejin.im?target=http%3A%2F%2Fes6.ruanyifeng.com%2F%23docs%2Flet)中的`let 和 const 命令`章节对这个问题作出了详细的说明。
 
 ES6引入了使用`{}`包裹的代码区域作为块级作用域的声明方式，其效果与ES5中`function`声明的函数所生成的函数作用域具有相同的效果，作用域外部不能访问作用域内部声明的函数或变量，这样的声明在ES6中对于包括`for () {}`、`if () {}`等大括号包裹的代码块中都会生效，生成一个单独的作用域。
 
@@ -240,15 +252,21 @@ if (true) {
 }
 ```
 
-## 7、闭包
+
+
+### 7、闭包
 
 待补充
 
-## 8、原型及原型链
+
+
+###  8、原型及原型链
 
 待补充
 
-## 9、浏览器的回流与重绘 (Reflow & Repaint)
+
+
+### 9、浏览器的回流与重绘
 
 参考：[juejin.im/post/5a9923…](https://juejin.im/post/5a9923e9518825558251c96a)
 
@@ -269,9 +287,9 @@ if (true) {
 - 激活CSS伪类（例如：:hover）
 - 查询某些属性或调用某些方法
 
-### 优化方案：
+- 优化方案：
 
-#### CSS
+- CSS
 
 - 避免使用`table`布局。
 - 尽可能在`DOM`树的最末端改变`class`。
@@ -279,7 +297,7 @@ if (true) {
 - 将动画效果应用到`position`属性为`absolute`或`fixed`的元素上。
 - 避免使用`CSS`表达式（例如：`calc()`）。
 
-#### JavaScript
+- JavaScript
 
 - 避免频繁操作样式，最好一次性重写`style`属性，或者将样式列表定义为`class`并一次性更改`class`属性。
 - 避免频繁操作`DOM`，创建一个`documentFragment`，在它上面应用所有`DOM`操作，最后再把它添加到文档中。
@@ -287,7 +305,9 @@ if (true) {
 - 避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。
 - 对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。
 
-## 10、JS对象的深复制
+
+
+### 10、JS对象的深复制
 
 一般的思路就是递归解决，对不同的数据类型做不同的处理：
 
@@ -313,33 +333,56 @@ function deepCopy (obj) {
 let cloneResult = JSON.parse(JSON.stringify(targetObj))
 ```
 
-## 11、JS运算精度丢失
+
+
+### 11、JS运算精度丢失
 
 此前转载了一篇文章，对JavaScript运算精度丢失的原因及解决方案都有比较详细的说明： [blog.csdn.net/qq_35271556…](https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fqq_35271556%2Farticle%2Fdetails%2F80137474)
 
-## 12、defer 和async
 
-无论如何包含代码，只要不存在defer 和async 属性，浏览器都会按照<script>元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个<script>元素包含的代码解析完成后，第二个<script>包含的代码才会被解析，然后才是第三个、第四个……
 
-按照传统的做法，所有<script>元素都应该放在页面的<head>元素中, 这种做法的目的就是把所有外部文件（包括CSS 文件和JavaScript 文件）的引用都放在相同的地方。可是，在文档的<head>元素中包含所有JavaScript 文件，意味着必须等到全部JavaScript 代码都被下载、解析和执行完成以后，才能开始呈现页面的内容（浏览器在遇到<body>标签时才开始呈现内容）。对于那些需要很多JavaScript 代码的页面来说，这无疑会导致浏览器在呈现页面时出现明显的延迟，而延迟期间的浏览器窗口中将是一片空白。为了避免这个问题，现代Web 应用程序一般都把全部JavaScript 引用放在<body>元素中页面内容的后面.
+### 12、defer 和async
 
-defer 属性只适用于外部脚本文件。这一点在HTML5 中已经明确规定，因此支持HTML5 的实现会忽略给嵌入脚本设置的defer 属性。同样与defer 类似，async 只适用于外部脚本文件，并告诉浏览器立即下载文件。但与defer不同的是，标记为async 的脚本并不保证按照指定它们的先后顺序执行。
-异步脚本一定会在页面的load 事件前执行，但可能会在DOMContentLoaded 事件触发之前或之后执行。
+JS会阻塞 DOM 的加载和渲染。
 
-## 13、垃圾收集方式
+`defer` ：
+
+- 立即加载JS，但不执行，待DOM渲染完成后再执行JS。
+- 多个 `defer` 按顺序执行，但实际上不一定，所以建议只有1个JS使用 `defer` 参数。
+- `XHTML` 下需写成 `defer="defer"` 。
+
+`async` ：
+
+- 异步加载JS (不阻塞DOM)，加载完后执行JS(此时会阻塞DOM)，执行完后继续加载/渲染DOM。
+- 不按顺序执行。
+- `XHTML` 下需写成 `async="async"` 。
+
+![img](https://jian2333.github.io/images/pj-1.jpg)
+
+
+
+[浅谈script标签的defer和async](https://juejin.im/entry/5a7ad55ef265da4e81238da9)
+
+
+
+### 13、垃圾收集方式
 
 JavaScript 中最常用的垃圾收集方式是标记清除（mark-and-sweep）。另一种不太常见的垃圾收集策略叫做引用计数（reference counting）
 
-## 14、JS函数类型
+
+
+### 14、JS函数类型
 
 JS中函数有两种类型，具名函数（命名函数）和匿名函数。
 创建方式有：1. 声明函数  2.创建匿名函数表达式  3.创建具名函数表达式  4.Function构造函数  5.自执行函数  6.其他创建函数的方法
 
 
 
-# 二、ECMAScript
+## 二、ECMAScript
 
-## 1、let 和 const 命令
+
+
+### 1、let 和 const 命令
 
 ES6 新增了`let`命令，用来声明变量。它的用法类似于`var`，但是所声明的变量，只在`let`命令所在的代码块内有效。
 
@@ -367,11 +410,9 @@ function func() {
 
 
 
-## 2、声明变量方法
+### 2、声明变量方法
 
 ES5 只有两种声明变量的方法：`var`命令和`function`命令。ES6 除了添加`let`和`const`命令，后面章节还会提到，另外两种声明变量的方法：`import`命令和`class`命令。所以，ES6 一共有 6 种声明变量的方法。
-
-
 
 ECMAScript 中有5 种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number
 和String。还有1 种复杂数据类型——Object，Object 本质上是由一组无序的名值对组成的。ECMAScript
@@ -455,9 +496,9 @@ return num * f(num-1);
 
 
 
-# 三、浏览器相关
+## 三、浏览器相关
 
-## 1、浏览器从加载到渲染的过程
+### 1、浏览器从加载到渲染的过程
 
 大致可以分为如下7步：
 
@@ -469,14 +510,14 @@ return num * f(num-1);
 6. 浏览器下载web服务器返回的数据及解析html源文件；
 7. 生成DOM树，解析css和js，渲染页面，直至显示完成；
 
-### 加载过程：
+**加载过程：**
 
 - 浏览器根据 DNS 服务器解析得到域名的 IP 地址
 - 向这个 IP 的机器发送 HTTP 请求
 - 服务器收到、处理并返回 HTTP 请求
 - 浏览器得到返回内容
 
-### 渲染过程：
+**渲染过程：**
 
 - 根据 HTML 结构生成 DOM 树
 - 根据 CSS 生成 CSSOM
@@ -484,13 +525,15 @@ return num * f(num-1);
 - 根据 RenderTree 开始渲染和展示
 - 遇到`<script>`时，会执行并阻塞渲染
 
-## 2、浏览器缓存机制
+
+
+### 2、浏览器缓存机制
 
 参考文章：[segmentfault.com/a/119000001…](https://link.juejin.im?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000011212929)
 
 
 
-## 3、输入 URL 到展现涉及的缓存环节
+### 3、输入 URL 到展现涉及的缓存环节
 
 - 地址栏缓存
 - 检查HSTS预加载列表
@@ -501,7 +544,7 @@ return num * f(num-1);
 
 
 
-## 4、性能优化
+### 4、性能优化
 
 参考文章：[blog.csdn.net/na_sama/art…](https://link.juejin.im?target=https%3A%2F%2Fblog.csdn.net%2Fna_sama%2Farticle%2Fdetails%2F51291798)
 
@@ -529,9 +572,9 @@ return num * f(num-1);
 
 2. 图标使用 IconFont 替换
 
+   
 
-
-## 5、跨域
+### 5、跨域
 
 - 同源策略
 
@@ -543,10 +586,9 @@ jsonp（利用script标签的跨域能力）跨域、websocket（html5的新特�
 
 
 
+## 四、AngularJs
 
-# 四、AngularJs
-
-## 1、factory、service 和 provider
+### 1、factory、service 和 provider
 
 - **factory**
 
@@ -612,9 +654,9 @@ app.config(function(FooServiceProvider){
 
 
 
-# 五、CSS
+## 五、CSS
 
-## 1、CSS引入方式
+### 1、CSS引入方式
 
 ​	内联: 这种是在标签内直接写的，style="   "
 
@@ -626,21 +668,28 @@ app.config(function(FooServiceProvider){
 
 ​	跟link实现的效果一样，不同是link是页面加载的时候同时加载引入的样式，而@import是页面加载完成后，再	加载引入的样式；并且link是xhtml中的标签，所以兼容所有浏览器，但@import是在CSS2.1提出的，所以低版	本的浏览器会不兼容；link是可以通过js来改变样式的，@import就是不可以的；还有就是link可以引入除了css	以为的其他文件，但@import只能引入css文件。
 
-## 2、@charset作用
+
+
+### 2、@charset作用
 
 在外部样式表文件中使用，告诉浏览器用什么编码方式解码该样式文件
 
-## 3、@import 作用
+
+
+### 3、@import 作用
 
 @import用来引入外部样式
 
 <style> @import url('base.css') body{ margin:0; } </style>
-## 4、id选择器和class选择器的使用场景
+
+### 4、id选择器和class选择器的使用场景
 
 id选择器使用前确定此元素权限较高且在文档里具有唯一性才可用
 class选择器是使用的最广最多的选择器，可以给任何元素添加class属性
 
-## 5、CSS中常见的选择器
+
+
+### 5、CSS中常见的选择器
 
 通配符选择器
 *{ margin:0; }
@@ -656,7 +705,9 @@ Id选择器
 
 [选择器的优先级是如何计算](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity)
 
-## 6、src 和 href 的区别
+
+
+### 6、src 和 href 的区别
 
 - src用于替换当前元素， href 用于在当前文档和引用资源之间确立联系。
   src是 source 的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求 src 资源时会将其指向的资源下载并应用到文档内，例如 js 脚本， img 图片和 frame 等元素。
@@ -672,7 +723,7 @@ Id选择器
 
 
 
-## 7、CSS布局
+### 7、CSS布局
 
 ```
 margin: 10px 20px 10px 20px;
@@ -691,7 +742,7 @@ margin: 10px 20px 10px 20px;
 
 
 
-## 8、CSS3中新添加的样式
+### 8、CSS3中新添加的样式
 
 阴影，rgba，圆角
 
@@ -703,11 +754,12 @@ margin: 10px 20px 10px 20px;
 
 - border-image属性用于设置图片边框
 
-  
 
-# 六、HTML
 
-## 1、HTML5新特性、移除元素
+
+## 六、HTML
+
+### 1、HTML5新特性、移除元素
 
 新特性：
 
@@ -729,7 +781,7 @@ margin: 10px 20px 10px 20px;
 
 
 
-## 2、 HTML5 存储类型以及区别
+### 2、 HTML5 存储类型以及区别
 
 cookies，localstorage，sessionstorage
 cookies的存储容量比较小而且数量有限制，一般为4K左右，localstorage的可以高达5M以上
@@ -738,7 +790,7 @@ cookies每次http请求都会被携带，会造成带宽浪费，localstorage和
 
 
 
-## 3、document load 和document ready 的区别
+### 3、document load 和document ready 的区别
 
 1.load是当页面所有资源全部加载完成后（包括DOM文档树，css文件，js文件，图片资源等），执行一个函数
 问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响
