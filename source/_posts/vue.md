@@ -11,11 +11,11 @@ Start Vue ~~~
 
 <!-- more-->
 
-## 1、组件间通信方式
+### 1、组件间通信方式
 
 Vue的官方文档对组件间的通信方式做了详细的说明：[cn.vuejs.org](https://link.juejin.im?target=https%3A%2F%2Fcn.vuejs.org)
 
-### 父组件向子组件传输
+#### 父组件向子组件传输
 
 - 最常用的方式是在子组件标签上传入数据，在子组件内部用`props`接收：
 
@@ -38,7 +38,7 @@ export default {
 - 还可以在子组件中用 `this.$parent` 访问父组件的实例，不过官方文档有这样一段文字，很好的说明了 `$parent` 的意义：节制地使用 `$parent` 和 `$children` —— 它们的主要目的是作为访问组件的应急方法。更推荐用 `props` 和 `events` 实现父子组件通信。
 - 
 
-### 子组件向父组件传输
+#### 子组件向父组件传输
 
 vue中子组件调用父组件的方法：
 
@@ -79,7 +79,7 @@ export default {
 
   
 
-### 非父子组件之间的数据传递
+#### 非父子组件之间的数据传递
 
 - 对于非父子组件间，且具有复杂组件层级关系的情况，可以通过 `Vuex` 进行组件间数据传递： [vuex.vuejs.org/zh/](https://link.juejin.im?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2F)
 
@@ -87,7 +87,7 @@ export default {
 
   
 
-## 2、双向绑定原理
+### 2、双向绑定原理
 
 vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
 
@@ -168,13 +168,13 @@ vue数据双向绑定是通过数据劫持结合发布者-订阅者模式的方�
 
 
 
-## 3、路由导航钩子
+### 3、路由导航钩子
 
 [router.vuejs.org/zh-cn/advan…](https://link.juejin.im?target=https%3A%2F%2Frouter.vuejs.org%2Fzh-cn%2Fadvanced%2Fnavigation-guards.html)
 
 
 
-## 4、对MVVM开发模式的理解
+### 4、对MVVM开发模式的理解
 
 MVVM分为Model、View、ViewModel三者。
 **Model** 代表数据模型，数据和业务逻辑都在Model层中定义；
@@ -185,14 +185,14 @@ MVVM分为Model、View、ViewModel三者。
 
 
 
-## 5、vue的响应式原理
+### 5、vue的响应式原理
 
 当一个Vue实例创建时，vue会遍历data选项的属性，用 **Object.defineProperty** 将它们转为 getter/setter并且在内部追踪相关依赖，在属性被访问和修改时通知变化。
 每个组件实例都有相应的 watcher 程序实例，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知 watcher 重新计算，从而致使它关联的组件得以更新。
 
 
 
-## 6、vue指令及属性
+### 6、vue指令及属性
 
 **(1) 常见指令:**
 
@@ -255,7 +255,7 @@ computed: {
 
 
 
-## 7、vue 组件中 data 
+### 7、vue 组件中 data 
 
 在 `new Vue()` 中，`data` 是可以作为一个对象进行操作的，然而在 `component` 中，`data` 只能以函数的形式存在，不能直接将对象赋值给它。
 
@@ -263,7 +263,7 @@ computed: {
 
 
 
-## 8、vue生命周期钩子函数
+### 8、vue生命周期钩子函数
 
 参考： https://www.jianshu.com/p/8b7373362b4c
 
@@ -291,7 +291,7 @@ computed: {
 
 
 
-## 9、computed 和 watched 的区别
+### 9、computed 和 watched 的区别
 
 computed 是计算属性，依赖其他属性计算值，并且 computed 的值有缓存，只有当计算值变化才会返回内容。**计算属性是基于它们的响应式依赖进行缓存的**，只在相关响应式依赖发生改变时它们才会重新求值。
 
@@ -301,7 +301,7 @@ watch 监听到值的变化就会执行回调，在回调中可以进行一些�
 
 
 
-## 10、vuex
+### 10、vuex
 
 Vuex 是一个专为 Vue.js 应用程序开发的**状态管理模式**。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
 
@@ -409,3 +409,171 @@ Action 类似于 mutation，不同在于：
 1.5、module
 
 ​        module其实只是解决了当state中很复杂臃肿的时候，module可以将store分割成模块，每个模块中拥有自己的state、mutation、action和getter。
+
+
+
+### 11、Vuex的作用以及应用场景
+
+项目数据状态的集中管理，复杂组件(如兄弟组件、远房亲戚组件)的数据通信问题。
+
+​        如果不打算开发大型单页应用，使用 Vuex 可能是繁琐冗余的。确实是如此——如果你的应用够简单，那最好不要使用 Vuex。一个简单的 global event bus 就足够所需了。但是，如果需要构建是一个中大型单页应用，很可能会考虑如何更好地在组件外部管理状态，Vuex 将会成为自然而然的选择。
+
+vuex 一般用于中大型 web 单页应用中对应用的状态进行管理，对于一些组件间关系较为简单的小型应用，使用 vuex 的必要性不是很大，因为完全可以用组件 prop 属性或者事件来完成父子组件之间的通信，**vuex 更多地用于解决跨组件通信以及作为数据中心集中式存储数据。**
+
+对于多层级组件嵌套等较为复杂的场景，使用 vuex 能更好地应对。**vuex 是通过将 state 作为数据中心、各个组件共享 state 实现跨组件通信的**，此时的数据完全独立于组件，因此将组件间共享的数据置于 State 中能有效解决多层级组件嵌套的跨组件通信问题。
+
+目前主要有两种数据会使用 vuex 进行管理：
+1、组件之间全局共享的数据
+2、通过后端异步请求的数据  (**即把通过后端异步请求的数据都纳入 vuex 状态管理，在 Action 中封装数据的增删改查等逻辑，这样可以一定程度上对前端的逻辑代码进行分层，使组件中的代码更多地关注页面交互与数据渲染等视图层的逻辑，而异步请求与状态数据的持久化等则交由 vuex 管理。**)
+
+**使用 vuex 解决跨组件通信问题**
+跨组件通信一般指非父子组件间的通信，父子组件的通信一般可以通过以下方式：
+**1、通过 prop 属性实现父组件向子组件传递数据**
+**2、通过在子组件中触发事件实现向父组件传递数据**
+非父子组件之间的通信一般通过一个空的 Vue 实例作为 中转站，也可以称之为 事件中心、event bus。  
+
+
+
+### 12、vuex工作原理
+
+[文章](https://www.cnblogs.com/changk/p/8657465.html)
+
+### 13、为虚拟 dom会提高性能，解释一下它的工作原理
+
+虚拟DOM其实就是一个JavaScript对象。通过这个JavaScript对象来描述真实DOM，真实DOM的操作，一般都会对某块元素的整体重新渲染，采用虚拟DOM的话，当数据变化的时候，只需要局部刷新变化的位置就好了
+
+
+
+### 14、一些 package.json 里面的配置
+
+[详细](https://blog.csdn.net/weixin_42420703/article/details/81870815)
+
+### 15、Vue是一套渐进式框架
+
+每个框架都不可避免会有自己的一些特点，从而会对使用者有一定的要求，这些要求就是主张，主张有强有弱，它的强势程度会影响在业务开发中的使用方式。 使用vue，你 可以在原有
+
+每个框架都不可避免会有自己的一些特点，从而会对使用者有一定的要求，这些要求就是主张，主张有强有弱，它的强势程度会影响在业务开发中的使用方式。
+ 使用vue，你可以在原有大系统的上面，把一两个组件改用它实现，当jQuery用；也可以整个用它全家桶开发，当Angular用；
+ 还可以用它的视图，搭配你自己设计的整个下层用。你可以在底层数据逻辑的地方用OO和设计模式的那套理念。
+ 也可以函数式，都可以。
+ 它只是个轻量视图而已，只做了自己该做的事，没有做不该做的事，仅此而已
+
+你不必一开始就用Vue所有的全家桶，根据场景，官方提供了方便的框架供你使用。
+
+
+
+### 16、vue-cli提供的几种脚手架模板有哪些，区别
+
+webpack模板与webpack-simple
+
+区别见：https://blog.csdn.net/Lisunlight/article/details/80999948
+
+
+
+### 17、计算属性的缓存和方法调用的区别
+
+1、我们可以将同一函数定义为一个方法或是一个计算属性。两种方式的最终结果确实是完全相同的。不同的是**计算属性是基于它们的依赖进行缓存的**。只在相关依赖发生改变时它们才会重新求值。相比之下，每当触发重新渲染时，调用方法将**总会**再次执行函数。
+
+2、使用计算属性还是`methods`取决于是否需要缓存，当遍历大数组和做大量计算时，应当使用计算属性，除非你不希望得到缓存。
+
+我们为什么需要缓存？假设我们有一个性能开销比较大的计算属性 A，它需要遍历一个巨大的数组并做大量的计算。然后我们可能有其他的计算属性依赖于 A 。如果没有缓存，我们将不可避免的多次执行 A 的 getter！如果你不希望有缓存，请用方法来替代。
+
+3、计算属性是根据依赖自动执行的，`methods`需要事件调用。
+
+
+
+### 18、axios、fetch与ajax的区别
+
+[详见1](https://www.jianshu.com/p/8bc48f8fde75)
+
+[详见2](https://www.cnblogs.com/zhang134you/p/10636061.html)
+
+### 19、vue中央事件总线的使用
+
+[简易使用Vue中的中央事件总线(eventBus)](https://juejin.im/post/5d358280e51d4556bc06704d)
+
+[详见](https://www.cnblogs.com/zeroes/p/vue-run-dev.html)
+
+### 20、Vue开发命令 npm run dev 输入后的执行过程
+
+[简述](https://www.cnblogs.com/zeroes/p/vue-run-dev.html)
+
+
+
+### 21、vue-cli中常用到的加载器
+
+​		1.模板:
+
+　　　　(1)html-loader:将HTML文件导出编译为字符串，可供js识别的其中一个模块
+
+　　　　(2)pug-loader : 加载pug模板
+
+　　　　(3)jade-loader : 加载jade模板(是pug的前身，由于商标问题改名为pug)
+
+　　　　(4)ejs-loader : 加载ejs模板
+
+　　　　(5)handlebars-loader : 将Handlebars模板转移为HTML
+
+　　2.样式:
+
+　　　　(1)css-loader : 解析css文件中代码
+
+　　　　(2)style-loader : 将css模块作为样式导出到DOM中
+
+　　　　(3)less-loader : 加载和转义less文件
+
+　　　　(4)sass-loader : 加载和转义sass/scss文件
+
+　　　　(5)postcss-loader : 使用postcss加载和转义css/sss文件
+
+　　3. 脚本转换编译:
+
+　　　　(1)script-loader : 在全局上下文中执行一次javascript文件，不需要解析
+
+　　　　(2)babel-loader : 加载ES6+ 代码后使用Babel转义为ES5后浏览器才能解析
+
+　　　　(3)typescript-loader : 加载Typescript脚本文件
+
+　　　　(4)coffee-loader : 加载Coffeescript脚本文件
+
+　　4. JSON加载:
+
+　　　　(1)json-loader : 加载json文件（默认包含）
+
+　　　　(2)json5-loader : 加载和转义JSON5文件
+
+　　5.Files文件
+
+　　　　(1)raw-loader : 加载文件原始内容(utf-8格式)
+
+　　　　(2)url-loader : 多数用于加载图片资源,超过文件大小显示则返回data URL
+
+　　　　(3)file-loader : 将文件发送到输出的文件夹并返回URL(相对路径)
+
+　　　　(4)jshint-loader : 检查代码格式错误
+
+　　6.加载框架:
+
+　　　　(1)vue-loader : 加载和转义vue组件
+
+　　　　(2)angualr2-template--loader : 加载和转义angular组件
+
+　　　　(3)react-hot-loader : 动态刷新和转义react组件中修改的部分,基于webpack-dev-server插件需先安装,然后在webpack.config.js中引用react-hot-loader
+
+[详细](https://www.jianshu.com/p/ac8e685577cd)
+
+### 22、Vue中如何利用 keep-alive 标签实现某个组件缓存功能
+
+[详见](https://www.php.cn/js-tutorial-398645.html)
+
+### 23、pc端页面刷新时如何实现vuex缓存
+
+[详见](https://www.csdn.net/gather_22/MtTaAgysNTY3NC1ibG9n.html)
+
+### 24、vue-router如何响应 路由参数 的变化
+
+[详见](https://www.cnblogs.com/mengfangui/p/9154253.html)
+
+### 25、Vue 组件中 data 为什么必须是函数
+
+[详见](https://www.jianshu.com/p/839cbef3be41)
