@@ -20,3 +20,6 @@ tags:
 [老生常谈的从 URL 输入到页面展现背后发生的事](https://mp.weixin.qq.com/s/oGmVsIRZLIUQPqY5ZpUzpQ)
 
 [前端性能优化常用总结](https://juejin.im/post/59e1bbc9f265da430f311fb1)
+
+[vue-cli脚手架目录一览](https://www.cnblogs.com/hongdiandian/p/8311645.html)
+
