@@ -124,7 +124,7 @@
 <meta property="og:image" content="http://foreverchenyl.github.io/images/repeatfilter.png">
 <meta property="og:image" content="http://foreverchenyl.github.io/images/Distinct.png">
 <meta property="og:image" content="http://foreverchenyl.github.io/images/filterresult.bmp">
-<meta property="og:updated_time" content="2019-08-26T09:39:15.305Z">
+<meta property="og:updated_time" content="2019-09-03T06:53:50.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C#, .NET所遇问题汇总">
 <meta name="twitter:description" content="汇总C#       .NET工作中遇到的一些方法的使用 ~">
@@ -478,6 +478,19 @@
 <p>Result:</p>
 <p><img src="/images/filterresult.bmp" alt></p>
 <p><a href="https://blog.csdn.net/lishuangquan1987/article/details/76096022" target="_blank" rel="noopener">C# Distinct将对象按条件去重</a></p>
+<h3 id="二、CORS跨域"><a href="#二、CORS跨域" class="headerlink" title="二、CORS跨域"></a>二、CORS跨域</h3><p>YTWO App调用web后端API存在的跨域问题：</p>
+<p>采用：webapi使用System.Web.Http.Cors配置跨域访问</p>
+<p>在webapi中使用System.Web.Http.Cors配置跨域信息可以有<strong>两种方式。</strong><br>1) 一种是在App_Start.WebApiConfig.cs的Register中配置如下代码，<strong>这种方式将在所有的webapi Controller里面起作用。</strong></p>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Web.Http;</span><br><span class="line">using System.Web.Http.Cors;</span><br><span class="line"></span><br><span class="line">namespace YTWO.Service</span><br><span class="line">&#123;</span><br><span class="line">    public static class WebApiConfig</span><br><span class="line">    &#123;</span><br><span class="line">        public static void Register(HttpConfiguration config)</span><br><span class="line">        &#123;</span><br><span class="line">            // Web API 配置和服务</span><br><span class="line"></span><br><span class="line">            // Web API 路由</span><br><span class="line">            config.MapHttpAttributeRoutes();</span><br><span class="line"></span><br><span class="line">            config.Routes.MapHttpRoute(</span><br><span class="line">                name: &quot;DefaultApi&quot;,</span><br><span class="line">                routeTemplate: &quot;api/&#123;controller&#125;/&#123;action&#125;/&#123;id&#125;&quot;,</span><br><span class="line">                defaults: new &#123; id = RouteParameter.Optional &#125;</span><br><span class="line">            );</span><br><span class="line">            //这是重点，从配置文件的appsettings节点中读取跨域的地址</span><br><span class="line">            var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings[&quot;origins&quot;], &quot;*&quot;, &quot;*&quot;);</span><br><span class="line">            config.EnableCors(cors);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置文件如下，<strong>注意一定要加上http</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">key</span>=<span class="string">"origins"</span> <span class="attr">value</span>=<span class="string">"http://localhost:9012,http://192.168.1.108:9012"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>2) <strong>第二种方式就是在每个webapiController类中设置，即每个控制器个性化配置。</strong></p>
+<p>eg:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Linq;</span><br><span class="line">using System.Web;</span><br><span class="line">using System.Web.Http.Cors;</span><br><span class="line">using System.Web.Mvc;</span><br><span class="line"></span><br><span class="line">namespace Service.Controllers</span><br><span class="line">&#123;</span><br><span class="line">    // 允许指定域访问API</span><br><span class="line">    [EnableCors(&quot;http://localhost:9012,http://192.168.1.108:9012&quot;, &quot;*&quot;, &quot;*&quot;)]</span><br><span class="line">    public class HomeController : Controller</span><br><span class="line">    &#123;</span><br><span class="line">        public ActionResult Index()</span><br><span class="line">        &#123;</span><br><span class="line">            ViewBag.Title = &quot;Home Page&quot;;</span><br><span class="line"></span><br><span class="line">            return View();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 允许所有域访问API</span><br><span class="line">    [EnableCors(&quot;*&quot;, &quot;*&quot;, &quot;*&quot;)]</span><br><span class="line">    public class CompanyController : Controller</span><br><span class="line">    &#123;</span><br><span class="line">        public ActionResult Index()</span><br><span class="line">        &#123;</span><br><span class="line">            ViewBag.Title = &quot;Company Page&quot;;</span><br><span class="line"></span><br><span class="line">            return View();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -647,7 +660,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -694,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Distinct用法"><span class="nav-number">1.</span> <span class="nav-text">一、Distinct用法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Distinct用法"><span class="nav-number">1.</span> <span class="nav-text">一、Distinct用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、CORS跨域"><span class="nav-number">2.</span> <span class="nav-text">二、CORS跨域</span></a></li></ol></div>
             
 
           </div>
