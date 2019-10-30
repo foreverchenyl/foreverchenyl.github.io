@@ -809,3 +809,50 @@ cookies每次http请求都会被携带，会造成带宽浪费，localstorage和
 问题：如果图片资源较多，加载时间较长，onload后等待执行的函数需要等待较长时间，所以一些效果可能受到影响
 2.$(document).ready()是当DOM文档树加载完成后执行一个函数 （不包含图片，css等）所以会比load较快执行
 在原生的jS中不包括ready()这个方法，只有load方法就是onload事件
+
+
+
+### 4、pre和code标签的区别
+
+谷歌浏览器关于这两个标签的用户样式：
+
+- `<code>`：
+
+```
+code {
+    font-family: monospace;
+}
+```
+
+- `<pre>`：
+
+```
+pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+}
+```
+
+不难看出`code`标签仅仅是给文字设置了浏览器的默认等宽字体；而`pre`标签默认的`white-space`属性值是`pre`，即保留连续空白符；
+
+
+
+## 七、Ajax
+
+### 1、实现AJAX的基本步骤
+
+要完整实现一个AJAX异步调用和局部刷新,通常需要以下几个步骤:
+
+​      (1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+
+​      (2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+
+​      (3)设置响应HTTP请求状态变化的函数.
+
+​      (4)发送HTTP请求.
+
+​      (5)获取异步调用返回的数据.
+
+​      (6)使用JavaScript和DOM实现局部刷新.

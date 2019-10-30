@@ -404,3 +404,117 @@ using (var ctx = newSchoolDBEntities())
     ).FirstOrDefault<Student>();
 }
 ```
+
+### 十二、List Array使用
+
+集合转换数组
+
+```c#
+List<Course> courseList = new List<Course>;
+Course[] course = courseList.ToArray();
+```
+
+数组转换集合
+
+```c#
+courseList = course.ToList();
+```
+
+删除集合元素
+
+```c#
+courseList.Remove(course1);
+courseList.RemoveAll(c => c.courseId > 2);
+courseList.RemoveAt(2);
+courseList.RemoveRange(1,2);
+```
+
+遍历和查找集合元素
+
+```c#
+//遍历
+for(int i = 0;i < courseList.Count(); i++)
+{
+    Consloe.WriteLine(courseList[i].Name);
+}
+
+foreach(Course item in courseList)
+{
+      Consloe.WriteLine(item.Name);
+}
+
+//集合快速查找方法
+var result1 = courseList.FindAll(c => c.courseId > 10002)
+    
+var result2 = from c in courseList where c.courseId > 10002 select c
+var result3 = result2.ToList();
+
+//集合排序
+List<int> ageList = new List<int>{20,19,25,30,26};
+ageList.Sort(); //默认按照升序排列
+```
+
+
+
+### 十三、ADO.NET
+
+```
+1) System.Data  → DataTable，DataSet，DataRow，DataColumn，DataRelation，Constraint，DataColumnMapping，DataTableMapping
+2) System.Data.Coummon     → 各种数据访问类的基类和接口
+3) System.Data.SqlClient   → 对Sql Server进行操作的数据访问类
+  主要有：   a) SqlConnection            → 数据库连接器
+            b) SqlCommand               → 数据库命名对象
+            c) SqlCommandBuilder        → 生存SQL命令
+            d) SqlDataReader            → 数据读取器
+            e) SqlDataAdapter           → 数据适配器，填充DataSet
+            f) SqlParameter             → 为存储过程定义参数
+            g) SqlTransaction           → 数据库事物
+```
+
+```
+  using (SqlConnection conn = new SqlConnection("server=.;uid=sa;pwd=sa;database=MyCar"))
+  {
+      //打开连接
+      conn.Open();
+      //将执行的sql
+      String sql = "delete from Car where Title=@Title";
+      //创建命令对象，指定要执行sql语句与连接对象conn
+      SqlCommand cmd = new SqlCommand(sql, conn);
+      //指定参数
+      cmd.Parameters.Add(new SqlParameter("@Title", txtTitle.Text));
+      //执行,返回影响行数
+      int rows = cmd.ExecuteNonQuery();
+      MessageBox.Show("删除成功"+rows+"行！");
+      
+      ---------------------------------------------------------------------------------
+      //执行查询返回结果集
+      SqlDataReader sdr = cmd.ExecuteReader();
+      //下移游标，读取一行，如果没有数据了则返回false
+      while (sdr.Read())
+      {
+         Console.WriteLine("编号：" + sdr["Id"] + "，车名：" + sdr["Title"] + "，速度：" + sdr["Speed"]);
+      }
+      
+      --------------------------------------------------------------------------------
+      //执行查询返回单行单列的值，Object类型
+      Object result = cmd.ExecuteScalar();
+      //显示结果到标签
+      lblCount.Text = result.ToString();
+  }
+```
+
+
+
+### 十四、常见开发架构
+
+1. 两层（最起码的）：UI + 数据层
+
+2. 三层（最多，最核心）：UI+数据层+业务层
+
+3. 三层+接口层（具体我们抽象那层的接口）
+
+   接口层出现的目的：为了更好的实现团队合作，以及后续更好的项目维护。
+
+4. 三层+接口层+通信层
+
+5. 三层+接口层+通信层+服务层（API）

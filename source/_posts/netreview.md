@@ -72,3 +72,96 @@ Result:
 
 [C# Distinct将对象按条件去重](https://blog.csdn.net/lishuangquan1987/article/details/76096022)
 
+
+
+### 二、CORS跨域
+
+YTWO App调用web后端API存在的跨域问题：
+
+采用：webapi使用System.Web.Http.Cors配置跨域访问
+
+在webapi中使用System.Web.Http.Cors配置跨域信息可以有**两种方式。** 
+1) 一种是在App_Start.WebApiConfig.cs的Register中配置如下代码，**这种方式将在所有的webapi Controller里面起作用。**
+
+eg:
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+using System.Web.Http.Cors;
+
+namespace YTWO.Service
+{
+    public static class WebApiConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+            // Web API 配置和服务
+
+            // Web API 路由
+            config.MapHttpAttributeRoutes();
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+            //这是重点，从配置文件的appsettings节点中读取跨域的地址
+            var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["origins"], "*", "*");
+            config.EnableCors(cors);
+        }
+    }
+}
+```
+
+配置文件如下，**注意一定要加上http**
+
+```xml
+<add key="origins" value="http://localhost:9012,http://192.168.1.108:9012" />
+```
+
+
+
+2) **第二种方式就是在每个webapiController类中设置，即每个控制器个性化配置。**
+
+eg:
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Http.Cors;
+using System.Web.Mvc;
+
+namespace Service.Controllers
+{
+    // 允许指定域访问API
+    [EnableCors("http://localhost:9012,http://192.168.1.108:9012", "*", "*")]
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
+    }
+    
+    // 允许所有域访问API
+    [EnableCors("*", "*", "*")]
+    public class CompanyController : Controller
+    {
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Company Page";
+
+            return View();
+        }
+    }
+}
+
+```
+

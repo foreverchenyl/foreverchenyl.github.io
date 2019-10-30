@@ -23,3 +23,6 @@ tags:
 
 [vue-cli脚手架目录一览](https://www.cnblogs.com/hongdiandian/p/8311645.html)
 
+[RESTful API 编写指南](https://blog.igevin.info/posts/restful-api-get-started-to-write/?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
+
+[跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
