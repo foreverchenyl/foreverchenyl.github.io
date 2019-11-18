@@ -20,53 +20,59 @@ tags:
 
 #### 1、JS变量
 
- ![变量](https://img-blog.csdn.net/20151025211444167) 
+ ![变量](/images/JS变量.png) 
 
 
 
 #### 2、 JS运算符 
 
- ![运算符](https://img-blog.csdn.net/20151027141856977) 
+ ![运算符](/images/JS运算符.png) 
 
 
 
 #### 3、 JS数组 
 
- ![数组](https://img-blog.csdn.net/20151027141927811) 
+ ![数组](/images/JS数组.png) 
 
 
 
 #### 4、 JS流程语句 
 
- ![流程语句](https://img-blog.csdn.net/20151027141948843) 
+ ![流程语句](/images/JS流程语句.png) 
 
 
 
 #### 5、 JS字符串函数 
 
- ![字符串函数](https://img-blog.csdn.net/20151027142009291) 
+ ![字符串函数](/images/JS字符串函数.png) 
 
 
 
 #### 6、 JS函数基础 
 
- ![函数基础](https://img-blog.csdn.net/20151027142030029) 
+ ![函数基础](/images/JS函数基础.png) 
 
 
 
 #### 7、 JS基础DOM操作 
 
-![基础DOM操作](https://img-blog.csdn.net/20151027142103529) 
+![基础DOM操作](/images/DOM基础操作.png) 
 
 
 
 #### 8、 JS正则表达式 
 
- ![正则表达式](https://img-blog.csdn.net/20151027142149735) 
+ ![正则表达式](/images/JS正则表达式.png) 
 
 
 
 #### 9、 JS数据类型 
 
- ![数据类型](https://img-blog.csdn.net/20151027142647506) 
+ ![数据类型](/images/JS数据类型.png) 
+
+
+
+#### 10、Window操作对象
+
+![Window操作对象](/images/window操作对象.png) 
 
